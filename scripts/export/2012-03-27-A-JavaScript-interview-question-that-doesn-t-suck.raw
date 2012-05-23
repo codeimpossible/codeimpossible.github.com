@@ -17,7 +17,7 @@ slug: A-JavaScript-interview-question-that-doesn-t-suck
 	<strong>How many problems can you spot in the following code sample? What are they? Why are they problems?</strong></p>
 
 <pre class="prettyprint"><code>var collection = new Array(1,2,3,"4",5);
-for(var i = 0; i <= collection.length; ++i) {
+for(var i = 0; i &lt;= collection.length; ++i) {
   alert(collection[i]);
   if( collection[i] == 4 ) {
     alert(collection[i] / 4);

@@ -5,20 +5,23 @@ title: 'Introducing The JavaScript Object Query Library'
 slug: Introducing-The-JavaScript-Object-Query-Library
 ---
 # Introducing The JavaScript Object Query Library
-## 
+##
 
-<blockquote><em>So, yeah I originally started writing this article back in september when I was about mid-way through JSOQ. Some things have changed since then and I've tried to keep the post up-to-date. Enjoy!</em>
+<p>So, yeah I originally started writing this article back in september when I was about mid-way through JSOQ. Some things have changed since then and I've tried to keep the post up-to-date. Enjoy! Also, another similar library has come out recently: <a href="http://www.codeplex.com/jsinq" target="_blank">JSINQ</a> which is a really feature-rich LINQ to Object implementation in Javascript. Really bad-ass stuff.</p>
 
-<em>Also, another similar library has come out recently: <a href="http://www.codeplex.com/jsinq" target="_blank">JSINQ</a> which is a really feature-rich LINQ to Object implementation in Javascript. Really bad-ass stuff.</em></blockquote>
+<p>
 The Elevator Pitch:
-
+</p>
+<p>
 JSOQ is an open-source pet project of mine that lets you easily access the data that you need from large collections in JavaScript. It was developed over a two week period in September of 2008 and is currently at version 1.1.
-
+</p>
+<p>
 Everyone probably just shrugged and said "so??" Well let me show you. 
-
+</p>
+<p>
 Lets assume that you have the following JSON string from another web application like, say <a title="Twitter search results in JSON" href="http://search.twitter.com/search.json?q=codeimpossible" target="_blank">twitter search results</a> for example:
-
-<pre class="brush:javascript">
+</p>
+<pre>
 {"results":[
 {
 "text":"Just another day at the office",
@@ -44,17 +47,22 @@ Lets assume that you have the following JSON string from another web application
 ]} 
 </pre>
 
+<p>
 In the sample above we only have two results but JSOQ has been tested to work with collections of tens of thousands of items.
-
+</p>
+<p>
 The JSON object we have here is perfectly fine if we watned to show a whole bunch of data to the end user, but what if I only wanted to show the search results after a certain date? Or what if I only wanted the text from each message that was typed to this "spolsky" character?
-
+</p>
+<p>
 To accomplish this in "straight" javascript I'd be looking at writing a lot of loops and if/else code and then I would still have all these extra properties that I don't even need.
-
+</p>
+<p>
 JSOQ allows me to query a javascript object or collection of objects using a specified criteria and return only the properties/methods I want.
-
+</p>
+<p>
 So lets go with the second option. Let's get all the .text members from all the messages that were sent to the "spolsky" user.
-
-<pre class="brush:javascript">
+</p>
+<pre>
 var search_results = eval(our_json_result);
 var result = null;
 with(jsoq) {
@@ -67,15 +75,17 @@ with(jsoq) {
 </pre>
 
  
-
+<p>
 And now our result object is filled with a bunch of other objects that would look something like:
+</p>
 
-<pre class="brush:javascript">
+<pre>
 {
     text: "@spolsky thats easy! http:\/\/tinyurl.com\/2z42bs"
 }
 </pre>
 
  
-
+<p>
 Pretty simple eh? For more information on JSOQ please check back here in the near future or contribute to <a title="JSOQ Google Code Page" href="http://code.google.com/p/jsoq/" target="_blank">the google code repository</a>.
+</p>

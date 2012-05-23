@@ -5,7 +5,7 @@ title: 'Wordpress.com SyntaxHighlighter - How To Remove Indent'
 slug: Wordpress-com-SyntaxHighlighter-How-To-Remove-Indent
 ---
 # Wordpress.com SyntaxHighlighter - How To Remove Indent
-## 
+##
 
 I post a lot of source code on my blog and lately I've been having a lot of trouble trying to remove the left-padding from my source code blocks.
 
@@ -22,17 +22,8 @@ My problem comes from the <a href="http://code.google.com/p/syntaxhighlighter">S
 }
 </code></pre>
 
-The use of the !important declaration is what is messing me up. The SyntaxHighlighter stylesheet is included at the end of the page html source and my custom css is at the top, so even though the SyntaxHighlighter styles have a lower higher <a href="http://www.stuffandnonsense.co.uk/archives/css_specificity_wars.html">css specificity</a> - my styles will never override them because <a href="http://www.w3schools.com/css/css_intro.asp" target="_blank">CSS is processed top-down</a>.  <em>from "CSS Introduction" @ w3schools:</em>
-<blockquote><strong>What style will be used when there is more than one style specified for an HTML element?
-</strong>
-Generally speaking we can say that all the styles will "cascade" into a new "virtual" style sheet by the following rules, where number four has the highest priority:
-<ol>
-	<li>Browser default</li>
-	<li>External style sheet</li>
-	<li>Internal style sheet (inside the &lt;head&gt; tag)</li>
-	<li>Inline style (inside an HTML element)</li>
-</ol>
-So, an inline style (inside an HTML element) has the highest priority, which means that it will override a style declared inside the &lt;head&gt; tag, in an external style sheet, or in a browser (a default value).</blockquote>
+The use of the !important declaration is what is messing me up. The SyntaxHighlighter stylesheet is included at the end of the page html source and my custom css is at the top, so even though the SyntaxHighlighter styles have a lower higher <a href="http://www.stuffandnonsense.co.uk/archives/css_specificity_wars.html">css specificity</a> - my styles will never override them because <a href="http://www.w3schools.com/css/css_intro.asp" target="_blank">CSS is processed top-down</a>.
+
 At this point I began thinking that it was pointless to try any more and that I should just accept that my code blocks would forever be indented by 45 pixels.
 
 However, I'm way too stubborn to admit defeat, and after spending a night reading about css specificity and trying some crazy hacks of my own, I realized that my problem was simple. <strong>I just wanted the code to be farther to the left</strong>.

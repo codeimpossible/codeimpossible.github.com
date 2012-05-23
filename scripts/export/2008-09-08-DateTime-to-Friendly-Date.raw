@@ -5,13 +5,13 @@ title: 'DateTime to &quot;Friendly&quot; Date'
 slug: DateTime-to-Friendly-Date
 ---
 # DateTime to &quot;Friendly&quot; Date
-## 
+##
 
 I really like it when an application presents dates in a friendly "n Hours Ago" format. Mostly because I'm lazy and hate to do extra brain-work. <a title="Pretty Date.js" href="http://ejohn.org/blog/javascript-pretty-date/" target="_blank">John Resig created "pretty date"</a> and it's insanely useful. It also plugs into JQuery very easily.
 
 But on the project I am working on it made more sense to provide this functionality within the database. So I created a pretty date function for SQL.
 
-[sourcecode language="SQL"]
+<pre>
 CREATE FUNCTION dbo.GetFriendlyDateTimeValue
 (
 	@CompareDate DateTime
@@ -28,41 +28,41 @@ BEGIN
 	SET @Now = getDate()
 	SET @Hours = DATEDIFF(MI, @CompareDate, @Now)/60
 
-	IF @Hours <= 1
+	IF @Hours &lt;= 1
 	BEGIN
 		SET @Suff = 'Just Now'
 		SET @Found = 1
 		RETURN @Suff
 	END
 
-	IF @Hours < 24
+	IF @Hours &lt; 24
 	BEGIN
 		SET @Suff = ' Hours Ago'
 		SET @Found = 1
 	END
 
-	IF @Hours >= 8760 AND @Found = 0
+	IF @Hours &gt;= 8760 AND @Found = 0
 	BEGIN
 		SET @Hours = @Hours / 8760
 		SET @Suff = ' Years Ago'
 		SET @Found = 1
 	END
 
-	IF @Hours >= 720 AND @Found = 0
+	IF @Hours &gt;= 720 AND @Found = 0
 	BEGIN
 		SET @Hours = @Hours / 720
 		SET @Suff = ' Months Ago'
 		SET @Found = 1
 	END
 
-	IF @Hours >= 168 AND @Found = 0
+	IF @Hours &gt;= 168 AND @Found = 0
 	BEGIN
 		SET @Hours = @Hours / 168
 		SET @Suff = ' Weeks Ago'
 		SET @Found = 1
 	END
 
-	IF @Hours >= 24 AND @Found = 0
+	IF @Hours &gt;= 24 AND @Found = 0
 	BEGIN
 		SET @Hours = @Hours / 24
 		SET @Suff = ' Days Ago'
@@ -72,4 +72,4 @@ BEGIN
 	RETURN Convert(nvarchar, @Hours) + @Suff
 
 END
-[/sourcecode] 
+</pre>

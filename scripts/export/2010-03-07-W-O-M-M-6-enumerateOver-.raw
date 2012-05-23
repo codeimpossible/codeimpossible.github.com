@@ -5,13 +5,13 @@ title: 'W.O.M.M. #6 - enumerateOver()'
 slug: W-O-M-M-6-enumerateOver-
 ---
 # W.O.M.M. #6 - enumerateOver()
-## 
+##
 
 <img class="alignleft" title="works-on-my-machine-starburst" src="http://codeimpossible.com/wp-content/uploads/2009/06/works-on-my-machine-starburst.jpg" alt="works-on-my-machine-starburst" />
 
 I've been focusing more and more on <a href="http://bitbucket.org/codeimpossible/jsoq"> my port of Ling-to-Objects, Jsoq</a> the past few weeks. It's still in really early stages and I'm not quite sure about it's actual usefulness but I'm learning a lot about JavaScript and having a ton of fun along the way!
 
-Jsoq deals with arrays a lot. About 95% of it's use cases involve either looping through, altering, or creating arrays. Having a ton of <code>for</code> loops in my code just seems so... not right. For loops have always seemed dirty to me. They just aren't elegant enough. 
+Jsoq deals with arrays a lot. About 95% of it's use cases involve either looping through, altering, or creating arrays. Having a ton of <code>for</code> loops in my code just seems so... not right. For loops have always seemed dirty to me. They just aren't elegant enough.
 
 Here is your normal, average, everyday <code>for</code> loop in Javascript.
 
@@ -53,19 +53,19 @@ A few hours later I had a decent function that I could use to replace a lot of t
 <pre class="prettyprint"><code>
 function enumerateOver(collection, work) {
 	var result = [], val = [];
-	
+
 	if (isArray(collection)) {
 		try {
-			for (var i = -1, l = collection.length; ++i < l;) {
+			for (var i = -1, l = collection.length; ++i &lt; l;) {
 				result = work(collection[i], i);
-				if (typeof result !== "undefined" && result != null) {
+				if (typeof result !== "undefined" &amp;&amp; result != null) {
 					val.push(result);
 				}
 			}
 		}catch (e) {
 			if (e != jsoq.$break) throw(e);
 		}
-		
+
 		if (val.length > 0) {
 			return val;
 		}

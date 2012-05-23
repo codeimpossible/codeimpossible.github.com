@@ -10,8 +10,7 @@ slug: This-blog-will-be-different-tomorrow
 <p>
 	In the words of <a href="http://www.minecraft.com">Minecraft</a> creator <a href="http://notch.tumblr.com/">Notch</a>:</p>
 <blockquote>
-	<p>
-		No sane person can be for SOPA. I don&rsquo;t know if we&rsquo;re sane, but we are strongly, uncompromisingly against SOPA, and any similar laws. Sacrificing freedom of speech for the benefit of corporate profit is abominable and disgusting.</p>
+		No sane person can be for SOPA. I don&rsquo;t know if we&rsquo;re sane, but we are strongly, uncompromisingly against SOPA, and any similar laws. Sacrificing freedom of speech for the benefit of corporate profit is abominable and disgusting.
 </blockquote>
 <h3>
 	How can I join in?</h3>
@@ -37,7 +36,7 @@ slug: This-blog-will-be-different-tomorrow
 <p>
 	Completely understandable, and there is an option for you as well! If you include the following javascript a 50px banner will be displayed on your site (example of the banner is included below the script):</p>
 <pre class="prettyprint">
-<code>&lt;script type=&quot;text/javascript&quot; 
+<code>&lt;script type=&quot;text/javascript&quot;
 src=&quot;https://raw.github.com/SaraJo/SOPA-PIPA-Protest-Page/master/javascript-only/banner.min.js&quot;&gt;
 &lt;/script&gt;
 </code></pre>

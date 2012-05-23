@@ -5,7 +5,7 @@ title: 'W.O.M.M. weekly post #3 - HtmlHelper.Gravatar'
 slug: W-O-M-M-weekly-post-3-HtmlHelper-Gravatar
 ---
 # W.O.M.M. weekly post #3 - HtmlHelper.Gravatar
-## 
+##
 
 <img class="alignleft" title="works-on-my-machine-starburst" src="http://wpup.codeimpossible.com/2009/06/works-on-my-machine-starburst.jpg" alt="works-on-my-machine-starburst" />Long story short: I <b>hate</b> re-inventing the wheel. If there is a free service that does something I need I will try my hardest to get that service into whatever I am working on. I'm currently working on an Asp .Net MVC project that needs Avatars (you know, those funny little pictures next to peoples names on Twitter). Enter <a href="http://www.gravatar.com">Gravatar</a>.
 <br />
@@ -71,7 +71,7 @@ namespace System.Web.Mvc
 			RouteValueDictionary htmlAttributes)
         {
             var tagBuilder = new TagBuilder("img");
-            string url = "http://www.gravatar.com/avatar/{0}?d={1}&s={2}";
+            string url = "http://www.gravatar.com/avatar/{0}?d={1}&amp;s={2}";
 
 	    // thanks to jon galloway for this one-liner!
             // http://www.eggheadcafe.com/aspnet/how-to/141740/adding-gravatars-to-your.aspx

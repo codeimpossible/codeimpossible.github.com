@@ -5,11 +5,11 @@ title: 'Useful Code: Object.Enumerate'
 slug: Useful-Code-Object-Enumerate
 ---
 # Useful Code: Object.Enumerate
-## 
+##
 
 I write a lot of javascript at my job and I often find myself in a horrible debugging situation where something isn't working right and I need a way to find out what properties and methods an object has quickly. I've found the following code very helpful in determining this.
 
-[sourcecode language="jscript"]
+<pre>
 Object.Enumerate = function(o,t) {
     var type = typeof t === 'undefined' ? null : t;
     for(var key in o)
@@ -26,11 +26,11 @@ Object.Enumerate = function(o,t) {
         }
     }
 };
-[/sourcecode]
+</pre>
 
 This is a really simple method that will take an object and (optionally) a string representation of a type ("number", "object", "function" or "string") and will display the members that match those types (or if no type is passed it will display each member and it's type).
 
-[sourcecode language="jscript"]
+<pre>
 //basic object for testing
 var x = {
     int: 1,
@@ -48,7 +48,7 @@ Object.Enumerate( x);
 
 //alerts "func is a function"
 Object.Enumerate(x, 'function');
-[/sourcecode]
+</pre>
 
 This code is really similar to how prototype generates JSON information and can easily be modified to return various types of data back to the requestor.
 
