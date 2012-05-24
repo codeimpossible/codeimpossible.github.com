@@ -8,7 +8,7 @@ slug: "AutoHotKey-scripts-for-developers"
 ## This week I'll post some useful AutoHotKey scripts that I use to make every-day coding easier.
 
 
-If you&#39;re not familiar with AutoHotKey yet, I&#39;ve [blogged about it before][1]  and I would recommend giving that post a read. For the rest of you I thought I would post some useful AHK scripts that I have come across.
+If you're not familiar with AutoHotKey yet, I've [blogged about it before][1]  and I would recommend giving that post a read. For the rest of you I thought I would post some useful AHK scripts that I have come across.
 
 
 **The most important AHK script ever. **
@@ -22,11 +22,11 @@ This script will generate a self-calling anonymous function that scopes jQuery a
     ;insert a self-calling anonymous method to scope jQuery calls
     :*R0:{jqsafe}::
     (
-    (function($) {{} 
-        $(function() {{}
+    (function($) &123;&123;} 
+        $(function() &123;&123;}
         // ...code to run on dom ready
 
-    {Left}{Left}{Left}{Left}{}});`n{}})(jQuery);
+    {Left}{Left}{Left}{Left}{&125;&125;);`n{&125;&125;)(jQuery);
     )
     return
 
@@ -47,7 +47,7 @@ Here is the script.
 
     ; Include jQuery from google cdn
     ~{::
-    Input, UserInput, I V L13 C, {}}, jqgoog*,
+    Input, UserInput, I V L13 C, {&125;&125;, jqgoog*,
     if ErrorLevel = NewInput
         return
     Test := InStr( UserInput, "jqgoog" )
@@ -76,13 +76,13 @@ This script will turn `{atwood}` into a block of C# that can connect to a databa
     var connString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
     var query = @"";
     using(var conn = new SqlConnection(connString))
-    {{}
+    {&125;&125;
         conn.Open();
     using( var cmd = new SqlCommand( query, conn ) ) 
-    {{}
+    {&125;&125;
         
-    {}}
-    {Left}{}}
+    {&125;&125;
+    {Left}{&125;&125;
     )
     return
 
