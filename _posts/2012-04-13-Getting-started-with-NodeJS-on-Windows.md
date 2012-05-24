@@ -88,7 +88,7 @@ Then we simply register a few callbacks. The first one is executed when our app 
     });
     
     app.get(config.routes.index, function(req, res) {
-        res.send("<h1>Hello World!</h1>")
+        res.send("<h1>Hello World!&lt;/h1&gt;")
     });
     
 
@@ -112,7 +112,7 @@ So when thats all put together, we end up with:
     });
     
     app.get(config.routes.index, function(req, res) {
-        res.send("<h1>Hello World!</h1>")
+        res.send("<h1>Hello World!&lt;/h1&gt;")
     });
     
 
@@ -124,7 +124,7 @@ Pretty simple right? Not a lot of code. Now, let's run it!
     
 
 
-Then we just need to make a request to `http://localhost:8000` and we should see &quot;Hello World!&quot;. And just like that you&#39;ve got your first NodeJS app (albeit a very simple one) running on Windows!
+Then we just need to make a request to `http://localhost:8000` and we should see "Hello World!". And just like that you&#39;ve got your first NodeJS app (albeit a very simple one) running on Windows!
 
 
 Hang on to this code as we'll start modifying this app to add more features in the next blog post.

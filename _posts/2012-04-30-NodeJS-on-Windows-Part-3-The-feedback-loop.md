@@ -28,7 +28,7 @@ Anyway, let's run supervisor on the node app we created last time.
     
 
 
-You&#39;ll see the normal app bootup messages, when you visit `http://localhost:8000` the site should load normally and show you &quot;Hello World!&quot;.
+You&#39;ll see the normal app bootup messages, when you visit `http://localhost:8000` the site should load normally and show you "Hello World!".
 
 
 Aaaaaaand nothing is different.
@@ -49,7 +49,7 @@ Now, save your js file and check your powershell window. Go ahead... I'll wait.
 WASN'T THAT AWESOME?!?! Supervisor watches all your js files for changes, when changes are detected it will reload the app automatically! So let's change the header and see what happens.
 
 
-    res.send("<h1>Jared is the best!</h1>");
+    res.send("<h1>Jared is the best!&lt;/h1&gt;");
     
 
 
@@ -119,7 +119,7 @@ In our `index.jade` view, add the following markup:
 Here we have the socket.io client library loaded *(socket.io provides a route to ExpressJS that handles the `/socket.io/*` request)* and then we use that to open a long-polling connection to the server. When that connection gets disconnected (e.g. the server gets recycled when a file is changed) our page will reload.
 
 
-Also, we now have our `date` property rendered out into an `<h2>` so we can tell when the page gets updated. All we have to do now is start supervisor and let it know we want it to watch more than just the .js files in our root:
+Also, we now have our `date` property rendered out into an `&lt;h2&gt;` so we can tell when the page gets updated. All we have to do now is start supervisor and let it know we want it to watch more than just the .js files in our root:
 
 
     $  supervisor -w "views,app.js" -e "jade,js" app.js

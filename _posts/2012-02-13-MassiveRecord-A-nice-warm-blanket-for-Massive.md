@@ -25,7 +25,7 @@ Massive makes db work pretty simple but all the sugar that it pours on your db a
 I started thinking how this could be made easier, and how it could be done Massive-style; One semi-large code file that you just drop into your project and then rock and roll.
 
 
-So I came up with [MassiveRecord][2] . MassiveRecord is my attempt to move the fun stuff from Rails&#39;s&nbsp;[ActiveRecord][3]  over to the .Net world so developers can do things like this:
+So I came up with [MassiveRecord][2] . MassiveRecord is my attempt to move the fun stuff from Rails&#39;s [ActiveRecord][3]  over to the .Net world so developers can do things like this:
 
 
     var products = DynamicTable.Create("Products").FindByCategory("Televisions");
@@ -45,7 +45,7 @@ So easy that if we wanted to get all fo the products in a category and with a ce
 MassiveRecord. Just. Works. It takes convention-based method calls, converts them to Massive black-magic and gives you the result. And there is very little configuration needed. Put this in your main application initialization code (global.asax) and you&rsquo;re golden:
 
 
-    DynamicTable.Configure( c => c.WhenAskedFor("Products").Use( s => {
+    DynamicTable.Configure( c => c.WhenAskedFor("Products").Use( s =&gt; {
         s.ConnectionString = "AdventureWorks";
         s.Table = "Products";
         s.PrimaryKey = "Id";

@@ -8,7 +8,7 @@ slug: "NodeJS-on-Windows-Part-2-using-the-Jade-ViewEngine"
 ## When we last left our nifty little NodeJS app it was spitting out "Hello World!" like a champ, let's see what other tricks we can teach it.
 
 
-[Our node app that we created in part one][1]  is writing out our header &quot;Hello World!&quot; really well. But that&#39;s not really that cool. Plus, it doesn&#39;t scale. If we wanted to output more HTML we would find the current solution to be a giant pain in the ass.
+[Our node app that we created in part one][1]  is writing out our header "Hello World!" really well. But that&#39;s not really that cool. Plus, it doesn&#39;t scale. If we wanted to output more HTML we would find the current solution to be a giant pain in the ass.
 
 
 It would be nice if we could use a templating engine to render HTML for us...
@@ -21,7 +21,7 @@ It would be nice if we could use a templating engine to render HTML for us...
 [Jade][2]  is a templating engine like HAML, which you can use as well, but I chose Jade because it works really well with ExpressJS.
 
 
-Let&#39;s create our first view. We&#39;ll create a folder named `views` in the root of our project directory and in there let&#39;s create a file named &quot;index.jade&quot; and paste the following markup in there:
+Let&#39;s create our first view. We&#39;ll create a folder named `views` in the root of our project directory and in there let&#39;s create a file named "index.jade" and paste the following markup in there:
 
 
     !!! 5
@@ -33,7 +33,7 @@ Let&#39;s create our first view. We&#39;ll create a folder named `views` in the 
     
 
 
-If you&#39;ve used HAML before then you should understand this markup, it creates a html5 document (!!! 5) and then sets the `title` property of our view model into the `<title>` tag, then just renders a simple `<h1>` in the body.
+If you&#39;ve used HAML before then you should understand this markup, it creates a html5 document (!!! 5) and then sets the `title` property of our view model into the `<title>` tag, then just renders a simple `&lt;h1&gt;` in the body.
 
 
 Easy enough. Now let&#39;s get our app to render this. Right now, our app has no idea that our views are in the `/views` directory, so let&#39;s clue it in. Paste the following code just before the `app.listen()` call:

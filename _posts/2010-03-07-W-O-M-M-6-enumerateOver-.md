@@ -14,7 +14,7 @@ Here is your normal, average, everyday `for` loop in Javascript.
     
     var array = "1,2,3,4,5,6,7,8,9,10".split(',');
     
-    for(var i = -1, l = array.length; ++i < l;) {
+    for(var i = -1, l = array.length; ++i &lt; l;) {
         alert(array[i]);
     }
 
@@ -24,7 +24,7 @@ This works. It's reliable and gets the message across. But what if we needed to 
     var results = [];
     var condition = function(i) { return i%2 == 0; };
     
-    for(var itt = -1, len = array.length; ++itt < len;) {
+    for(var itt = -1, len = array.length; ++itt &lt; len;) {
         if( condition(array[itt]) ) {
             results.push(array[itt]);
         }
@@ -47,7 +47,7 @@ A few hours later I had a decent function that I could use to replace a lot of t
         
         if (isArray(collection)) {
             try {
-                for (var i = -1, l = collection.length; ++i < l;) {
+                for (var i = -1, l = collection.length; ++i &lt; l;) {
                     result = work(collection[i], i);
                     if (typeof result !== "undefined" && result != null) {
                         val.push(result);
@@ -57,7 +57,7 @@ A few hours later I had a decent function that I could use to replace a lot of t
                 if (e != jsoq.$break) throw(e);
             }
         
-            if (val.length > 0) {
+            if (val.length &gt; 0) {
                 return val;
             }
             }else {

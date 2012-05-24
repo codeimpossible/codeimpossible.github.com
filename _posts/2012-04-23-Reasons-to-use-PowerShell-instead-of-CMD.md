@@ -8,7 +8,7 @@ slug: "Reasons-to-use-PowerShell-instead-of-CMD"
 ## I stopped using cmd.exe in favor of PowerShell almost a year ago. Here's a quick list of things that made me drop CMD forever.
 
 
-First, I guess I should say that there isn&#39;t anything necessarily&nbsp;**wrong** with the command line in windows. It&#39;s the &#39;ol standby for a lot of windows users. It&#39;s looked the same since 1986, it has the same familiar commands and you can use TrueType fonts if you want to be a rebel.
+First, I guess I should say that there isn&#39;t anything necessarily **wrong** with the command line in windows. It&#39;s the &#39;ol standby for a lot of windows users. It&#39;s looked the same since 1986, it has the same familiar commands and you can use TrueType fonts if you want to be a rebel.
 
 
 I.R.O.N.
@@ -31,12 +31,12 @@ It has modules!!!
 
 Git is better in powershell
 
-[Posh-Git][4]  is a PowerShell script for, you guessed it, git that has makes me love working with git more than I ever could on linux/mac. The major selling point? contextual tab-completion. It&#39;s freaking awesome. Git on all other platforms has been put on notice.&nbsp;
+[Posh-Git][4]  is a PowerShell script for, you guessed it, git that has makes me love working with git more than I ever could on linux/mac. The major selling point? contextual tab-completion. It&#39;s freaking awesome. Git on all other platforms has been put on notice. 
 
 
 Easy automation
 
-PowerShell is a pretty easy language to grok. I&#39;ve only used it in passing to automate really tedious tasks, but if I can throw a workable script together in 10 minutes then the language&nbsp;**has&nbsp;**to be easy to understand!
+PowerShell is a pretty easy language to grok. I&#39;ve only used it in passing to automate really tedious tasks, but if I can throw a workable script together in 10 minutes then the language **has **to be easy to understand!
 
 
 Awesome output commands
@@ -44,7 +44,7 @@ Awesome output commands
 clip is a command that copies whatever is "piped" to it to the clipboard. Yeah, no more right-clicking on the cmd window icon, selecting "select all" and pressing enter. Just pipe the output!
 
 
-    $ c:\> ls | clip
+    $ c:\&gt; ls | clip
 
 
 The directory listing for my c:\ root would be put into the clipboard, ready to be pasted into a blog post, email or message-board twitter flame.
@@ -56,7 +56,7 @@ out-gridview is a similar command but instead of putting the piped data into the
 So that's my list, if you're using powershell already let me know what you like most about it in the comments. If I've forgotten something obvious let me know!
 
 
-For more resources on powershell, check out the [Hey!, Scripting Guy][5]  blog as well as [BeefyCode][6] &nbsp;blog (what an awesome name for a blog). Until next time.
+For more resources on powershell, check out the [Hey!, Scripting Guy][5]  blog as well as [BeefyCode][6]  blog (what an awesome name for a blog). Until next time.
 
 
   [1]: http://www.dougfinke.com/blog/index.php/2010/08/29/how-to-load-net-assemblies-in-a-powershell-session/

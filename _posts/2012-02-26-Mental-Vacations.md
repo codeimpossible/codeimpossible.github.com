@@ -8,10 +8,10 @@ slug: "Mental-Vacations"
 ## I came up against some - seemingly - insurmountable problems the other day. So I left work and played video games.
 
 
-I was working on a problem and things weren&#39;t going my way. Tests that *should*&nbsp;be passing weren&#39;t, errors that didn&#39;t seem possible were popping up and in just about every way imagineable shit was falling apart.
+I was working on a problem and things weren&#39;t going my way. Tests that *should* be passing weren&#39;t, errors that didn&#39;t seem possible were popping up and in just about every way imagineable shit was falling apart.
 
 
-I remember thinking &quot;*I can do this. If I can just solve this next problem I'll be in a better spot.*&quot; and sometimes this works. I amp myself up, I actually do fix the problem and can go back to being productive. Not this time. These problems seemed too big. I couldn&#39;t focus because everything I had tried had failed. Twice.
+I remember thinking "*I can do this. If I can just solve this next problem I'll be in a better spot.*" and sometimes this works. I amp myself up, I actually do fix the problem and can go back to being productive. Not this time. These problems seemed too big. I couldn&#39;t focus because everything I had tried had failed. Twice.
 
 
 So I left.

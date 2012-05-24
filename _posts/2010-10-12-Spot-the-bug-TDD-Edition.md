@@ -19,7 +19,7 @@ Today I have one example of how TDD has saved my arse: I'm beginning work on add
 
         // uses WithViewData extension method from 
         // MvcContrib TestHelpers
-        result.WithViewData<List<Project>>();
+        result.WithViewData<List&lt;Project>&gt;();
     }
 
 Okay, now, let's create that controller so I can run my test and see it fail.
@@ -42,7 +42,7 @@ Great! Now to run my test aaaaaaaand. Whoa! What? The test is **passing**!?!? W.
 *Note: I skipped a step here, WithViewData() calls AssertViewDataModelType() so I included that method here instead*
 
 
-    private static TViewData AssertViewDataModelType<TViewData>(
+    private static TViewData AssertViewDataModelType&lt;TViewData&gt;(
         ViewResultBase actionResult)
     {
         var actualViewData = actionResult.ViewData.Model;

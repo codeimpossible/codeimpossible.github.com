@@ -31,9 +31,9 @@ That made no sense
 Well, if you&#39;re not a software developer we have a much easier option. Just include the javascript below on your website and visitors to your site will be sent to [http://protestsopa.org/][9] .
 
 
-    <script type="text/javascript">
+    &lt;script type="text/javascript"&gt;
         window.location.href = "http://protestsopa.org/";
-    </script>
+    </script&gt;
     
 
 
@@ -42,9 +42,9 @@ I can't blackout my entire site but still want to help
 Completely understandable, and there is an option for you as well! If you include the following javascript a 50px banner will be displayed on your site (example of the banner is included below the script):
 
 
-    <script type="text/javascript"
-    src="https://raw.github.com/SaraJo/SOPA-PIPA-Protest-Page/master/javascript-only/banner.min.js">
-    </script>
+    &lt;script type="text/javascript"
+    src="https://raw.github.com/SaraJo/SOPA-PIPA-Protest-Page/master/javascript-only/banner.min.js"&gt;
+    </script&gt;
     
 
 

@@ -24,9 +24,9 @@ I did this because I have to use the same layout for the entire theme (it's a li
 
 So this can be used to hide/show content like so:
 
-    <% if is_active?( :controller => "posts", :action => "index") -%>
-      <%= render :partial => "themes/codeimpossible/partials/callout" %>
-    <% end -%>
+    &lt;% if is_active?( :controller => "posts", :action => "index") -%&gt;
+      &lt;%= render :partial => "themes/codeimpossible/partials/callout" %&gt;
+    <% end -%&gt;
 
 Let me know if this helped you!
 

@@ -7,7 +7,7 @@ slug: "Jeff-Johnson-Grandfather-of-the-Tree-View"
 
 ## "Think of it as a hi-tech version of Woody Allen's statement that life is what happens to you while you're out doing something else."
 
-The above excerpt was written by Jeff Johson, the creator of the Xtree file management software in his quasi-blog post title &quot;[An Unapologetic History of XTree][1] &quot; written in 1991, six years after Xtree 1.0 was released.&nbsp;
+The above excerpt was written by Jeff Johson, the creator of the Xtree file management software in his quasi-blog post title "[An Unapologetic History of XTree][1] " written in 1991, six years after Xtree 1.0 was released. 
 
 Jeff was the lead developer on the Xtree software project that originally started out as an in-house tool but would soon become one of the most popular applications ever released for the DOS operating system. What set Xtree apart from every other application was how it showed you where your files were located.
 

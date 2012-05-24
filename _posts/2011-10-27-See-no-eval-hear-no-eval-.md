@@ -8,7 +8,7 @@ slug: "See-no-eval-hear-no-eval-"
 ## Dynamic evaluation is a great way to shoot yourself in the foot.
 
 
-Eval is a function in JavaScript that allows developers to invoke the js compiler and pass a string to be compiled and evaluated. Eval is often misused by developers which creates a&nbsp;[ticking timebomb in your codebase][1] .&nbsp;
+Eval is a function in JavaScript that allows developers to invoke the js compiler and pass a string to be compiled and evaluated. Eval is often misused by developers which creates a [ticking timebomb in your codebase][1] . 
 
 
 Here&#39;s [what Eric Lippert says on eval][2] :
@@ -36,10 +36,10 @@ I opened up the wayback machine and snagged some real production code from a pre
      eval (fStr);
 
 
-* note: if this looks familiar it&#39;s because I had submitted part of this code to The Daily WTF waaaaaaaaay back in 2004. Check out&nbsp;[the original post here][3] .
+* note: if this looks familiar it&#39;s because I had submitted part of this code to The Daily WTF waaaaaaaaay back in 2004. Check out [the original post here][3] .
 
 
-Aside from the empty else (which is priceless), what are the other problems here?&nbsp;
+Aside from the empty else (which is priceless), what are the other problems here? 
 
 
  1. it looks like shit. Seriously, this code makes my soul hurt.

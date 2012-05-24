@@ -27,14 +27,14 @@ That should do. I've got my start variable (dropping the 0 in favor of more read
 
 Obviously we'll need some kind of loop. How about a while loop?
     
-    while( current <= end )
+    while( current &lt;= end )
     {
     
     }
 
 Cool. Now when the loop is running I'll need a way to keep track of the current value, the previous value and I need to add the current value to the sum. So....
     
-    while( current <= end )
+    while( current &lt;= end )
     {
         temp = current;
         current = current + previous;
@@ -50,7 +50,7 @@ So given this new(ish) piece of info my solution end sup being:
     
     var start = 1, end = 4000000, current = 1, previous = 1, sum = 0, temp = 0;
     
-    while( current <= end )
+    while( current &lt;= end )
     {
     temp = current;
     current = current + previous;

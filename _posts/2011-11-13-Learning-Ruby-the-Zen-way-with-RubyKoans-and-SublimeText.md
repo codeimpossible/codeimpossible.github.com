@@ -14,7 +14,7 @@ Python, Ruby, TDD and writing plugins for an awesome text editor. What more coul
 I stumbled across [RubyKoans.com][1]  a few days ago. Most blogs and books teach you ruby by showing you examples and then, once you have a grasp on the language, you&#39;ll be told about TDD.
 
 
-Ruby Koans takes a different approach. Specifically, RubyKoans teaches you Ruby and TDD by &nbsp;forcing you fix tests that are broken. Each test case encompasses a different part of the language. Some people think that this is like [being taught to swim by getting thrown into the ocean][2] , but I think RubyKoans does a fantastic job keeping the lessons tight, focused and informative.
+Ruby Koans takes a different approach. Specifically, RubyKoans teaches you Ruby and TDD by  forcing you fix tests that are broken. Each test case encompasses a different part of the language. Some people think that this is like [being taught to swim by getting thrown into the ocean][2] , but I think RubyKoans does a fantastic job keeping the lessons tight, focused and informative.
 
 
 Getting RubyKoans working on your system is really simple. Download and install Ruby, then just download their examples and extract them somewhere on your drive. Their website has all the instructions to get you up and running on *nix or windows.
@@ -26,7 +26,7 @@ Working your way through the tests is pretty easy. Launch a new command line win
     $ ruby /path/to/your/rubykoans/dir/path_to_enlightenment.rb
 
 
-After a few seconds you should see an output similar to&nbsp;below:
+After a few seconds you should see an output similar to below:
 
 
 [![][3] ][4] 

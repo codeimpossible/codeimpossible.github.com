@@ -8,7 +8,7 @@ slug: "Notepad-it-s-time-we-saw-other-editors"
 ## Notepad++ is an awesome text editor but it's become a bit of a frustration point lately, so I'm trying out a new editor: SublimeText
 
 
-Notepad++ has been my text editor of choice for the past 6 years. I&#39;ve always found it to be a productivity aide and it&#39;s always&nbsp;**just worked**. However, lately, Notepad++ has a nasty habit of losing all of my settings and it&#39;s becoming unbearable.
+Notepad++ has been my text editor of choice for the past 6 years. I&#39;ve always found it to be a productivity aide and it&#39;s always **just worked**. However, lately, Notepad++ has a nasty habit of losing all of my settings and it&#39;s becoming unbearable.
 
 
 I asked on twitter the other day if anyone had a better editor that they had used on Windows. I got a lot of good suggestions and most of them were for [Sublime Text][1] .
@@ -20,7 +20,7 @@ First things first: you should be aware that SublimeText is not free. It has an 
 The good news is that SublimeText is licensed on a per-user basis, not per-machine. This means you can install your licensed copy of SublimeText on as many machines as you like. Also, SublimeText uses a hosted version of Python v2.6.5, so you can build some pretty awesome plugins. I'll have a post soon on how to build a pretty sweet plugin in a few days.
 
 
-SublimeText has an awesome set of features. I've pointed out a few of my favorites in the screenshot below but there are others that deserve a mention.&nbsp;
+SublimeText has an awesome set of features. I've pointed out a few of my favorites in the screenshot below but there are others that deserve a mention. 
 
 
 ![][2]
@@ -35,7 +35,7 @@ SublimeText has a really great tab autocompletion system. It auto-completes loca
 
 
 **Finding stuff is easier**
-The find function is incredibly easy to use, just hit ctrl+f and start typing. SublimeText will bring you to the first match and start highlighing all the other matches.&nbsp;Find and replace uses&nbsp;**real** regular expressions, not the strange hybrid that notepad++ uses and definitely not that filthy mess that visual studio tries to pass off as regular expressions.
+The find function is incredibly easy to use, just hit ctrl+f and start typing. SublimeText will bring you to the first match and start highlighing all the other matches. Find and replace uses **real** regular expressions, not the strange hybrid that notepad++ uses and definitely not that filthy mess that visual studio tries to pass off as regular expressions.
 
 
 I'll be evaluating SublimeText for another couple of days, building out some plugins and using it as my default for a while before I make the decision to buy it, but it's already impressed the hell out of me and made me want to stop using Notepad++.

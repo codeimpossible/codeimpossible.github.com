@@ -11,22 +11,22 @@ I made an example of the piece of code that was giving us trouble. Why  will `co
     class Program
     {
 
-            private static string xml = @"<?xml version=""1.0"" encoding=""UTF-8""?> 
-    <kml xmlns=""http://earth.google.com/kml/2.0"">
-      <Document>
-      <Placemark>
-       <name>my office</name>
-       <LookAt>
-          <longitude>8.853193712983327</longitude>
-          <latitude>53.10919982492059</latitude>
-          <range>500000</range><tilt>0</tilt><heading>0</heading>
-       </LookAt>
-       <Point>
-         <coordinates>8.853193712983327,53.10919982492059,10</coordinates>
-       </Point>
-      </Placemark>
-     </Document>
-    </kml>
+            private static string xml = @"&lt;?xml version=""1.0"" encoding=""UTF-8""?&gt; 
+    <kml xmlns=""http://earth.google.com/kml/2.0""&gt;
+      &lt;Document&gt;
+      &lt;Placemark&gt;
+       <name>my office&lt;/name&gt;
+       &lt;LookAt&gt;
+          <longitude>8.853193712983327&lt;/longitude&gt;
+          <latitude>53.10919982492059&lt;/latitude&gt;
+          <range>500000</range><tilt>0</tilt><heading>0&lt;/heading&gt;
+       &lt;/LookAt&gt;
+       &lt;Point&gt;
+         <coordinates>8.853193712983327,53.10919982492059,10&lt;/coordinates&gt;
+       &lt;/Point&gt;
+      &lt;/Placemark&gt;
+     &lt;/Document&gt;
+    </kml&gt;
     ";
 
         static void Main ( string[] args )

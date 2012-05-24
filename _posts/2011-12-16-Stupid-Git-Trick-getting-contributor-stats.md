@@ -8,7 +8,7 @@ slug: "Stupid-Git-Trick-getting-contributor-stats"
 ## Getting contributor stats for your non-public project can be a real pain, that is, unless you're using git!
 
 
-We use [github][1] &nbsp;for all of our source code and documentation on the [Ohloh][2] &nbsp;team. We&#39;ve even got a few&nbsp;[public open source][3] &nbsp;projects up there that you should check out, but I&#39;ll talk about those another time.
+We use [github][1]  for all of our source code and documentation on the [Ohloh][2]  team. We&#39;ve even got a few [public open source][3]  projects up there that you should check out, but I&#39;ll talk about those another time.
 
 
 Earlier this week I tweeted my YTD commit stats from my new job:
@@ -58,7 +58,7 @@ If you've never used gawk before this might be really strange looking to you but
     
 
 
-This will pipe (more about piping in the next section) the output from the `git log` command into gawk which will use each line as a new set of arguments and will keep a running total of the additions (first argument) , deletions (second argument) and the difference between the two (the &quot;true&quot; lines of code I&#39;ve commited).
+This will pipe (more about piping in the next section) the output from the `git log` command into gawk which will use each line as a new set of arguments and will keep a running total of the additions (first argument) , deletions (second argument) and the difference between the two (the "true" lines of code I&#39;ve commited).
 
 
 After gawk is done we'll see this result on our terminal:
@@ -71,7 +71,7 @@ After gawk is done we'll see this result on our terminal:
 For those of you who are linux termnial n00bs like me, the `\` in the terminal command above is a line continuation character. It lets us tell the terminal that the command is continued on the next line.
 
 
-The `|` character tells the terminal to take the output from the command on the left and feed it to the command on the right, this is called &quot;piping&quot;.
+The `|` character tells the terminal to take the output from the command on the left and feed it to the command on the right, this is called "piping".
 
 
 For all my Windows peeps, you can grab [grep][5]  and [gawk][6]  for Windows to get this to work.
@@ -84,7 +84,7 @@ Now, back to the stats. They&#39;re great but they are not really accurate are t
 When I posted those numbers on the twitters I totally ignored the fact that I was counting files that I didn&#39;t write. So I needed to figure out how to remove certain lines from the result *before* it gets passed into gawk.
 
 
-I found grep has a `-v` option that tells it to ignore lines that match the text supplied. So I can use the following in the &quot;pipeline&quot; (a chain of piped commands) to trim out the unwanted code file.
+I found grep has a `-v` option that tells it to ignore lines that match the text supplied. So I can use the following in the "pipeline" (a chain of piped commands) to trim out the unwanted code file.
 
 
     grep -v public/javascripts/jquery
@@ -138,7 +138,7 @@ So now that we have a much better way of determining commit stats, I re-did all 
 **Css:** added lines: 416 removed lines: 220
 
 
-**Project Total:**&nbsp;added lines: 2574 removed lines: 1531
+**Project Total:** added lines: 2574 removed lines: 1531
 
 
  - 6.9% of removals and 27% of additions were unit tests

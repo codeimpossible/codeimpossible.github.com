@@ -15,7 +15,7 @@ My solution is pretty simple but it works:
     var getLargestPrimeFactor = function(num)
     {
         var factors = [];
-        for ( var f = 2; f < num; f++ )
+        for ( var f = 2; f &lt; num; f++ )
         {
             if( num%f == 0 )
             {

@@ -14,7 +14,7 @@ I came across this issue just at quitting time yesterday and was blown away when
     public class UsersController : Controller
     {
 
-        List<string> users = new List<string> ()
+        List<string> users = new List&lt;string&gt; ()
             {
                 "mace.windu",
                 "yoda",

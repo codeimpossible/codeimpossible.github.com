@@ -1,7 +1,7 @@
 ---
 layout: post
 status: publish
-title: 'Make &quot;Implement Interface&quot; use auto properties'
+title: 'Make "Implement Interface" use auto properties'
 slug: "Make-Implement-Interface-use-auto-properties"
 ---
 
@@ -19,7 +19,7 @@ To see what I mean create a new class, something simple...
 yeah, like that.
 
 
-Now move your cursor over &quot;IDisposable&quot; and press ctrl+period. Selecting &quot;Implement Interface&quot; from the menu that appears will automagically insert all the properties and methods needed to make your class conform to the `IDisposable` interface.
+Now move your cursor over "IDisposable" and press ctrl+period. Selecting "Implement Interface" from the menu that appears will automagically insert all the properties and methods needed to make your class conform to the `IDisposable` interface.
 
 
 It's very handy, but it generates the properties in a way that I'm not particularly a fan of:
@@ -55,8 +55,8 @@ I initially thought I would have to modify some built-in T4 template but thankfu
 The file you&#39;re looking for is in the `Refactoring` directory and is named `PropertyStub.snippet`. Open this guy up in your favorite text editor - don&#39;t worry it&#39;s just xml - and find the part that looks like this:
 
 
-    <Code Language="csharp">
-        <![CDATA[$signature$
+    &lt;Code Language="csharp"&gt;
+        &lt;![CDATA[$signature$
     {
         $GetterAccessibility$ get 
         { 
@@ -66,15 +66,15 @@ The file you&#39;re looking for is in the `Refactoring` directory and is named `
         { 
             throw new $Exception$(); 
         }
-    }]]>
-    </Code>
+    }]]&gt;
+    </Code&gt;
     
 
 
 Replace this xml with the xml below and you'll be good to go after a quick restart of Visual Studio!
 
 
-    <Code Language="csharp">
-        <![CDATA[$signature$ { $GetterAccessibility$ get; $SetterAccessibility$ set; }]]>
-    </Code>
+    &lt;Code Language="csharp"&gt;
+        &lt;![CDATA[$signature$ { $GetterAccessibility$ get; $SetterAccessibility$ set; }]]&gt;
+    </Code&gt;
 

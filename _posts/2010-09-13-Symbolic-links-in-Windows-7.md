@@ -16,7 +16,7 @@ Symbolic links have been around for a looooooong time ( in pretty much every oth
 
 To make a symbolic link, open a command line and use mklink (in Windows Vista and greater):
     
-    mklink /D <path_to_symbolic_dir> <path_to_target_dir>
+    mklink /D <path_to_symbolic_dir> &lt;path_to_target_dir&gt;
     
 For example:
     

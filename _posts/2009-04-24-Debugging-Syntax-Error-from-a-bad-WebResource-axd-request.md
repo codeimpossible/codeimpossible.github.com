@@ -1,7 +1,7 @@
 ---
 layout: post
 status: publish
-title: 'Debugging &quot;Syntax Error&quot; from a bad WebResource.axd request'
+title: 'Debugging "Syntax Error" from a bad WebResource.axd request'
 slug: "Debugging-Syntax-Error-from-a-bad-WebResource-axd-request"
 ---
 "Syntax Error, Line: 2, Char: 0". How many of you out there have seen this error while working on a web project? Usually it's because of a forgotten semi-colon or parenthesis in some external javascript file. But sometimes it's something more sinister... Something darker, dirtier and just a little bit more evil. After seeing the error message, I opened up Internet Explorer's options dialog and unchecked the following options:

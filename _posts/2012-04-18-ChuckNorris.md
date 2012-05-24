@@ -8,13 +8,13 @@ slug: "ChuckNorris"
 ## @JohnBubriski mentioned a project from the ChuckNorris suite of tools and I found myself browsing their git repo
 
 
-Looking through the git repo for&nbsp;[ChuckNorris][1] , seeing the amazing number of tools that&nbsp;&nbsp;[Dru Sellers][2]  and [Rob Reynolds][3]  have turned out leaves me thinking one thought:
+Looking through the git repo for [ChuckNorris][1] , seeing the amazing number of tools that  [Dru Sellers][2]  and [Rob Reynolds][3]  have turned out leaves me thinking one thought:
 
 
 ![][4] 
 
 
-If you don't know what ChuckNorris is, a lot of people call it a framework but it's more like a suite. There are, at the time I wrote this, about eight tools that target specific aspects of the development process. &nbsp;From database migrations, continuous builds, to deployment. ChuckNorris has a story for pretty much everything.
+If you don't know what ChuckNorris is, a lot of people call it a framework but it's more like a suite. There are, at the time I wrote this, about eight tools that target specific aspects of the development process.  From database migrations, continuous builds, to deployment. ChuckNorris has a story for pretty much everything.
 
 
 You don't have to use the tools together, they each work just as well separately, but when you combine them they make your life insanely simple.
@@ -32,7 +32,7 @@ To show my love for ChuckNorris I thought I would write up a few of the tools th
 [WarmuP][7] , which is what [@JohnBubriski][8]  and I were talking about, is a project bootstrapper. Setup your project directories, templates, dependencies once and WarmuP will get them from source control and perform a token replacement on them. Pretty cool stuff.
 
 
-[UppercuT][9]  is a templated build system written on top of nant. I&#39;ve used this in the past as well, it sports a ton of extensibility points. Pretty much every step in the build process has Pre, Post or Replace hook so you can make it do&nbsp;**anything** and you can make it do anything in a matter of minutes.
+[UppercuT][9]  is a templated build system written on top of nant. I&#39;ve used this in the past as well, it sports a ton of extensibility points. Pretty much every step in the build process has Pre, Post or Replace hook so you can make it do **anything** and you can make it do anything in a matter of minutes.
 
 
 Are there any OpenSource libraries/suites that you guys use that constantly surprise you with the sheer amount of features that they have? Give them a shoutout in the comments!

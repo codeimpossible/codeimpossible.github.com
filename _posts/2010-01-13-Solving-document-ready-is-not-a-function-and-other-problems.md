@@ -1,7 +1,7 @@
 ---
 layout: post
 status: publish
-title: 'Solving &quot;$(document).ready is not a function&quot; and other problems'
+title: 'Solving "$(document).ready is not a function" and other problems'
 slug: "Solving-document-ready-is-not-a-function-and-other-problems"
 ---
 ### Ever been working on a customer's site, writing some really awesome jQuery, you deploy it, and everything is awesome. And then you get an email one day...
@@ -23,8 +23,8 @@ You open up FireFox, activate FireBug, load the console, and type `alert($)`, pr
 You instead get:
 
     function $(element) {
-        if (arguments.length > 1) {
-            for (var i = 0, elements = [], length = arguments.length; i < length; i++) {
+        if (arguments.length &gt; 1) {
+            for (var i = 0, elements = [], length = arguments.length; i &lt; length; i++) {
                 elements.push($(arguments[i]));
             }
             return elements;
@@ -51,15 +51,15 @@ So what this does is call our anonymous function and pass the `jQuery` object. T
 
 Basically this will allow our code to run and use the `$` shortcut for JQuery as if it were loaded without any of these other libraries on the page. Here is what the completed code would look like:
     
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js" type="text/javascript">
-    </script>
+    &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js" type="text/javascript"&gt;
+    </script&gt;
     
-    <script src="http://ajax.googleapis.com/ajax/libs/prototype/1.6.1.0/prototype.js" type="text/javascript">
-    </script>
-    <script src="http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js" type="text/javascript">
-    </script>
+    &lt;script src="http://ajax.googleapis.com/ajax/libs/prototype/1.6.1.0/prototype.js" type="text/javascript"&gt;
+    </script&gt;
+    <script src="http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js" type="text/javascript"&gt;
+    </script&gt;
     
-    <script type="text/javascript">
+    &lt;script type="text/javascript"&gt;
     ( function($) {
         // we can now rely on $ within the safety of our &ldquo;bodyguard&rdquo; function
         $(document).ready( function() { alert("nyah nyah! I&rsquo;m able to use '$'!!!!");  } );
@@ -67,7 +67,7 @@ Basically this will allow our code to run and use the `$` shortcut for JQuery as
     
     //this will fail
     $(document).ready( function() { alert('fail?'); } );
-    </script>
+    </script&gt;
     
 
 

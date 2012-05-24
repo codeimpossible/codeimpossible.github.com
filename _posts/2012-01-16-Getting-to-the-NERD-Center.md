@@ -23,10 +23,10 @@ I try to bring new people with me as much as possible and I find that getting th
 2) This is the right hand turn that you will not realize is there until you are almost past it. Watch out for merging traffic from the left. This turn will put you on the home stretch. Memorial drive. Take in the scenic Charles River on your left, but don't stare too long because...
 
 
-3)&nbsp;You have to make this right hand turn into the main "driveway" which leads you to...&nbsp;
+3) You have to make this right hand turn into the main "driveway" which leads you to... 
 
 
-4)&nbsp;the NERD Center parking garage!
+4) the NERD Center parking garage!
 
 
 Park and enjoy your free pizza, event speakers and networking!

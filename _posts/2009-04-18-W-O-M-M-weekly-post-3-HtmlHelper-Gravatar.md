@@ -101,7 +101,7 @@ Also, I'm not sure if this is a no-no or what, but I did put the extension class
 Alright so we have some code now, let's take a look at how it can be used in our views.
 
     
-    <%= Html.Gravatar(
+    &lt;%= Html.Gravatar(
         Model.Email, // the email address
         50,          // size, in pixels of the avatar
         GravatarDefaultTypes.Identicon,
@@ -109,8 +109,8 @@ Alright so we have some code now, let's take a look at how it can be used in our
         new RouteValueDictionary(new {
         style = "vertical-align: middle;"
         })
-    )%> 
-     <%= Model.UserName %> 
+    )%&gt; 
+     &lt;%= Model.UserName %&gt; 
 
 
 Let's see how that looks.

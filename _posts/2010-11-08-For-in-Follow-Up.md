@@ -22,7 +22,7 @@ The for/in loop in JavaScript is powerful but it definitely doesn&#39;t do what 
 In most other programming languages these days, everything is an object. You can see this in current languages like C# where everything inherits from System.Object or in Ruby where you can assign properties and methods to anything at will.
 
 
-JavaScript is an object oriented language but it&#39;s implementation of objects is a little different from other languages. In JavaScript every object (every thing) is an array - a special array called an &quot;associative array&quot;. If you&#39;re a C# developer think `Dictionary<string, object>`. If you&#39;re a python developer then you&#39;re already familiar with this concept. So in JavaScript:
+JavaScript is an object oriented language but it&#39;s implementation of objects is a little different from other languages. In JavaScript every object (every thing) is an array - a special array called an "associative array". If you&#39;re a C# developer think `Dictionary&lt;string, object&gt;`. If you&#39;re a python developer then you&#39;re already familiar with this concept. So in JavaScript:
 
 
     var x = {
@@ -33,7 +33,7 @@ JavaScript is an object oriented language but it&#39;s implementation of objects
     y["something"] = "hi";
 
 
-`x` and `y` define the same thing. Both objects will have a `something` property with the value `"hi"`.&nbsp;*Need more proof?*Try the following:
+`x` and `y` define the same thing. Both objects will have a `something` property with the value `"hi"`. *Need more proof?*Try the following:
 
 
     alert( typeof( new Array() ) );

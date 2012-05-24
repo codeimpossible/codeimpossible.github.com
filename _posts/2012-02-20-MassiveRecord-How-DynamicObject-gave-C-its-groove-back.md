@@ -17,13 +17,13 @@ In this post I'm going to explain a bit about how MassiveRecord can have FindByI
 **First, a little about the dynamic keyword and DynamicObject.**
 
 
-The CLR in .net has always been like a nosey neighbors.&nbsp;It wants to know when your garbage is collected, what objects you have laying around in your yard, and what type each of your variables is.
+The CLR in .net has always been like a nosey neighbors. It wants to know when your garbage is collected, what objects you have laying around in your yard, and what type each of your variables is.
 
 
 Okay, so I couldn't think of a good analogy for the last one, but I think you get the point.
 
 
-In .Net 4.0&nbsp;Microsoft added the dynamic keyword - mostly to make working with COM a lot easier - but the COM developers gains are ours too. The dynamic keyword gives us the ability to tell the CLR to back off.
+In .Net 4.0 Microsoft added the dynamic keyword - mostly to make working with COM a lot easier - but the COM developers gains are ours too. The dynamic keyword gives us the ability to tell the CLR to back off.
 
 
 It let' s us say "I know what this object is, and I don't want to care about its type." It's the developer equivalent of closing your blinds while your nosey neighbor - Carl Lee Richman (get it?) - sits, frustrated, in his living room with his binoculars.
@@ -72,9 +72,9 @@ Since Massive's DynamicModel inherits from DynamicObject, MassiveContextBase can
             var method = binder.Name.ToLower().Replace( "findby", "" );
             var methodColumns = Regex.Split( method, "and" );
     
-            for( int i = 0; i < methodColumns.Length; i++ )
+            for( int i = 0; i &lt; methodColumns.Length; i++ )
                 where.AppendFormat( "{0} [{1}] = {2} ", 
-                                        i > 0 ? " and " : "", 
+                                        i &gt; 0 ? " and " : "", 
                                         methodColumns[ i ], 
                                         ToSql( args[ i ] ) );
             result = All( where: where.ToString() );
@@ -112,9 +112,9 @@ Lets take a look at the first IF block:
         var method = binder.Name.ToLower().Replace( "findby", "" );
         var methodColumns = Regex.Split( method, "and" );
     
-        for( int i = 0; i < methodColumns.Length; i++ )
+        for( int i = 0; i &lt; methodColumns.Length; i++ )
             where.AppendFormat( "{0} [{1}] = {2} ", 
-                                    i > 0 ? " and " : "", 
+                                    i &gt; 0 ? " and " : "", 
                                     methodColumns[ i ], 
                                     ToSql( args[ i ] ) );
         result = All( where: where.ToString() );
@@ -122,7 +122,7 @@ Lets take a look at the first IF block:
     }
 
 
-First thing MassiveRecord needs is the method name. *Are you trying to invoke a MassiveRcord method or a Massive method?* This is done by checking for a &quot;trigger phrase&quot;, specifically &quot;findby&quot;. If MassiveRecord knows the method it is broken out into columns and each column is then put into a WHERE clause using custom code - ToSql() - to format the names.
+First thing MassiveRecord needs is the method name. *Are you trying to invoke a MassiveRcord method or a Massive method?* This is done by checking for a "trigger phrase", specifically "findby". If MassiveRecord knows the method it is broken out into columns and each column is then put into a WHERE clause using custom code - ToSql() - to format the names.
 
 
 Once this step is done MassiveRecord passes the WHERE clause off to Massive's All() method and returns the result to the user. TryInvokeMember demands we return a boolean value - true if the method was handled or false if the method was not. If we return a false here then the user would see an exception at run time saying that the method could not be found.
@@ -157,7 +157,7 @@ So that, in a nutshell, is how MassiveRecord does its voodoo to give you FindBy*
 If you haven&#39;t done so already, please checkout [MassiveRecord on github][3] , fork it, submit patches, features, whatever!
 
 
-&nbsp;
+ 
 
 
   [1]: http://codeimpossible.com/2012/2/13/MassiveRecord-A-nice-warm-blanket-for-Massive

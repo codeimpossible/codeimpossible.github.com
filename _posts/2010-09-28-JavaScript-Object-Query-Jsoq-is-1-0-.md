@@ -32,7 +32,7 @@ Below is what I would call the common jsoq use case. The code below will find th
     
     var result = $q(somearray)
                         .where(function(item) {
-                            return item.value.length > 3;
+                            return item.value.length &gt; 3;
                         })
                         .first()
                         .select("id");

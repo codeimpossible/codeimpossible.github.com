@@ -30,19 +30,19 @@ Why is the code above necessary? Why should you stop using alerts in your produc
 **Alerts block the javascript execution.** When you call alert the entire javascript thread blocks until the alert dialog is closed. Sounds pretty useful right?
 
 
-**Alerts block the browser.**&nbsp;Alert dialogs are displayed [modally][2] &nbsp;which means that the parent thread (the browser) blocks until you close them.&nbsp;
+**Alerts block the browser.** Alert dialogs are displayed [modally][2]  which means that the parent thread (the browser) blocks until you close them. 
 
 
-**They look terrible.**&nbsp;This is pretty self explanatory. I&#39;ve never had an alert fit in with a websites ux. It&#39;s actually pretty jarring when you see one.
+**They look terrible.** This is pretty self explanatory. I&#39;ve never had an alert fit in with a websites ux. It&#39;s actually pretty jarring when you see one.
 
 
-**Alerts only display strings.**&nbsp;Console.log can display all sorts of data, and is included in most major browsers (and node.js) which is why I chose to use console.log as a replacement for alert in the snippet above.
+**Alerts only display strings.** Console.log can display all sorts of data, and is included in most major browsers (and node.js) which is why I chose to use console.log as a replacement for alert in the snippet above.
 
 
-**Alerts tend to lead to bad behaviors.** I&#39;ve been working in web development for about 9 years now and in every codebase I&#39;ve worked on there is, somewhere, an alert with profanity or &quot;what the hell&quot;, or &quot;WTF&quot;, or some kind of rediculous message that a dev left in there to signal when they got to some unexpected block of code.
+**Alerts tend to lead to bad behaviors.** I&#39;ve been working in web development for about 9 years now and in every codebase I&#39;ve worked on there is, somewhere, an alert with profanity or "what the hell", or "WTF", or some kind of rediculous message that a dev left in there to signal when they got to some unexpected block of code.
 
 
-To this day, some developers still prefer to use this method but with all of the javascript unit test frameworks and in-browser debuggers out there this just doesn't make sense.&nbsp;
+To this day, some developers still prefer to use this method but with all of the javascript unit test frameworks and in-browser debuggers out there this just doesn't make sense. 
 
 
   [1]: http://dl.dropbox.com/u/6291954/15086571.jpg

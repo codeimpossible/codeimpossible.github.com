@@ -65,22 +65,22 @@ Here is the code I used to achieve this (This code depends on [Moq v3.0.108.5 wh
     public static class JsonResultExtensions
     {
     
-        public static T Deserialize<T>(this JsonResult json, Controller controller)
+        public static T Deserialize&lt;T&gt;(this JsonResult json, Controller controller)
         {
             
             var jsonSB = new StringBuilder();
             
-            var httpResponseMock = new Mock<httpResponseBase>();
+            var httpResponseMock = new Mock&lt;httpResponseBase&gt;();
             
-            httpResponseMock.Setup(mock => {
-                mock.Write(It.IsAny<string>());
-            }).Callback<string>((s) => {
+            httpResponseMock.Setup(mock =&gt; {
+                mock.Write(It.IsAny&lt;string&gt;());
+            }).Callback&lt;string>((s) =&gt; {
                 jsonSB.Append(s);
             });
             
-            var httpContextMock =  new Mock<httpContextBase>();
+            var httpContextMock =  new Mock&lt;httpContextBase&gt;();
             
-            httpContextMock.Setup(mock => mock.Response)
+            httpContextMock.Setup(mock =&gt; mock.Response)
                             .Returns(httpResponseMock.Object);
             
             controller.ControllerContext
@@ -89,7 +89,7 @@ Here is the code I used to achieve this (This code depends on [Moq v3.0.108.5 wh
             jsonResult.ExecuteResult(controller.ControllerContext);
             
             return new JavaScriptSerializer()
-                        .Deserialize<T>(jsonSB.ToString());
+                        .Deserialize&lt;T&gt;(jsonSB.ToString());
         }
     }
 
@@ -97,7 +97,7 @@ Here is the code I used to achieve this (This code depends on [Moq v3.0.108.5 wh
     
     var viewResult = controller.Index() as JsonResult;
     var jsonData =
-        viewResult.Deserialize<IDictionary<string, object>>(controller);
+        viewResult.Deserialize<IDictionary&lt;string, object>&gt;(controller);
     
     Assert.AreEqual("this is a test message", jsonData["MessageBody"]);    
 

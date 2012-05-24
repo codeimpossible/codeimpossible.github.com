@@ -13,11 +13,11 @@ Safe Assumptions:
  3. This code compiles with no warnings or errors
  4. This code **will** throw an exception at runtime.
     
-    public IList<TModel> GetAllByCriteria<TModel> ( Expression<Func<TModel, bool>> criteria )
+    public IList<TModel> GetAllByCriteria<TModel> ( Expression<Func&lt;TModel, bool>&gt; criteria )
     {
-        Func<TModel, bool> action = criteria.Compile();
-        return _dictionary.Where( pair => 
-            action( (TModel)pair.Value ) ).Cast<TModel>().ToList();
+        Func&lt;TModel, bool&gt; action = criteria.Compile();
+        return _dictionary.Where( pair =&gt; 
+            action( (TModel)pair.Value ) ).Cast&lt;TModel&gt;().ToList();
     }
     
 

@@ -24,7 +24,7 @@ We have a function that takes an argument and checks to see if it contains a url
     });
 
 
-Note, in order to pimp my own stuff a bit, I&#39;m using my javascript testing library [BlockyTest][1] , but you could use [Qunit][2] &nbsp;or [JSunit][3] .
+Note, in order to pimp my own stuff a bit, I&#39;m using my javascript testing library [BlockyTest][1] , but you could use [Qunit][2]  or [JSunit][3] .
 
 
   [1]: https://bitbucket.org/codeimpossible/blockytests/wiki/Home

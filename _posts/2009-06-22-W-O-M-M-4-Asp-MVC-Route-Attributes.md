@@ -47,34 +47,34 @@ GetRoutes' first order of business is to make a list of data that it will need t
                 BindingFlags.Public |
                 BindingFlags.DeclaredOnly;
     
-            public static IList<ControllerMetaData> GetControllers(this Assembly assembly)
+            public static IList&lt;ControllerMetaData&gt; GetControllers(this Assembly assembly)
             {
-                var controllers = assembly.GetTypes().ToList().FindAll(type =>
+                var controllers = assembly.GetTypes().ToList().FindAll(type =&gt;
                 {
                     var isValidController = type.IsClass &&
                         type.IsPublic &&
-                        type.IsSubclassOf<Controller>();
+                        type.IsSubclassOf&lt;Controller&gt;();
     
-                    var hasValidActions = type.GetMethods(ActionFlags).ToList().Any(m =>
+                    var hasValidActions = type.GetMethods(ActionFlags).ToList().Any(m =&gt;
                     {
                         var valid = false;
                         if (m.ReturnParameter != null && m.ReturnParameter.ParameterType == typeof(ActionResult))
                         {
-                            valid = m.GetAttributesOfType<RouteAttribute>().Count > 0;
+                            valid = m.GetAttributesOfType&lt;RouteAttribute>().Count &gt; 0;
                         }
     
                         return valid;
                     });
     
                     return isValidController && hasValidActions;
-                }).Select<Type, ControllerMetaData>((t) => new ControllerMetaData(t)).ToList();
+                }).Select&lt;Type, ControllerMetaData>((t) =&gt; new ControllerMetaData(t)).ToList();
     
                 return controllers;
             }
     
-            public static IDictionary<string, Route> GetRoutes(this Assembly assembly)
+            public static IDictionary&lt;string, Route&gt; GetRoutes(this Assembly assembly)
             {
-                var Routes      = new Dictionary<string, Route>();
+                var Routes      = new Dictionary&lt;string, Route&gt;();
     
                 var data = (from c in assembly.GetControllers()
                             from a in c.GetActions()
@@ -101,7 +101,7 @@ GetRoutes' first order of business is to make a list of data that it will need t
                         throw new MissingRouteParameterException("Unknown", r.RouteData.RoutePath);
                     }
     
-                    var missingParams = new List<ParameterMetaData>();
+                    var missingParams = new List&lt;ParameterMetaData&gt;();
     
                     if (r.RouteData.RequireRouteParams)
                     {
@@ -110,7 +110,7 @@ GetRoutes' first order of business is to make a list of data that it will need t
                                          select p).ToList();
                     }
     
-                    if (missingParams.Count > 0)
+                    if (missingParams.Count &gt; 0)
                     {
                         var param = missingParams.First();
                         throw new MissingRouteParameterException(param.Name, r.RouteData.RoutePath);
@@ -149,7 +149,7 @@ Slapping route attributes onto your classes and methods is all well and good but
     
     var routes = Assembly.GetCurrentExecutingAssembly().GetRoutes();
     
-    routes.ForEach(r => RouteTable.Add(r));
+    routes.ForEach(r =&gt; RouteTable.Add(r));
 
 This, although pretty easy, wasn't as readible as I wanted. So I added some extension methods to the RouteTable class:
     
