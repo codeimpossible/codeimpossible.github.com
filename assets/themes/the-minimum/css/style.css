@@ -62,9 +62,9 @@ h1, .h1 {
   letter-spacing: -1px;
 }
 h2, .h2 {
-  font-size: 42px;
-  line-height: 52px;
-  margin-top: 52px;
+  font-size: 34px;
+  line-height: 44px;
+  margin-top: 44px;
   margin-bottom: 26px;
   letter-spacing: -1px;
 }
@@ -189,7 +189,7 @@ a:visited {
   text-decoration: none;
 }
 a:hover {
-  color: #474747;
+  color: #369;
   text-decoration: none;
 }
 /* HIGHLIGHTER */
@@ -229,16 +229,13 @@ pre {
 /* MAIN
 --------------------------------------------------------------------------------- */
 .unit-article header {
-  background: url('/assets/themes/the-minimum/skin/100-90-5-monochrome.png');
-  background-repeat: repeat;
-  background-position: 0 0;
-  background-color: #BADA55;
+  background-color: #369;
   margin-bottom: 1.625em;
   padding-top: 1.625em;
   padding-bottom: 1.625em;
 }
 .unit-article header h1 {
-  color: #2d2d2d;
+  color: #eee;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -254,8 +251,9 @@ pre {
 .unit-article .entry-content h4 a:link,
 .unit-article .entry-content h5 a:link,
 .unit-article .entry-content h6 a:link {
-  color: #2d2d2d;
+  color: #369;
   border: 0;
+  text-decoration: underline;
 }
 .unit-article .entry-content h2 a:visited,
 .unit-article .entry-content h3 a:visited,
@@ -270,8 +268,9 @@ pre {
 .unit-article .entry-content h4 a:hover,
 .unit-article .entry-content h5 a:hover,
 .unit-article .entry-content h6 a:hover {
-  color: #474747;
+  color: #369;
   border: 0;
+  text-decoration: none;
 }
 .unit-article .entry-content:first-child h2,
 .unit-article .entry-content:first-child h3,
@@ -280,14 +279,13 @@ pre {
 .unit-article .entry-content:first-child h6 {
   margin-top: 0;
 }
-.unit-article a:link {
-  border-bottom: 1px dotted #99cc99;
+.unit-article .entry-content a:link {
+  color: #369;
+  text-decoration: underline;
 }
-.unit-article a:visited {
-  border-bottom: 1px dotted #77bb77;
-}
-.unit-article a:hover {
-  border-bottom: 1px dotted #bbddbb;
+.unit-article .entry-content a:hover {
+  color: #369;
+  text-decoration: none;
 }
 .unit-article blockquote {
   border-left: 1em solid rgba(21, 25, 25, 0.8);
