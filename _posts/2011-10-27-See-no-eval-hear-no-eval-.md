@@ -13,7 +13,7 @@ Eval is a function in JavaScript that allows developers to invoke the js compile
 
 Here&#39;s [what Eric Lippert says on eval][2] :
 
-> 
+&gt; 
 
 Eric uses a pretty contrived example in his blog post, I don't think a lot of JavaScript devs are misusing eval in the way he shows in his post.
 

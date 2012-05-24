@@ -19,7 +19,7 @@ Today I have one example of how TDD has saved my arse: I'm beginning work on add
 
         // uses WithViewData extension method from 
         // MvcContrib TestHelpers
-        result.WithViewData<List&lt;Project>&gt;();
+        result.WithViewData&lt;List&lt;Project&gt;&gt;();
     }
 
 Okay, now, let's create that controller so I can run my test and see it fail.

@@ -60,14 +60,14 @@ GetRoutes' first order of business is to make a list of data that it will need t
                         var valid = false;
                         if (m.ReturnParameter != null && m.ReturnParameter.ParameterType == typeof(ActionResult))
                         {
-                            valid = m.GetAttributesOfType&lt;RouteAttribute>().Count &gt; 0;
+                            valid = m.GetAttributesOfType&lt;RouteAttribute&gt;().Count &gt; 0;
                         }
     
                         return valid;
                     });
     
                     return isValidController && hasValidActions;
-                }).Select&lt;Type, ControllerMetaData>((t) =&gt; new ControllerMetaData(t)).ToList();
+                }).Select&lt;Type, ControllerMetaData&gt;((t) =&gt; new ControllerMetaData(t)).ToList();
     
                 return controllers;
             }

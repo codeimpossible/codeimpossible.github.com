@@ -10,7 +10,7 @@ slug: "This-blog-will-be-different-tomorrow"
 
 In the words of [Minecraft][1]  creator [Notch][2] :
 
-> 
+&gt; 
 
 How can I join in?
 
@@ -33,7 +33,7 @@ Well, if you&#39;re not a software developer we have a much easier option. Just 
 
     &lt;script type="text/javascript"&gt;
         window.location.href = "http://protestsopa.org/";
-    </script&gt;
+    &lt;/script&gt;
     
 
 
@@ -44,7 +44,7 @@ Completely understandable, and there is an option for you as well! If you includ
 
     &lt;script type="text/javascript"
     src="https://raw.github.com/SaraJo/SOPA-PIPA-Protest-Page/master/javascript-only/banner.min.js"&gt;
-    </script&gt;
+    &lt;/script&gt;
     
 
 

@@ -88,7 +88,7 @@ Then we simply register a few callbacks. The first one is executed when our app 
     });
     
     app.get(config.routes.index, function(req, res) {
-        res.send("<h1>Hello World!&lt;/h1&gt;")
+        res.send("&lt;h1&gt;Hello World!&lt;/h1&gt;")
     });
     
 
@@ -112,7 +112,7 @@ So when thats all put together, we end up with:
     });
     
     app.get(config.routes.index, function(req, res) {
-        res.send("<h1>Hello World!&lt;/h1&gt;")
+        res.send("&lt;h1&gt;Hello World!&lt;/h1&gt;")
     });
     
 

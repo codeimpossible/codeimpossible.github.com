@@ -66,11 +66,11 @@ Now you can use this code in your view like so:
 
 
     
-    <h2>About&lt;/h2&gt;
-    <p&gt;
+    &lt;h2&gt;About&lt;/h2&gt;
+    &lt;p&gt;
          Hello @Html.RouteInfo().name()! You are in the @Html.RouteInfo().action() action, 
     which is located in the @Html.RouteInfo().controller() controller.
-    </p&gt;
+    &lt;/p&gt;
     
 
 

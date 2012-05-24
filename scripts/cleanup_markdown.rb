@@ -11,8 +11,8 @@ Dir.glob(File.dirname(__FILE__) + '/../_posts/*.{md}') do |file|
     contents = contents
                 .gsub(/&nbsp;/, ' ')
                 .gsub(/&quot;/, '"')
-                .gsub(/(^\s{4,}.+)(>)/, '\1&gt;')
-                .gsub(/(^\s{4,}.+)(<)/, '\1&lt;')
+                .gsub(/>/, '&gt;')
+                .gsub(/</, '&lt;')
     writer.write contents
   end
 end

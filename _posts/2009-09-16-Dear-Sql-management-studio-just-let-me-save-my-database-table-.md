@@ -10,6 +10,6 @@ You may not have found it annoying enough to investigate but I sure did. I don't
 
 Well, anyway, here's your chance to get rid of that dialog once and for all.
 
-In Sql Management Studio, go to Tools -> Options, expand down the Designers node, and select Table and Database Designers. In the Table Options section uncheck Prevent saving changes that require table re-creation and you're done! 
+In Sql Management Studio, go to Tools -&gt; Options, expand down the Designers node, and select Table and Database Designers. In the Table Options section uncheck Prevent saving changes that require table re-creation and you're done! 
 
 You can now change your database tables hassle free!

@@ -45,7 +45,7 @@ So easy that if we wanted to get all fo the products in a category and with a ce
 MassiveRecord. Just. Works. It takes convention-based method calls, converts them to Massive black-magic and gives you the result. And there is very little configuration needed. Put this in your main application initialization code (global.asax) and you&rsquo;re golden:
 
 
-    DynamicTable.Configure( c => c.WhenAskedFor("Products").Use( s =&gt; {
+    DynamicTable.Configure( c =&gt; c.WhenAskedFor("Products").Use( s =&gt; {
         s.ConnectionString = "AdventureWorks";
         s.Table = "Products";
         s.PrimaryKey = "Id";

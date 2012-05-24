@@ -8,12 +8,12 @@ What is wrong with the code below?
  
 Safe Assumptions:
 
- 1. `_dictionary` is a valid non-null `Dictionary<object,object>`
+ 1. `_dictionary` is a valid non-null `Dictionary&lt;object,object&gt;`
  2. `_dictionary` contains items that will match the passed expression
  3. This code compiles with no warnings or errors
  4. This code **will** throw an exception at runtime.
     
-    public IList<TModel> GetAllByCriteria<TModel> ( Expression<Func&lt;TModel, bool>&gt; criteria )
+    public IList&lt;TModel&gt; GetAllByCriteria&lt;TModel&gt; ( Expression&lt;Func&lt;TModel, bool&gt;&gt; criteria )
     {
         Func&lt;TModel, bool&gt; action = criteria.Compile();
         return _dictionary.Where( pair =&gt; 

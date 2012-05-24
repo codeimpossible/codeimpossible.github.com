@@ -8,7 +8,7 @@ A symbolic link is a text file that contains a relative or absolute path to anot
 
 So let's say I had the following symbolic link setup: 
 
-`Folder A -linked-to-> Folder B.`
+`Folder A -linked-to-&gt; Folder B.`
 
 When I browse to `Folder A` I would see the contents of `Folder B` as if they existed in `Folder A`! Since the folders are linked I can change any of the files in either location, and I can delete the symbolic folder (`Folder A`) without deleting the target folder!
 
@@ -16,7 +16,7 @@ Symbolic links have been around for a looooooong time ( in pretty much every oth
 
 To make a symbolic link, open a command line and use mklink (in Windows Vista and greater):
     
-    mklink /D <path_to_symbolic_dir> &lt;path_to_target_dir&gt;
+    mklink /D &lt;path_to_symbolic_dir&gt; &lt;path_to_target_dir&gt;
     
 For example:
     

@@ -67,7 +67,7 @@ The file you&#39;re looking for is in the `Refactoring` directory and is named `
             throw new $Exception$(); 
         }
     }]]&gt;
-    </Code&gt;
+    &lt;/Code&gt;
     
 
 
@@ -76,5 +76,5 @@ Replace this xml with the xml below and you'll be good to go after a quick resta
 
     &lt;Code Language="csharp"&gt;
         &lt;![CDATA[$signature$ { $GetterAccessibility$ get; $SetterAccessibility$ set; }]]&gt;
-    </Code&gt;
+    &lt;/Code&gt;
 

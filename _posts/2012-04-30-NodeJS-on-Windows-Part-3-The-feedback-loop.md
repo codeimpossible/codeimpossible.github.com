@@ -49,7 +49,7 @@ Now, save your js file and check your powershell window. Go ahead... I'll wait.
 WASN'T THAT AWESOME?!?! Supervisor watches all your js files for changes, when changes are detected it will reload the app automatically! So let's change the header and see what happens.
 
 
-    res.send("<h1>Jared is the best!&lt;/h1&gt;");
+    res.send("&lt;h1&gt;Jared is the best!&lt;/h1&gt;");
     
 
 

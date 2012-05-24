@@ -36,7 +36,7 @@ After a bit of googling I found that this is indeed an issue with MvcTurbine but
 
 [Javier Lozano][1]  - the author of MvcTurbine, explains what&#39;s causing the problem:
 
-> 
+&gt; 
 
 Here are some links where you can [see the original post with Javier's answer][2] , take a [look at the code that Javier posted showing the fix in place][3] , and [the StackOverflow question that should provide some more context][4] .
 

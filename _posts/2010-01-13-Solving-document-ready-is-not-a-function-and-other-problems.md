@@ -8,7 +8,7 @@ slug: "Solving-document-ready-is-not-a-function-and-other-problems"
 
 Has this ever happened to you: you've been working on a customer's site, writing some really awesome jQuery flashy, fadey, scrolly, interactivey thing, you deploy it, and everything is awesome. The customer rejoices and the customer's customers rejoice. Rejoicing is had by everyone. And then you get an email one day:
 
-> "Everything is broken. We've kidnapped your dog. Fix our site or you'll never see Spartacus again."
+&gt; "Everything is broken. We've kidnapped your dog. Fix our site or you'll never see Spartacus again."
 
 And before you have time to wonder why you ever named your dog "Spartacus" to begin with (i mean **come. on.**), you're off in debug hell. 
 
@@ -52,12 +52,12 @@ So what this does is call our anonymous function and pass the `jQuery` object. T
 Basically this will allow our code to run and use the `$` shortcut for JQuery as if it were loaded without any of these other libraries on the page. Here is what the completed code would look like:
     
     &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js" type="text/javascript"&gt;
-    </script&gt;
+    &lt;/script&gt;
     
     &lt;script src="http://ajax.googleapis.com/ajax/libs/prototype/1.6.1.0/prototype.js" type="text/javascript"&gt;
-    </script&gt;
-    <script src="http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js" type="text/javascript"&gt;
-    </script&gt;
+    &lt;/script&gt;
+    &lt;script src="http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js" type="text/javascript"&gt;
+    &lt;/script&gt;
     
     &lt;script type="text/javascript"&gt;
     ( function($) {
@@ -67,7 +67,7 @@ Basically this will allow our code to run and use the `$` shortcut for JQuery as
     
     //this will fail
     $(document).ready( function() { alert('fail?'); } );
-    </script&gt;
+    &lt;/script&gt;
     
 
 

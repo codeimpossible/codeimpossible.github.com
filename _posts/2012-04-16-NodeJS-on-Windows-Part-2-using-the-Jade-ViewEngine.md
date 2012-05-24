@@ -33,7 +33,7 @@ Let&#39;s create our first view. We&#39;ll create a folder named `views` in the 
     
 
 
-If you&#39;ve used HAML before then you should understand this markup, it creates a html5 document (!!! 5) and then sets the `title` property of our view model into the `<title>` tag, then just renders a simple `&lt;h1&gt;` in the body.
+If you&#39;ve used HAML before then you should understand this markup, it creates a html5 document (!!! 5) and then sets the `title` property of our view model into the `&lt;title&gt;` tag, then just renders a simple `&lt;h1&gt;` in the body.
 
 
 Easy enough. Now let&#39;s get our app to render this. Right now, our app has no idea that our views are in the `/views` directory, so let&#39;s clue it in. Paste the following code just before the `app.listen()` call:

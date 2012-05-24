@@ -11,7 +11,7 @@ The above excerpt was written by Jeff Johson, the creator of the Xtree file mana
 
 Jeff was the lead developer on the Xtree software project that originally started out as an in-house tool but would soon become one of the most popular applications ever released for the DOS operating system. What set Xtree apart from every other application was how it showed you where your files were located.
 
-> Among the subjects discussed were how the program would represent the DOS directory structure on-screen, and what the screen might look like. I drew a picture of this outline on a white board. It looked like a tree that needed water. It was a swell picture but no one thought it could be done. Impossible, they said.
+&gt; Among the subjects discussed were how the program would represent the DOS directory structure on-screen, and what the screen might look like. I drew a picture of this outline on a white board. It looked like a tree that needed water. It was a swell picture but no one thought it could be done. Impossible, they said.
 
 Famous last words.
 

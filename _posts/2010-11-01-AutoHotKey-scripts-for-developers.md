@@ -31,17 +31,17 @@ This script will generate a self-calling anonymous function that scopes jQuery a
     return
 
 **Include jQuery from the Google CDN**
-This script will turn `{jqgoog#.#.#}` into a `<script>` tag pointing to that version of jquery, specified by the #.#.#, hosted on googles cdn. `{jqgoog1.4.2}` will become: *Line breaks added for readability*
+This script will turn `{jqgoog#.#.#}` into a `&lt;script&gt;` tag pointing to that version of jquery, specified by the #.#.#, hosted on googles cdn. `{jqgoog1.4.2}` will become: *Line breaks added for readability*
 
     &lt;script 
     type=&rdquo;text/javascript&rdquo; 
-    src=http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js>&lt;/script&gt;
+    src=http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js&gt;&lt;/script&gt;
 
 `{jqgoog1}` will become: *Line breaks added for readability*
 
     &lt;script 
     type=&rdquo;text/javascript&rdquo; 
-    src=http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js>&lt;/script&gt;
+    src=http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js&gt;&lt;/script&gt;
 
 Here is the script.
 
@@ -63,7 +63,7 @@ Here is the script.
     Send, {backspace}
     }
 
-    Send, <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/%jqVer%/jquery.min.js">&lt;/script&gt;
+    Send, &lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/%jqVer%/jquery.min.js"&gt;&lt;/script&gt;
         return
     }
     return

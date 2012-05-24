@@ -74,7 +74,7 @@ Here is the code I used to achieve this (This code depends on [Moq v3.0.108.5 wh
             
             httpResponseMock.Setup(mock =&gt; {
                 mock.Write(It.IsAny&lt;string&gt;());
-            }).Callback&lt;string>((s) =&gt; {
+            }).Callback&lt;string&gt;((s) =&gt; {
                 jsonSB.Append(s);
             });
             
@@ -97,7 +97,7 @@ Here is the code I used to achieve this (This code depends on [Moq v3.0.108.5 wh
     
     var viewResult = controller.Index() as JsonResult;
     var jsonData =
-        viewResult.Deserialize<IDictionary&lt;string, object>&gt;(controller);
+        viewResult.Deserialize&lt;IDictionary&lt;string, object&gt;&gt;(controller);
     
     Assert.AreEqual("this is a test message", jsonData["MessageBody"]);    
 
