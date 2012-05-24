@@ -1,7 +1,7 @@
 ---
 layout: post
 status: draft
-title: 'Interview questions that don't suck - jQuery'
+title: "Interview questions that don't suck - jQuery"
 slug: "Interview-questions-that-don-t-suck-jQuery"
 ---
 

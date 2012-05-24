@@ -1,7 +1,7 @@
 ---
 layout: post
 status: publish
-title: 'Notepad++, it's time we saw other editors'
+title: "Notepad++, it's time we saw other editors"
 slug: "Notepad-it-s-time-we-saw-other-editors"
 ---
 
@@ -20,7 +20,7 @@ First things first: you should be aware that SublimeText is not free. It has an 
 The good news is that SublimeText is licensed on a per-user basis, not per-machine. This means you can install your licensed copy of SublimeText on as many machines as you like. Also, SublimeText uses a hosted version of Python v2.6.5, so you can build some pretty awesome plugins. I'll have a post soon on how to build a pretty sweet plugin in a few days.
 
 
-SublimeText has an awesome set of features. I've pointed out a few of my favorites in the screenshot below but there are others that deserve a mention. 
+SublimeText has an awesome set of features. I've pointed out a few of my favorites in the screenshot below but there are others that deserve a mention.
 
 
 ![][2]

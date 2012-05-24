@@ -1,7 +1,7 @@
 ---
 layout: post
 status: publish
-title: 'Trailing whitespace is evil. Don't commit evil into your repo.'
+title: "Trailing whitespace is evil. Don't commit evil into your repo."
 slug: "Trailing-whitespace-is-evil-Don-t-commit-evil-into-your-repo-"
 ---
 
@@ -36,7 +36,7 @@ Fred opens up a terminal and does a quick check to see what Tim is talking about
 
 
     git diff master product-ratings-feature
-    
+
 
 
 *"Crap!"* the word jumps instantly into Freds mind. He can see immediately what Tims talking about. There a bunch of lines where the only thing different is the whitespace at the beginning or end of the line.
@@ -50,7 +50,7 @@ Fred opens up a terminal and does a quick check to see what Tim is talking about
 
 "Great, guess I've got some more work to do" Fred says to himself. He lets out a fairly audible sigh, opens up Visual Studio and starts typing away at the keyboard.
 
-## 
+##
 The moral of the story ##
 
 
@@ -78,7 +78,7 @@ How to Remove Trailing Whitespace on save in Visual Studio
         Handles DocumentEvents.DocumentSaved
         Dim fileName As String
         Dim result As vsFindResult
-    
+
         Try
             ' Remove trailing whitespace
             result = DTE.Find.FindReplace( _
@@ -90,7 +90,7 @@ How to Remove Trailing Whitespace on save in Visual Studio
                 document.FullName, _
                 "", _
                 vsFindResultsLocation.vsFindResultsNone)
-    
+
             If result = vsFindResult.vsFindResultReplaced Then
                 ' Triggers DocumentEvents_DocumentSaved event again
                 document.Save()
@@ -99,7 +99,7 @@ How to Remove Trailing Whitespace on save in Visual Studio
             MsgBox(ex.Message, MsgBoxStyle.OkOnly, "Trim White Space exception")
         End Try
     End Sub
-    
+
 
 
 Now save your new macro and whenever you save a file in Visual Studio this will run and trim all the trailing whitespace.
@@ -122,7 +122,7 @@ In the example above Fred could have saved himself a lot of time if he ran one c
 
     # run in the root of your repo directory
     mv .git/hooks/pre-commit.sample .git/hooks/pre-commit
-    
+
 
 
 This file has a check (on the last line) that will fail any commit when there are whitespace errors. It&#39;s not enabled by default so you have to remove the `.sample` from the file name to get git to run it.
@@ -132,7 +132,7 @@ This file has a check (on the last line) that will fail any commit when there ar
 High-five Yourself!!!
 
 
-![][1] 
+![][1]
 
 
   [1]: http://dl.dropbox.com/u/6291954/MnEIl.gif

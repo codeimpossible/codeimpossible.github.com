@@ -1,7 +1,7 @@
 ---
 layout: post
 status: publish
-title: 'A JavaScript interview question that doesn't suck'
+title: "A JavaScript interview question that doesn't suck"
 slug: "A-JavaScript-interview-question-that-doesn-t-suck"
 ---
 

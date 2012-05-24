@@ -1,11 +1,11 @@
 ---
 layout: post
 status: publish
-title: 'No, actually that's pretty accurate'
+title: "No, actually that's pretty accurate"
 slug: "No-actually-that-s-pretty-accurate"
 ---
 
-## Was talking about Rails with some friends. 
+## Was talking about Rails with some friends.
 
     Me: it is fast enough when it's loaded up
 
