@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Welcome
+title: "Hey, my name is Jared Barboza, I'm a Software Developer who specializes in JavaScript, Ruby, Python and C#. This is my blog." 
 tagline: Hey there
 ---
 {% include JB/setup %}
