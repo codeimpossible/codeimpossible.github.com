@@ -1,46 +1,27 @@
 ---
 layout: page
-title: "Hey, my name is Jared Barboza, I'm a Software Developer who specializes in JavaScript, Ruby, Python and C#. This is my blog." 
+title: Anything is possible if you have access to a compiler.
 tagline: Hey there
 ---
 {% include JB/setup %}
 
-Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
+## Hey, my name is Jared Barboza, I'm a Software Developer who specializes in JavaScript, Ruby, Python and C#. This is my blog.
 
-Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
+So, yeah, this is it. My little spot on teh interwebs.
 
-## Update Author Attributes
+### A long time ago, in a memory address far, far away
+My first computer was an IBM PC 5155 which weighed more than I did. My first experience with programming came just after Windows 95 was released. I got a copy of Visual Basic 4.0 for my birthday and I spent that entire summer locked in my room writing code and reading every book I could get my hands on. It was awesome.
 
-In `_config.yml` remember to specify your own data:
+I've been hooked on writing code ever since, and through the years I've had the chance to work on awesome projects with some really great technologies and people.
 
-    title : My Blog =)
+### Currently
+I record [a weekly podcast](http://thepullrequest.com?ref=codeimpossible) with some friends, am an active and outspoken proponent of open source software, am getting married to my Girlfriend of 5 years, and I'm [starting my own company](http://fragcastle.com?ref=codeimpossible).
 
-    author :
-      name : Name Lastname
-      email : blah@email.test
-      github : username
-      twitter : username
-
-The theme should reference these variables whenever needed.
-
-## Sample Posts
-
-This blog contains sample posts which help stage pages and blog data.
-When you don't need the samples anymore just delete the `_posts/core-samples` folder.
-
-    $ rm -rf _posts/core-samples
-
-Here's a sample "posts list".
+## I also write
+Below are all of the posts for this blog, I had to remove some of them when I migrated from my old host but I'm adding them back in as I get free time.
 
 <ul class="posts">
   {% for post in site.posts %}
     <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
-
-## To-Do
-
-This theme is still unfinished. If you'd like to be added as a contributor, [please fork](http://github.com/plusjade/jekyll-bootstrap)!
-We need to clean up the themes, make theme usage guides with theme-specific markup examples.
-
-
