@@ -5,9 +5,10 @@ title: "Trailing whitespace is evil. Don't commit evil into your repo."
 slug: "Trailing-whitespace-is-evil-Don-t-commit-evil-into-your-repo-"
 ---
 
-## Lately, I've beeen working on a lot of projects with different people/languages/editors, most of us were new git'ers and each project had a real problem with trailing whitespace.
+### Lately, I've beeen working on a lot of projects with different people/languages/editors, most of us were new git'ers and each project had a real problem with trailing whitespace.
 
-## Fred and Tim ##
+**Fred and Tim**
+
 It all starts out innocently enough. Fred, a mid-level developer at InfoTech Systems opens up his IM client and fires off a chat to a co-worker: "Hey Tim, can you check out my pull request? I'm done with the ratings feature and think we should merge it in".
 
 
@@ -38,7 +39,6 @@ Fred opens up a terminal and does a quick check to see what Tim is talking about
     git diff master product-ratings-feature
 
 
-
 *"Crap!"* the word jumps instantly into Freds mind. He can see immediately what Tims talking about. There a bunch of lines where the only thing different is the whitespace at the beginning or end of the line.
 
 
@@ -50,8 +50,7 @@ Fred opens up a terminal and does a quick check to see what Tim is talking about
 
 "Great, guess I've got some more work to do" Fred says to himself. He lets out a fairly audible sigh, opens up Visual Studio and starts typing away at the keyboard.
 
-##
-The moral of the story ##
+**The moral of the story**
 
 
 
@@ -67,39 +66,36 @@ A lot of IDEs and text editors have options to configure trailing whitespace (Su
 How to Remove Trailing Whitespace on save in Visual Studio
 
  1. Open visual studio (yep)
- 2. In the menu select Tools -&gt; Macros -&gt; Macros IDE (yeah, we&#39;re opening **another** IDE)
+ 2. In the menu select Tools -&gt; Macros -&gt; Macros IDE (yeah, we're opening **another** IDE)
  3. Expand "My Macros" in the Project Explorer (usually in the right-hand side of the window)
  4. Double-Click the EnvironmentEvents module (yep, it's VBA in all it's glory)
  5. Paste the code below just after the "Automatically generated code" region
 
-
-
-    Private Sub DocumentEvents_DocumentSaved(ByVal document As EnvDTE.Document) _
-        Handles DocumentEvents.DocumentSaved
-        Dim fileName As String
-        Dim result As vsFindResult
-
-        Try
-            ' Remove trailing whitespace
-            result = DTE.Find.FindReplace( _
-                vsFindAction.vsFindActionReplaceAll, _
-                "{:b}+$", _
-                vsFindOptions.vsFindOptionsRegularExpression, _
-                String.Empty, _
-                vsFindTarget.vsFindTargetFiles, _
-                document.FullName, _
-                "", _
-                vsFindResultsLocation.vsFindResultsNone)
-
-            If result = vsFindResult.vsFindResultReplaced Then
-                ' Triggers DocumentEvents_DocumentSaved event again
-                document.Save()
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.OkOnly, "Trim White Space exception")
-        End Try
-    End Sub
-
+        Private Sub DocumentEvents_DocumentSaved(ByVal document As EnvDTE.Document) _
+	        Handles DocumentEvents.DocumentSaved
+	        Dim fileName As String
+	        Dim result As vsFindResult
+	
+	        Try
+	            ' Remove trailing whitespace
+	            result = DTE.Find.FindReplace( _
+	                vsFindAction.vsFindActionReplaceAll, _
+	                "{:b}+$", _
+	                vsFindOptions.vsFindOptionsRegularExpression, _
+	                String.Empty, _
+	                vsFindTarget.vsFindTargetFiles, _
+	                document.FullName, _
+	                "", _
+	                vsFindResultsLocation.vsFindResultsNone)
+	
+	            If result = vsFindResult.vsFindResultReplaced Then
+	                ' Triggers DocumentEvents_DocumentSaved event again
+	                document.Save()
+	            End If
+	        Catch ex As Exception
+	            MsgBox(ex.Message, MsgBoxStyle.OkOnly, "Trim White Space exception")
+	        End Try
+	    End Sub
 
 
 Now save your new macro and whenever you save a file in Visual Studio this will run and trim all the trailing whitespace.
@@ -120,12 +116,11 @@ Get Git to help you out
 In the example above Fred could have saved himself a lot of time if he ran one command:
 
 
-    # run in the root of your repo directory
     mv .git/hooks/pre-commit.sample .git/hooks/pre-commit
 
 
 
-This file has a check (on the last line) that will fail any commit when there are whitespace errors. It&#39;s not enabled by default so you have to remove the `.sample` from the file name to get git to run it.
+This file has a check (on the last line) that will fail any commit when there are whitespace errors. It's not enabled by default so you have to remove the `.sample` from the file name to get git to run it.
 
 ## After all this, what should I do next? ##
 
