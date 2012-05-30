@@ -14,6 +14,6 @@
     
     var html = "<scr" + "ipt src='" + last_commit_url + "&callback=renderCommitSha'></scr" + "ipt>"; 
     
-    $('body').append("<br /><br />" + html);
+    $('body').append("<br /><br />&nbsp;<br />" + html);
   });
 })(jQuery, window);
