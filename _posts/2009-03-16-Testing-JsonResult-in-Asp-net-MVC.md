@@ -2,7 +2,7 @@
 layout: post
 status: publish
 title: 'Testing JsonResult in Asp.net MVC'
-slug: "Testing-JsonResult-in-Asp-net-MVC"
+slug: "testing-jsonresult-in-asp-net-mvc"
 ---
 So lately I've been working on a project using Asp.net MVC and TDD to build a web 2.0 application. It's a twitter-like application that I started a while ago but due to [my failure to test everything][1]  I lost about 99% of my work and had to start over from scratch.
 

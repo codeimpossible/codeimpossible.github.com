@@ -2,7 +2,7 @@
 layout: post
 status: publish
 title: 'Using jQuery on an Iframe'
-slug: "Using-jQuery-on-an-Iframe"
+slug: "using-jquery-on-an-iframe"
 ---
 The other day I had to alter the stylesheets in a child IFrame when a user selected an item from a drop-down. My first draft was pretty ugly, it ivolved getting the DOM from the child IFrame (by getting it's [contentWindow][1]  or [contentDocument][2]  property) then getting the &lt;head&gt; of the DOM and looping over all the child items... yuck!
 
