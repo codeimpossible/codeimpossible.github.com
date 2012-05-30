@@ -20,7 +20,7 @@ You open up FireFox, activate FireBug, load the console, and type `alert($)`, pr
     function (E, F) {
         return new (o.fn.init)(E, F);
     }
-{% highlight %}
+{% endhighlight %}
     
 You instead get:
 
@@ -37,7 +37,7 @@ You instead get:
         }
         return Element.extend(element);
     }
-{% highlight %}
+{% endhighlight %}
     
 Or even:
 
@@ -45,7 +45,7 @@ Or even:
     function $(id) {
         return document.getElementById(id);
     }
-{% highlight %}
+{% endhighlight %}
 
 **DOH!** Looks like another javascript library has been loaded and has overwritten the `$()` shortcut for jQuery. Woe is I. Why can't we all just get along?!? Well, we can't stop people from including their favorite javascript libraries, but what we can do is prevent our code from suffering as a result. We'll need a nice, big beefy, bodyguard to make sure our code isn't messed with while it's out clubbing with Prototype, Scriptaculous or even MooTools (who invited *him*??!?). Here's what our bodyguard function will look like
 
@@ -53,7 +53,7 @@ Or even:
     ( function($) {
     
     } ) ( jQuery );
-{% highlight %}
+{% endhighlight %}
 
 So what this does is call our anonymous function and pass the `jQuery` object. This will scope `$` our little function so we won't step on anyone else's toes (and they won't bump into us while we're on the dance floor and spill our drink everywhere). Okay, I think I&#39;ve taken the clubbing metaphor far enough.
 
@@ -77,7 +77,7 @@ Basically this will allow our code to run and use the `$` shortcut for JQuery as
     //this will fail
     $(document).ready( function() { alert('fail?'); } );
     </script>
-{% highlight %}
+{% endhighlight %}
 
 I love using this simple self-calling anonymous function style when working with jQuery because it saves me from typing `jQuery()`, which really does look a lot more ugly than using the `$()` shortcut. It also protects my code from any scoping issues and lets the code function normally when [jQuery is put into no conflict mode][1] .
 
