@@ -12,5 +12,7 @@
     };
     
     var html = "<scr" + "ipt src='" + last_commit_url + "?callback=renderCommitSha'></scr" + "ipt>"; 
+    
+    $('body').append(html);
   });
 })(jQuery, window);
