@@ -15,7 +15,7 @@ My first computer was an IBM PC 5155 which weighed more than I did. My first exp
 I've been hooked on writing code ever since, and through the years I've had the chance to work on awesome projects with some really great technologies and people.
 
 ### Currently
-I record [a weekly podcast](http://thepullrequest.com?ref=codeimpossible) with some friends, am an active and outspoken proponent of open source software, am getting married to my Girlfriend of 5 years, and I'm [starting my own company](http://fragcastle.com?ref=codeimpossible).
+I record [a weekly podcast](http://thepullrequest.com?ref=codeimpossible) with some friends, am an active and outspoken proponent of open source software, am getting married to my Girlfriend of 5 years, and I'm [starting a company](http://fragcastle.com?ref=codeimpossible) with [@JohnBubriski](http://johnnycode.com).
 
 ## I also write
 Below are all of the posts for this blog, I had to remove some of them when I migrated from my old host but I'm adding them back in as I get free time.
