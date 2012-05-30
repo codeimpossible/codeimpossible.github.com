@@ -8,12 +8,14 @@
       var commit_url = commit.url;
       var message = commit.commit.message.replace(/\r\n/ig, '');
       var $html = $('<a />', { href: commit_url, text: sha, title: message, target: "_blank" });
+      var $wrapper = $('<p />', { text: "&nbsp;" });
       
-      $html.appendTo('p.licence');
+      $html.appendTo($wrapper);
+      $wrapper.appendTo('p.licence');
     };
     
     var html = "<scr" + "ipt src='" + last_commit_url + "&callback=renderCommitSha'></scr" + "ipt>"; 
     
-    $('body').append("<br /><br />&nbsp;<br />" + html);
+    $('body').append(html);
   });
 })(jQuery, window);
