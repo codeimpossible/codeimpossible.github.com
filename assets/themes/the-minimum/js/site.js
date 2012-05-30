@@ -8,7 +8,9 @@
       var commit_url = commit.url;
       var message = commit.commit.message.replace(/\r\n/ig, '');
       var $html = $('<a />', { href: commit_url, text: sha, title: message, target: "_blank" });
-      var $wrapper = $('<p />', { text: "&nbsp;" });
+      var $wrapper = $('<p />');
+      
+      $wrapper.append("<br />&nbsp;");
       
       $html.appendTo($wrapper);
       $wrapper.appendTo('p.licence');
