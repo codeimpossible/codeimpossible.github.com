@@ -5,7 +5,7 @@ tagline: Hey there
 ---
 {% include JB/setup %}
 
-## Hey, my name is Jared Barboza, I'm a Software Developer who specializes in JavaScript, Ruby, Python and C#. This is my blog.
+## Hey, my name is Jared Barboza, I'm a Husband, Musician, Gamer, and Software Developer who specializes in JavaScript, Ruby, Python and C#. This is my blog.
 
 So, yeah, this is it. My little spot on teh interwebs.
 
@@ -15,7 +15,7 @@ My first computer was an IBM PC 5155 which weighed more than I did. My first exp
 I've been hooked on writing code ever since, and through the years I've had the chance to work on awesome projects with some really great technologies and people.
 
 ### Currently
-I record [a weekly podcast](http://thepullrequest.com?ref=codeimpossible) with some friends, am an active and outspoken proponent of open source software, am getting married to my Girlfriend of 5 years, and I'm [starting a company](http://fragcastle.com?ref=codeimpossible) with [@JohnBubriski](http://johnnycode.com).
+I record [a weekly podcast](http://thepullrequest.com?ref=codeimpossible) with some friends, am an active and outspoken proponent of open source software, and I'm [starting a company](http://fragcastle.com?ref=codeimpossible) with [@JohnBubriski](http://johnnycode.com).
 
 ## I also write
 Below are all of the posts for this blog, I had to remove some of them when I migrated from my old host but I'm adding them back in as I get free time.
