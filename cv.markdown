@@ -1,4 +1,10 @@
-## Skills 
+---
+layout: page
+title: "My Resume"
+tagline: 'Software Developer specializing in C# and JavaScript'
+---
+
+## Skills
 I have a very strong knowledge of JavaScript, in almost every job I've been known as the "JavaScript Guy". I've also been working with C# and ASP.net since version 1.0, and I've got 3 years of Ruby development under my belt.
 
 ### Programming Languages
@@ -10,25 +16,32 @@ C#, VB.net, Java
 JavaScript, Ruby, Python
 
 #### Web Frameworks
-Asp.net (and MVC), Rails, NancyFX
+Asp.net (and MVC), Rails
 
 #### JavaScript Libraries
 Backbone, Require, jQuery(like everyone else), Mustache(and Handlebars and Hogan) templating languages
 
-## Writing Samples
+### Writing Samples
 I love to write code but I also love to write about code. My blog started as a way for me to keep track of the things that I learned but it's also started to help other people, which is awesome.
 
 As far as I'm concerned, every developer should have a blog, even if they don't post every day. It let's you keep track of the WTFs you encounter during your career so that you can learn from them. I can't tell you how many times I refer back to my blog, not only for my own use, but as a reference point for the developers I work with.
 
 So here are my "greatest hits", the blog posts that I am most proud of.
 
-## Solving document.ready is not a function and other problems[view post](http://codeimpossible.com/2010/01/13/solving-document-ready-is-not-a-function-and-other-problems/)
-Has this ever happened to you: you’ve been working on a customer’s site, writing some really awesome jQuery flashy, fadey, scrolly, interactivey thing, you deploy it, and everything is awesome. The customer rejoices and the customer’s customers rejoice. Rejoicing is had by everyone. 
+#### Solving document.ready is not a function and other problems[view post](http://codeimpossible.com/2010/01/13/solving-document-ready-is-not-a-function-and-other-problems/)
+Has this ever happened to you: you've been working on a customer's site, writing some really awesome jQuery flashy, fadey, scrolly, interactivey thing, you deploy it, and everything is awesome. The customer rejoices and the customer's customers rejoice. Rejoicing is had by everyone.
 
-## Debugging "Syntax Error" from a bad WebResource.axd request [view post](http://codeimpossible.com/2009/04/24/debugging-syntax-error-from-a-bad-webresource-axd-request/)
-“Syntax Error, Line: 2, Char: 0?. How many of you out there have seen this error while working on a web project? Usually it’s because of a forgotten semi-colon or parenthesis in some external javascript file. But sometimes it’s something more sinister… Something darker, dirtier and just a little bit more evil. 
+#### Debugging "Syntax Error" from a bad WebResource.axd request [view post](http://codeimpossible.com/2009/04/24/debugging-syntax-error-from-a-bad-webresource-axd-request/)
+"Syntax Error, Line: 2, Char: 0?. How many of you out there have seen this error while working on a web project? Usually it's because of a forgotten semi-colon or parenthesis in some external javascript file. But sometimes it's something more sinister... Something darker, dirtier and just a little bit more evil.
 
 ## Employment
+### Black Duck Software (_2011-present_)
+#### Senior Ruby Developer (Ohloh.net)
+- Moved entire Ohloh.net UX to Twitter Bootstrap, lead the charge in refactoring javascript/SASS
+- Worked with team members on a huge Ruby codebase, implementing new features on a tight sprint schedule
+- Optimized queries on huge data sets (100's of millions of records)
+- Answered user support requests and helped prioritize workload for off-shore teammates
+
 
 ### Wake}fly Inc (_2009-2011_)
 #### Professional Services Manager
@@ -57,7 +70,7 @@ Key technologies used:
 ### ScerIS, Inc. (_2007-2009_)
 #### Software Developer
 
-*ScerIS E-forms:* Hired to be the lead developer on the ScerIS E-Forms application. The E-Forms application allowed businesses to eliminate paper waste by implementing their paper forms into an electronic document system using a form designer. 
+*ScerIS E-forms:* Hired to be the lead developer on the ScerIS E-Forms application. The E-Forms application allowed businesses to eliminate paper waste by implementing their paper forms into an electronic document system using a form designer.
 
 Users could then fill out these forms and, using a basic work-flow system, route the documents to other users. The system featured an electronic signature system where users could sign certain sections of documents (or the entire document) and any changes to these signed sections would invalidate those signatures.
 
@@ -78,7 +91,7 @@ Key technologies used:
 ### Cyphermint (_2004-2007_)
 #### Software Engineer
 
-*PayCash Remote:* I Designed and developed the “PayCash Remote” Network Monitoring and Management client \ server application: http://www.paycashremote.com which was used by over 10,000 kiosks that Cyphermint rolled out for clients such as DHL, AAA, and Bellsouth. 
+*PayCash Remote:* I Designed and developed the "PayCash Remote” Network Monitoring and Management client \ server application: http://www.paycashremote.com which was used by over 10,000 kiosks that Cyphermint rolled out for clients such as DHL, AAA, and Bellsouth.
 
 The PayCash Remote acted as a network and local system health monitoring system. With PayCash Remote Cyphermint was able to reduce maintenance costs to kiosks by 60%. PayCash Remote also handled deployment of kiosk updates and collection of kiosk analytics data. The remote updating system was used to transmit and install software updates on the kiosks and the analytics data was used to allow clients to measure traffic on the kiosk applications.
 
