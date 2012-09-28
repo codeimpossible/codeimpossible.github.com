@@ -2,5 +2,6 @@ a.brand img { padding-right: 5px; }
 .navbar .nav { padding-top: 5px; }
 h1, h2 { line-height: 1em; }
 h1 small { text-transform: uppercase; }
-h2 { padding-bottom: 1em; color: #bbb;}
+h2 { padding-bottom: 1em; color: #bbb; padding-top: .5em;}
 body { padding-top: 64px; font-size: 16px; }
+.page-header { border-bottom: 3px solid #A200FF!important; }
