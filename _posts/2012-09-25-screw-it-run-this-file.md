@@ -2,7 +2,7 @@
 layout: post
 title: 'Screw it, run this file!'
 slug: "screw-it-run-this-file"
-published: false
+date: '2012-09-28 00:00:00 -04:00'
 tags: "development, devx, developer-experience, practices"
 ---
 ## Ever experienced a nightmarish environment setup and thought "If this project is this hard to setup, how hard is it going to be to work on?". Yeah, me too.
@@ -22,7 +22,7 @@ I've worked on plenty of codebases whose setup story sounded like it was ripped 
 7. open the source in the IDE and compile
 8. run the unit tests
 
-_WHEW!_. I'm tired just writing that list out. Did you notice how long it took us to just get the code opened up in the editor? Thats rediculous. Especially when you consider what it takes to start working with the Rails project:
+_WHEW!_ I'm tired just writing that list out. Did you notice how long it took us to just get the code opened up in the editor? Thats rediculous. Especially when you consider what it takes to start working with the [Rails](http://github.com/rails/rails) project:
 
     $ bundle install
     $ rake test
@@ -41,14 +41,12 @@ This is a concept that I felt really strongly about when I wrote [Artigo](http:/
 
     $ rake artigo:first_time
 
-BOOM. You're setup. The `artigo:first_time` task cleans your db, migrates it, seeds it and then *runs the test suite*. If your project isn't this simple to get up and running then nobody is going to work on your stuff.
+BOOM. You're setup. This one task cleans your db, migrates it, seeds it and then *runs the test suite*. If your project isn't this simple to get up and running then nobody is going to work on your stuff.
 
-When making a service-oriented website your UX dev will suggest making registration "painfully obvious and simple" so that more people will register. What developer is going to bother with a 100 step setup guide just so they can submit a patch to your project?
+Dev experience for .Net developers is getting a lot better, with Nuget and its new(er) feature to auto-download dependencies on build, devX is finally getting pushed to the foreground.
 
-### The story for .Net devs
+But there is still more to be done. And it has to be done by us. We need to add unit tests to our projects, take the time to write a [single powershell script to setup IIS](http://mikefrobbins.com/2012/05/15/create-a-new-iis-website-with-powershell/) and migrate our databases with [RoundhousE](http://github.com/chucknorris/roundhouse). We don't have to use these specific solutions but we need to use _some_ solution.
 
-Good news everyone! Dev experience for .Net developers is getting a lot better. With Nuget and it's new(er) feature to auto-download dependencies on build, devX is getting pushed to the foreground.
-
-But there is still more to be done. Add unit tests to your projects, take the time to write a [single powershell script to setup IIS](http://mikefrobbins.com/2012/05/15/create-a-new-iis-website-with-powershell/) and migrate your database with [RoundhousE](http://github.com/chucknorris/roundhouse). In short, look at Rails, Jibbr and dozens of other projects to see how they are solving this problem and then _solve it_.
+In short, look at [Rails](http://github.com/rails/rails), [Jibbr](http://github.com/code52/jibbr) and dozens of other projects to see how they are solving this problem and then _solve it_.
 
 Your future contributors/teammates will thank you for it!
