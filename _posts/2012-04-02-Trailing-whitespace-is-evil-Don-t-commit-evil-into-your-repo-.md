@@ -63,7 +63,7 @@ This can make finding what actually changed in a file later on in the developmen
 A lot of IDEs and text editors have options to configure trailing whitespace (SublimeText make this insanely easy) but Visual Studio, amazingly, has no option for this.
 
 
-How to Remove Trailing Whitespace on save in Visual Studio
+## How to Remove Trailing Whitespace on save in Visual Studio
 
  1. Open visual studio (yep)
  2. In the menu select Tools -&gt; Macros -&gt; Macros IDE (yeah, we're opening **another** IDE)
@@ -101,7 +101,7 @@ How to Remove Trailing Whitespace on save in Visual Studio
 Now save your new macro and whenever you save a file in Visual Studio this will run and trim all the trailing whitespace.
 
 
-How to Remove trailing whitespace on save in Sublime Text 2
+## How to Remove trailing whitespace on save in Sublime Text 2
 
  1. In Sublime Text, open up the preferences menu and select "File Settings - User"
    - this is important because if you use the "Default" settings, they may be overwritten when you update Sublime Text to a new version.
@@ -111,7 +111,7 @@ How to Remove trailing whitespace on save in Sublime Text 2
 
 
 
-Get Git to help you out
+## Get Git to help you out
 
 In the example above Fred could have saved himself a lot of time if he ran one command:
 
