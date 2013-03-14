@@ -4,7 +4,7 @@ status: publish
 title: 'Spot the bug - for/in and JavaScript'
 slug: "Spot-the-bug-for-in-and-JavaScript"
 ---
-I'm poking around in the [JSOQ source][1]  this week and came across this gem. 
+I'm poking around in the JSOQ source this week and came across this gem. 
    
     var array = [
         { id: 1, num: 2 },
@@ -19,4 +19,3 @@ I'm poking around in the [JSOQ source][1]  this week and came across this gem.
     }
     
 The code above isn't calling `alert(item.id)`. Why is this?
-  [1]: http://bitbucket.org/codeimpossible/jsoq
