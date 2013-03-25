@@ -3,6 +3,17 @@ a.brand img { padding-right: 5px; }
 h1, h2 { line-height: 1em; }
 h1 small { text-transform: uppercase; }
 h2 { padding-bottom: 1em; color: #bbb; padding-top: .5em;}
-body { padding-top: 64px; font-size: 16px; }
+body {
+    padding-top: 64px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 29px;
+    border: none;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: auto;
+}
 .page-header { border-bottom: 3px solid #A200FF!important; }
 .label-info { background: #1BA1E2!important; border-radius: 0; }
+li {
+    line-height: 32px;
+}
