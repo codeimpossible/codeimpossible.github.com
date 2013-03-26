@@ -27,7 +27,7 @@ On Friday John and I stayed in our "stomping grounds" - the Westin lobby - until
 Luckily we finished RK Runner and published it to the android marketplace just as John took off to a Valve party. I headed out and did a few hours of cut-throat caverns with some friends. When John and I headed out @ 9:30 our game was live!!!
 
 ### Saturday, Dawn of the third day
-Saturday was by far, the most dificult day. We arrived at the exhibit hall around 8:30 and began setting up. We met our volunteers - who were great Lain was the best volunteer we could have hoped for, he kept us relaxed and focused.
+Saturday was by far, the most dificult day. We arrived at the exhibit hall around 8:30 and began setting up. We met our volunteers - who were great Iain was the best volunteer we could have hoped for, he kept us relaxed and focused.
 
 At about 9:50am, ten minutes until the floor opens, shit starts to get pretty real. You can hear the crowd getting amped up and they start announcing the countdown until pax starts over the PA system. It's exactly like the beginning of a round of Team Fortress.
 
