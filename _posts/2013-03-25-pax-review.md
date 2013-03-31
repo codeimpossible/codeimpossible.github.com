@@ -8,7 +8,13 @@ tags: "fragcastle, gaming, pax, indie"
 ---
 ## A recap on how this years PAX was, from my point of view
 
-A full day after PAX and I'm still reeling from it. There were so many great moments but one of them that really stuck with me was when we had a group of college-aged guys standing around the booth watching one of their friends play they started cheering and laughing when he dodged a shot or made a tricky jump.
+<img src="https://lh3.googleusercontent.com/-e3R9xdXlBXE/UU-g3Kcm_MI/AAAAAAAADCs/FRg8NxaQl74/s1462/IMG_1123.JPG" width="780"/>
+
+A full day after PAX and I'm still reeling from it. There were so many great moments: hours of Cut-throat Caverns with friends, ahowing our game to hundreds of people, meeting lots of other indie devs. 
+
+One of them that really stuck with me was when we had a group of college-aged guys standing around at the indie mini booth watching one of their friends play Rock Kickass; they started cheering and laughing when he dodged a shot or made a tricky jump.
+
+The spectators were just as into the action as the guy/gal playing!!!
 
 Around the same time we had a group of kids playing our mobile infinite runner game and they were laughing and yelling, making Rock jump and shoot enemies. I got hooked right then. I don't think I've gotten that kind of raw reaction to something I've made during my 10 years of software development or at any point before that.
 
