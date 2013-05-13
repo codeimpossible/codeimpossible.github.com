@@ -3,6 +3,12 @@ a.brand img { padding-right: 5px; }
 h1, h2 { line-height: 1em; }
 h1 small { text-transform: uppercase; }
 h2 { padding-bottom: 1em; color: #bbb; padding-top: .5em;}
+.post h4 {
+    padding: 24px 0 0px 0;
+    border-bottom: 1px solid #A200FF!important;
+    width: 99%;
+    margin: 0 0 6px 0;
+}
 body {
     padding-top: 64px;
     font-weight: 300;
