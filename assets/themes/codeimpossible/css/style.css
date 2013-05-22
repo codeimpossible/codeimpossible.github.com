@@ -1,14 +1,18 @@
 a.brand img { padding-right: 5px; }
-.navbar .nav { padding-top: 5px; }
+.navbar .nav { padding-top: 5px; float: none; margin: 0 auto; width: 520px; }
 h1, h2 { line-height: 1em; }
 h1 small { text-transform: uppercase; }
 h2 { padding-bottom: 1em; color: #bbb; padding-top: .5em;}
 .post h4 {
     padding: 24px 0 0px 0;
-    border-bottom: 1px solid #A200FF!important;
     width: 99%;
     margin: 0 0 6px 0;
 }
+
+pre {
+    border: none;
+}
+
 body {
     padding-top: 64px;
     font-weight: 300;
@@ -31,7 +35,7 @@ li {
     background-color: #eee;
     background-image: none!important;
     background-repeat: repeat-x;
-    border: 1px solid #d4d4d4;
+    border: none;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
@@ -39,4 +43,8 @@ li {
     -webkit-box-shadow: none!important;
     -moz-box-shadow: none!important;
     box-shadow: none!important;
+}
+
+p.license {
+    text-align: center;
 }
