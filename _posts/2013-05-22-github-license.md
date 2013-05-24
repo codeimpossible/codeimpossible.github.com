@@ -17,6 +17,10 @@ Creating a `LICENSE` file - the community agreed upon way to license your code -
 
  > According to Williamson, out of the 1,692,135 code repositories he scanned, just 219,326 of them – 14.9 percent – had a file in their top-level directories that identified any kind of license at all. Of those, 28 per cent only announced their licenses in a README file, as opposed to recommended filenames such as LICENSE or COPYING.
 
+I decided to poke around a bit at work to see if I got similar results. _Working on [Ohloh](http://ohloh.net) has it's perks!_ Ohloh currently has 125k github repositories in it's database. Of those, only ~30k had a `LICENSE` or `COPYING` file in their root. So that means that 75% of the code that Ohloh has from github isn't really useable by anyone!
+
+My numbers were a bit higher but I also was using a smaller subset than the guy the article mentions.
+
 Allowing repositories to be created with no license was acceptable when github was focused on collaboration, but with the focus shifting towards getting others to use your code not having licenses on so many repositories is unacceptable. Most of the project owners I've contacted have been really great about adding a license. In fact, a lot of them just reply with "Oops! Shit, I'll add one right now." Why not force them to do this by including the license automatically?
 
 When you create a repo on Github, a `LICENSE` file should be created that contains the BSD license. If you want to overwrite it you can update it yourself. Please Github, let's make this a thing!
