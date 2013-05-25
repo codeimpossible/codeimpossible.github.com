@@ -15,5 +15,5 @@ I'm a UI Architect (yeah, yeah) at [Blackduck Software](http://blackducksoftware
 
 {% for post in site.posts %}
 <h3><a href="{{BASE_PATH}}{{post.url}}">{{post.title}}</a>&nbsp;<small>{{ post.date | date_to_string }}</small></h3>
-<p>{{ post.content | strip_html | truncatewords:75}}... <a href="{{BASE_PATH}}{{post.url}}">Read Mode</a></p>
+<p>{{ post.content | strip_html | truncatewords:75}}... <a href="{{BASE_PATH}}{{post.url}}" class="btn">Read more</a></p>
 {% endfor %}
