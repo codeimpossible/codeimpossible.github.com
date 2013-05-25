@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: 'Github should select a license for you'
 slug: "oss-license"
 date: '2013-05-22 23:30 -04:00'
