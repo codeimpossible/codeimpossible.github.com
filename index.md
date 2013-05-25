@@ -13,7 +13,9 @@ I'm a UI Architect (yeah, yeah) at [Blackduck Software](http://blackducksoftware
 
 ## Posts
 
-{% for post in site.posts %}
+{% for post in site.posts offset: 0 limit: 7 %}
 <h3><a href="{{BASE_PATH}}{{post.url}}">{{post.title}}</a>&nbsp;<small>{{ post.date | date_to_string }}</small></h3>
-<p>{{ post.content | strip_html | truncatewords:75}}... <a href="{{BASE_PATH}}{{post.url}}" class="btn">Read more</a></p>
+<p>{{ post.content | strip_html | truncatewords:75}}... <a href="{{BASE_PATH}}{{post.url}}" class="btn btn-small">Read more</a></p>
 {% endfor %}
+
+For more reading, check the [archives](/archive.html).

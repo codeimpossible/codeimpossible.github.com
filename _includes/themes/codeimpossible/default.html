@@ -54,11 +54,14 @@
 
     </div> <!-- /container -->
 
-    <div class="container">
+    <div class="container" style="margin-bottom: 60px;">
       <footer>
-        <p class="license">&copy; {{ site.author.name }} 2012
-          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>.
+        <p class="license">
+          <a rel="license" href="http://creativecommons.org/licenses/by-nd/3.0/deed.en_US">
+            <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/3.0/88x31.png" />
+          </a><br />
+          <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Code: Impossible</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://codeimpossible.com" property="cc:attributionName" rel="cc:attributionURL">Jared Barboza</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nd/3.0/deed.en_US">Creative Commons Attribution-NoDerivs 3.0 Unported License</a>.<br />
+          Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="{{ BASE_PATH }}{{ page.url }}" rel="dct:source">Code: Impossible</a>.
         </p>
       </footer>
     </div>
@@ -67,10 +70,10 @@
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script type="text/javascript" src="{{ ASSET_PATH }}/js/site.js"></script>
-    
+
     <!-- adjusted bounce rate via http://drawingablank.me/blog/fix-your-bounce-rate.html -->
     <script type="text/javascript">
-      setTimeout( function() { 
+      setTimeout( function() {
           _gaq.push(['_trackEvent', '15_seconds', 'read']);
         }, 15000);
     </script>
