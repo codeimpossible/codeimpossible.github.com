@@ -3,7 +3,6 @@ layout: post
 published: false
 title: 'FragEngine: Sprite Animations'
 slug: "fragengine-sprite-animations"
-date: '2013-08-04 00:00 -04:00'
 tags: "programming, fragengine, fragcastle, game-development"
 ---
 
