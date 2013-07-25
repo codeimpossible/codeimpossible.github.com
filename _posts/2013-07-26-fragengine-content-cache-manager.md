@@ -7,6 +7,11 @@ date: '2013-07-26 00:00 -04:00'
 tags: "programming, fragengine, fragcastle, game-development"
 ---
 
+It's official: we're making our own game engine for MonoGame. After PAX it was really clear to John and I that HTML5 was not the right tech stack for Rock Kickass. There's very limited controller support, only the latest and greatest browsers support HTML5 games, and its hard to get anywhere near native performance with HTML5 on mobile devices.
+
+We looked at some other solutions, which I may blog about later, but ultimately decided on using MonoGame as our run time for our games going forward. Looking at the code we had already written for Final Frontier and what we would need to port Rock Kickass, it became clear that we would need a shared engine to keep things sane. After putting up our
+
+### Caching Assets
 Loading textures XNA/MonoGame games can really be a pain in the ass. If you don't cache your assets you'll end up hitting the disk each time you load a texture, and allocating memory for each texture you instantiate.
 
 FragEngine keeps all of this in check by enforcing the use of a content cache, cleverly named `ContentCacheManager`. When a FragEngine game starts, the ContentCacheManager will scan the /Content directory recursively, and load files as XNA/MonoGame Content Pipeline assets based on their parent directory:
