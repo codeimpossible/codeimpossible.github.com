@@ -22,7 +22,7 @@ Questions that involve having people look at code and critique it are my favorit
 
 
     var collection = new Array(1,2,3,"4",5);
-    for(var i = 0; i &lt;= collection.length; ++i) {
+    for(var i = 0; i <= collection.length; ++i) {
       alert(collection[i]);
       if( collection[i] == 4 ) {
         alert(collection[i] / 4);
