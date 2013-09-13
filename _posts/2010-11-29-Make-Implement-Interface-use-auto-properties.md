@@ -5,7 +5,7 @@ title: 'Make "Implement Interface" use auto properties'
 slug: "Make-Implement-Interface-use-auto-properties"
 ---
 
-##   This week I'm finding that there is a lot less pain involved in getting Visual Studio 2010 to do things my way than I thought - like no pain at all.
+##This week I'm finding that there is a lot less pain involved in getting Visual Studio 2010 to do things my way than I thought - like no pain at all.
 
 I'm refactoring some legacy code this week; a task that would normally be a total PITA but thanks to Visual Studio's built-in refactoring tools it's going much easier than expected. The one tool that I'm a huge fan of is the "Implement Interface" context menu item.
 
@@ -46,17 +46,12 @@ Instead I'd like to have this code generated using auto properties so that it lo
 
 
 
-I initially thought I would have to modify some built-in T4 template but thankfully it&#39;s much, much easier than that. Apparently the visual studio team took full advantage of the snippet feature when they added it because nearly every refactoring tool is editable via a `.snippet` file. You can find the snippets that visual studio uses for C# in the following directory:
+I initially thought I would have to modify some built-in T4 template but thankfully it's much, much easier than that. Apparently the visual studio team took full advantage of the snippet feature when they added it because nearly every refactoring tool is editable via a `.snippet` file. You can find the snippets that visual studio uses for C# in the following directory: `%programfiles%\Microsoft Visual Studio 10.0\VC#\Snippets\1033`
 
 
-`%programfiles%\Microsoft Visual Studio 10.0\VC#\Snippets\1033`
+The file you're looking for is in the `Refactoring` directory and is named `PropertyStub.snippet`. Open this guy up in your favorite text editor - don't worry it's just xml - and find the part that looks like this:
 
-
-The file you&#39;re looking for is in the `Refactoring` directory and is named `PropertyStub.snippet`. Open this guy up in your favorite text editor - don&#39;t worry it&#39;s just xml - and find the part that looks like this:
-
-
-    &lt;Code Language="csharp"&gt;
-        &lt;![CDATA[$signature$
+    <![CDATA[$signature$
     {
         $GetterAccessibility$ get 
         { 
@@ -66,15 +61,11 @@ The file you&#39;re looking for is in the `Refactoring` directory and is named `
         { 
             throw new $Exception$(); 
         }
-    }]]&gt;
-    &lt;/Code&gt;
+    }]]>
     
 
 
 Replace this xml with the xml below and you'll be good to go after a quick restart of Visual Studio!
 
-
-    &lt;Code Language="csharp"&gt;
-        &lt;![CDATA[$signature$ { $GetterAccessibility$ get; $SetterAccessibility$ set; }]]&gt;
-    &lt;/Code&gt;
+    <![CDATA[$signature$ { $GetterAccessibility$ get; $SetterAccessibility$ set; }]]>
 
