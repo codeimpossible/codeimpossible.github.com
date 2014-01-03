@@ -2,7 +2,8 @@
 	"folders":
 	[
 		{
-			"path": "/C/Users/jared/Src/codeimpossible.github.com"
+			"follow_symlinks": true,
+			"path": "."
 		}
 	]
 }
