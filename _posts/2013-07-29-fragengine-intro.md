@@ -7,7 +7,7 @@ tags: "programming, fragengine, fragcastle, game-development, monogame"
 ---
 
 <div class="video-container">
-    <iframe width="560" height="315" src="//www.youtube.com/embed/YZYnctBDiEU?rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="100%" height="500" src="//www.youtube.com/embed/YZYnctBDiEU?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
 
 <div>&nbsp;</div>

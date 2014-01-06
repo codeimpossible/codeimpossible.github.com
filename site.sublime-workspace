@@ -263,7 +263,11 @@
 	},
 	"console":
 	{
-		"height": 186.0
+		"height": 186.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
 	},
 	"distraction_free":
 	{
@@ -650,6 +654,11 @@
 		]
 	},
 	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "site.sublime-project",
 	"replace":
 	{
 		"height": 66.0
@@ -1183,10 +1192,24 @@
 		],
 		"width": 380.0
 	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
 	"show_minimap": true,
-	"show_open_files": false,
-	"show_tabs": true,
+	"show_open_files": true,
+	"show_tabs": false,
 	"side_bar_visible": true,
-	"side_bar_width": 157.0,
-	"status_bar_visible": true
+	"side_bar_width": 254.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
 }

@@ -5,10 +5,10 @@ tagline: 'Software Developer specializing in C# and JavaScript'
 group: navigation
 ---
 
-## Skills
+# Skills
 I have a very strong knowledge of JavaScript, in almost every job I've been known as the "JavaScript Guy". I've also been working with C# and ASP.net since version 1.0, and I've got 3 years of Ruby development under my belt.
 
-### Programming Languages
+## Programming Languages
 
 #### Static languages
 C#, VB.net, Java
@@ -22,7 +22,7 @@ Asp.net (and MVC), Rails
 #### JavaScript Libraries
 Backbone, Require, jQuery(like everyone else), Mustache(and Handlebars and Hogan) templating languages
 
-### Writing Samples
+## Writing Samples
 I love to write code but I also love to write about code. My blog started as a way for me to keep track of the things that I learned but it's also started to help other people, which is awesome.
 
 As far as I'm concerned, every developer should have a blog, even if they don't post every day. It let's you keep track of the WTFs you encounter during your career so that you can learn from them. I can't tell you how many times I refer back to my blog, not only for my own use, but as a reference point for the developers I work with.
@@ -35,9 +35,9 @@ Has this ever happened to you: you've been working on a customer's site, writing
 #### [Debugging "Syntax Error" from a bad WebResource.axd request](http://codeimpossible.com/2009/04/24/debugging-syntax-error-from-a-bad-webresource-axd-request/)
 "Syntax Error, Line: 2, Char: 0?. How many of you out there have seen this error while working on a web project? Usually it's because of a forgotten semi-colon or parenthesis in some external javascript file. But sometimes it's something more sinister... Something darker, dirtier and just a little bit more evil.
 
-## Employment
+# Employment
 
-### Black Duck Software (_2011-present_)
+## Black Duck Software (_2011-present_)
 
 #### Senior Ruby Developer (Ohloh.net)
 
@@ -47,7 +47,7 @@ Has this ever happened to you: you've been working on a customer's site, writing
 - Answered user support requests and helped prioritize workload for off-shore teammates
 
 
-### Wake}fly Inc (_2009-2011_)
+## Wake}fly Inc (_2009-2011_)
 
 #### Professional Services Manager
 
@@ -73,7 +73,7 @@ Key technologies used:
 - JavaScript
 - Entity Framework, MassiveORM, Dapper
 
-### ScerIS, Inc. (_2007-2009_)
+## ScerIS, Inc. (_2007-2009_)
 
 #### Software Developer
 
@@ -95,7 +95,7 @@ Key technologies used:
 - JavaScript
 - WCF
 
-### Cyphermint (_2004-2007_)
+## Cyphermint (_2004-2007_)
 
 #### Software Engineer
 
@@ -115,15 +115,15 @@ Key technologies used:
 
 ## My Open Source Projects
 
-### JavaScript Object Query Library (JSOQ)
+#### JavaScript Object Query Library (JSOQ)
 Jsoq is a port of C#'s Linq to Objects to JavaScript. Under the covers jSoq is a bunch of wrapper code for dealing with arrays in JavaScript. [View the source](http://bitbucket.org/codeimpossible/jsoq).
 
-### BlockyTest
+#### BlockyTest
 A really simplistic unit-test library for javascript. [View the source](http://bitbucket.org/codeimpossible/blockytests).
 
-### Artigo
+#### Artigo
 An open-source blog engine written in Ruby and running on the Rails platform. [View the source](http://github.com/codeimpossible/Artigo)
 
-### MassiveRecord
+#### MassiveRecord
 An library that provides ActiveRecord-like extension methods for the [Massive ORM](http://github.com/robconery/massive) library. [View the source](http://github.com/codeimpossible/MassiveRecord).
 

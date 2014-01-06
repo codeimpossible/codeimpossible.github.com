@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{{ page.title }}</title>
+    <title>{{ page.title }} | Code: Impossible a blog by Jared Barboza</title>
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
 
@@ -16,8 +16,7 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ ASSET_PATH}}/metro.ui/metro.ui.css" rel="stylesheet" >
+    <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
     <link rel="shortcut icon" href="https://secure.gravatar.com/avatar/55997cec217233703cbf68b689578771?s=16&v=1">
@@ -26,45 +25,41 @@
     <link rel="apple-touch-icon" sizes="114x114" href="https://secure.gravatar.com/avatar/55997cec217233703cbf68b689578771?s=114">
   </head>
 
-  <body style="background: #eee;">
-
-    <div class="navbar">
-      <div class="navbar-inner">
-        <div class="container">
-          <ul class="nav">
-            <li><a href="{{ HOME_PATH }}">Home</a></li>
-            {% assign pages_list = site.pages %}
-            {% assign group = 'navigation' %}
-            {% include JB/pages_list %}
-          </ul>
-        </div>
-      </div>
+  <body>
+    <div class="body-content-header">
+      <header>
+        <img src="https://en.gravatar.com/userimage/1755635/8b9f6352afae72e900f3c25ec868eb64.jpeg" />
+        <h1>Code: Impossible;</h1>
+        <p>by Jared Barboza: Husband, Frag Castle Games founder, Open Source junkie and game-maker. Opinions here are my own.</p>
+      </header>
     </div>
-
-    <div class="container" style="background: #fff; padding: 0px 20px 0px 20px; margin-bottom: 60px; border: 1px solid #ddd; border-radius: 8px;">
-
-      <div class="content" style="margin-bottom: 90px; margin-top: 40px;">
-        <h1 style="text-align:center"><big>Code: Impossible</big></h1>
-        <h3 style="text-align:center"><small>by</small> Jared Barboza</h3>
-        <h4  style="text-align:center">Software maker, Game maker. I focus mainly on JavaScript, Ruby and C#.</h4>
-      </div>
-
-      <div class="content">
+    <div class="body-nav">
+      <nav class="navbar container" role="navigation">
+        <ul class="nav navbar-nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/archive.html">Archives</a></li>
+          <li><a href="/cv.html">Resume</a></li>
+          <li><a href="/about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container">
+      <section>
         {{ content }}
-      </div>
-
+      </section>
     </div> <!-- /container -->
-
-    <div class="container" style="margin-bottom: 60px;">
-      <footer>
-        <p class="license">
-          <a rel="license" href="http://creativecommons.org/licenses/by-nd/3.0/deed.en_US">
-            <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/3.0/88x31.png" />
-          </a><br />
-          <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Code: Impossible</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://codeimpossible.com" property="cc:attributionName" rel="cc:attributionURL">Jared Barboza</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nd/3.0/deed.en_US">Creative Commons Attribution-NoDerivs 3.0 Unported License</a>.<br />
-          Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="{{ BASE_PATH }}{{ page.url }}" rel="dct:source">Code: Impossible</a>.
-        </p>
-      </footer>
+    <div class="body-footer">
+      <div class="container" style="margin-bottom: 60px;">
+        <footer>
+          <p class="license">
+            <a rel="license" href="http://creativecommons.org/licenses/by-nd/3.0/deed.en_US">
+              <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/3.0/88x31.png" />
+            </a><br />
+            <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Code: Impossible</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://codeimpossible.com" property="cc:attributionName" rel="cc:attributionURL">Jared Barboza</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nd/3.0/deed.en_US">Creative Commons Attribution-NoDerivs 3.0 Unported License</a>.<br />
+            Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="{{ BASE_PATH }}{{ page.url }}" rel="dct:source">Code: Impossible</a>.
+          </p>
+        </footer>
+      </div>
     </div>
 
     <script type="text/javascript">
@@ -81,7 +76,7 @@
 
     </script>
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="{{ ASSET_PATH }}/js/site.js"></script>
 
     <!-- adjusted bounce rate via http://drawingablank.me/blog/fix-your-bounce-rate.html -->
