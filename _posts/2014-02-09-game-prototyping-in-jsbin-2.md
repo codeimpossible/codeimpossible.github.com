@@ -89,49 +89,49 @@ var update = this.update = function() {
 Yeah you can definitely keep pasting more code into draw and update to add more boxes but this will quickly become a hot mess if we try to build out anything serious. Let's add a `GameObject` class to our game so making new objects becomes a lot easier.
 
 {% highlight javascript %}
-// adapted from underscore js's _.extend()
-Game.extend = function(obj) {
-  for( var i = -1, l = arguments.length; ++i < l; ) {
-    var source = arguments[i];
-    if( source ) {
-      for(var prop in source ) {
-        obj[prop] = source[prop];
-      }
-    }
-  }
-  return obj;
-};
-
 Game.GameObject = function(x, y) {
-  this.pos = this.pos || { x: x, y: y };
+    this.pos = this.pos || { x: x, y: y };
 };
 
 // adapted from Backbone.js's Model.extend method
 Game.GameObject.extend = function( instance, klass ) {
-  var parent = this;
-  var child;
+    var parent = this;
+    var child;
 
-  if (instance && instance.hasOwnProperty('constructor')) {
-    child = instance.constructor;
-  } else {
-    child = function(){ return parent.apply(this, arguments); };
-  }
+    // adapted from underscore js's _.extend()
+    var _extend = function(obj) {
+        for( var i = -1, l = arguments.length; ++i < l; ) {
+            var source = arguments[i];
+            if( source ) {
+                for(var prop in source ) {
+                    obj[prop] = source[prop];
+                }
+            }
+        }
+        return obj;
+    };
 
-  Game.extend( child, parent, klass );
+    if (instance && instance.hasOwnProperty('constructor')) {
+        child = instance.constructor;
+    } else {
+        child = function(){ return parent.apply(this, arguments); };
+    }
 
-  var Surrogate = function(){ this.constructor = child; };
-  Surrogate.prototype = parent.prototype;
-  child.prototype = new Surrogate;
+    _extend( child, parent, klass );
 
-  if (instance) Game.extend(child.prototype, instance);
+    var Surrogate = function(){ this.constructor = child; };
+    Surrogate.prototype = parent.prototype;
+    child.prototype = new Surrogate();
 
-  child.__super__ = parent.prototype;
+    if (instance) _extend(child.prototype, instance);
 
-  return child;
+    child.__super__ = parent.prototype;
+
+    return child;
 };
 {% endhighlight %}
 
-There is a lot of stuff happening in this code. `Game.extend` and `Game.GameObject.extend` can be ignored. They are two methods that help simulate inheritance in javascript. JavaScript doesn't have inheritance like you would expect if you were coming from C# or Java. These methods simulate inheritance by copying the properties and methods from one object to another as if they were being inherited from a parent to a child.
+There is a lot of stuff happening in this code. `Game.GameObject.extend` can safely be ignored. JavaScript doesn't have inheritance like you would expect if you were coming from C# or Java. This method simulates inheritance by copying the properties and methods from one object to another as if they were being inherited from a parent to a child.
 
 If you're interested you can read more about [Backbone's Extend method](http://backbonejs.org/docs/backbone.html#section-190) and [Underscore's Extend method](http://underscorejs.org/docs/underscore.html#section-78) to get a better idea of what they are doing.
 
@@ -158,6 +158,8 @@ Defining a box type is pretty easy, we pass a definition or body to `Game.GameOb
 {% highlight javascript %}
 var HorizontalBox = Box.extend({
     color: 'yellow',
+    height: 64,
+    width: 64,
     update: function() {
         this.pos.x += 1;
     }
@@ -165,6 +167,8 @@ var HorizontalBox = Box.extend({
 
 var VerticalBox = Box.extend({
     color: 'green',
+    height: 64,
+    width: 64,
     update: function() {
         this.pos.y += 1;
     }
@@ -172,3 +176,61 @@ var VerticalBox = Box.extend({
 {% endhighlight %}
 
 Since the `Box` object already defines a `draw()` we don't need to supply one in our new box objects. They will call the parent `draw()` by default. Also, since they define an `update()` the parent `update()` will _not_ be called. This is an important piece to remember.
+
+### Drawing GameObjects
+
+Having the `GameObject` class is great, it'll definitely decrease the amount of code we'll have to write, but there is a small problem. The `draw()` in our `Game` class isn't setup to draw any one these objects! Fixing it won't be too difficult. Replace `update()` and `draw()` with the code below.
+
+{% highlight javascript %}
+var objects = this.objects = [];
+
+var draw = this.draw = function() {
+    // clear the canvas with out bg color
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect (0, 0, canvas.width, canvas.height);
+
+    // call draw on each object
+    for(var i = -1, l = objects.length; ++i < l; ) {
+      objects[i].draw( canvas, ctx );
+    }
+};
+
+var update = this.update = function() {
+    for(var i = -1, l = objects.length; ++i < objects.length; ) {
+      objects[i].update();
+    }
+};
+{% endhighlight %}
+
+Adding an array named `objects` makes the code for `update()` and `draw()` really simple. Just loop and call a method on each object. Adding new objects to our game is now just a matter of adding them to the objects array. Add the code below just after we initialize the `game`.
+
+{% highlight javascript %}
+var game = new Game();
+
+game.objects.push( new VerticalBox(100, 164) );
+game.objects.push( new HorizontalBox(100, 100) );
+{% endhighlight %}
+
+Now we should have our two boxes back and they should be moving like before!
+
+![Double Trouble](/assets/posts/game-proto-2/boxes-moving-1.gif)
+
+This article was a bit longer than the first part but that was largely due to the extend method code. We cleaned up our code quite a bit and now adding new game objects is pretty simple. I've [posted the example in this article up on jsbin](http://jsbin.com/iPOzAJa/2/edit?js,output) in case you want to check your code against the code in this article. Try changing the `height` and `width` of the two box objects we created, also see what happens if you replace the `VerticalBox` with the code below.
+
+{% highlight javascript %}
+var VerticalBox = Box.extend({
+    color: 'green',
+    height: 64,
+    width: 64,
+    radians: 1,
+    update: function() {
+        this.radians += 0.1;
+        this.pos = {
+            x: 100 + 100 * Math.sin(this.radians),
+            y: 100 + 100 * Math.cos(this.radians)
+        };
+    }
+});
+{% endhighlight %}
+
+This wraps part two. Part three will focus on adding some "depth" to our game engine, making objects event more configurable, reducing the code needed to add an object to the game, and avoiding a really troublesome bug that can cost you hours of debugging.
