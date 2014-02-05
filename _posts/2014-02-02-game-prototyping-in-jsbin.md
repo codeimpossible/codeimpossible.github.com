@@ -101,7 +101,7 @@ var update = this.update = function() {
 
 Changing the `x` value of `box_pos` now moves the box to the right, but something odd is happening. The box is leaving this odd, ugly "snail trail" behind it.
 
-![Snail Trail](/assets/posts/game-proto-1/snail.png)
+![A square that is leaving a dark trail behind it. It looks ugly, terrifying but still a little familiar. Like you've met before. Maybe he was that guy you danced with on thursday when you told your friends you were tired but you went to that seedy dive bar in south boston to live a little. He never called.](/assets/posts/game-proto-1/snail.png)
 
 This is happening because we're always drawing the box at it's new position, but we're never clearing the screen. This causes the new box to be drawn on top of the old box, but 1px to the right, which leaves the left border of the previous box still visible. This will be pretty easy to clean up. Change the draw method so it looks like the one below.
 
@@ -123,7 +123,7 @@ Clearing the frame before we draw to it is a standard practice in game engines. 
 
 Now your box should be moving rather nicely across the screen.
 
-![They see me rollin' they hatin'](/assets/posts/game-proto-1/box-moving-1.gif)
+![A square that is moving innocently across the screen from the left to the right as all god-fearing, tax-paying squares do.](/assets/posts/game-proto-1/box-moving-1.gif)
 
 [I've posted this up on jsbin](http://jsbin.com/iPOzAJa/4/edit) in case you have trouble getting this to work or if you just want to refer to the code in this post later.
 
