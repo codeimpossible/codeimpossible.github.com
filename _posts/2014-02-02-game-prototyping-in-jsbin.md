@@ -75,8 +75,58 @@ Next, setup the `Game` object so it executes `run()` 60 times a second. This is 
     setInterval( run, 1000 / 60 );
 {% endhighlight %}
 
-This will draw a yellow box on the screen! [I've posted this up on jsbin](http://jsbin.com/iPOzAJa/1/edit) in case you have trouble getting this to work or if you just want to refer to the code in this post later.
+This will draw a yellow box on the screen!
 
-That's enough for part 1, in part 2 I'll cover handling more than one box, adding movement and using inheritance and objects to reduce the amount of code we need to write. I'll update this post when that part goes live.
+
+### Adding movement
+
+Making something move is just a matter of telling the game engine to change where it is being drawn for the new frame. Remember that a "frame" is one execution of both `update()` and `draw()`, or one call to `run()`.
+
+in order to move our box, we're going to have to change a few lines of code. Replace `update()` and `draw()` with the code below.
+
+{% highlight javascript %}
+var box_pos = { x: 100, y: 100 };
+var draw = this.draw = function() {
+    ctx.beginPath();
+    ctx.fillStyle = 'yellow';
+    ctx.rect(box_pos.x, box_pos.y, 64, 64);
+    ctx.fill();
+    ctx.stroke();
+};
+
+var update = this.update = function() {
+    box_pos.x += 1;
+};
+{% endhighlight %}
+
+Changing the `x` value of `box_pos` now moves the box to the right, but something odd is happening. The box is leaving this odd, ugly "snail trail" behind it.
+
+![Snail Trail](/assets/posts/game-proto-1/snail.png)
+
+This is happening because we're always drawing the box at it's new position, but we're never clearing the screen. This causes the new box to be drawn on top of the old box, but 1px to the right, which leaves the left border of the previous box still visible. This will be pretty easy to clean up. Change the draw method so it looks like the one below.
+
+{% highlight javascript %}
+var draw = this.draw = function() {
+    // clear the canvas with a bg color
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect (0, 0, canvas.width, canvas.height);
+
+    ctx.beginPath();
+    ctx.fillStyle = 'yellow';
+    ctx.rect(box_pos.x, box_pos.y, 64, 64);
+    ctx.fill();
+    ctx.stroke();
+};
+{% endhighlight %}
+
+Clearing the frame before we draw to it is a standard practice in game engines. There are other ways to handle this, XNA uses a two-frame draw method, showing one frame to the screen while drawing to another. It is constantly alternating between the frames to conserve memory and improve performance. Here, we're just drawing a large rectangle that is the same dimensions as our canvas with the same background color as our page.
+
+Now your box should be moving rather nicely across the screen.
+
+![They see me rollin' they hatin'](/assets/posts/game-proto-1/box-moving-1.gif)
+
+[I've posted this up on jsbin](http://jsbin.com/iPOzAJa/4/edit) in case you have trouble getting this to work or if you just want to refer to the code in this post later.
+
+That's enough for part 1, in part 2 I'll cover handling more than one box and using inheritance / objects to reduce the amount of code we need to write. I'll update this post when that part goes live.
 
 Got any feedback, questions? Having trouble? Post a comment and I'll reply ASAP.
