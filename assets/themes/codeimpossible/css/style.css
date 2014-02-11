@@ -151,6 +151,10 @@ article section.quote-jumbotron blockquote cite {
   margin-top: 20px;
 }
 
+article img {
+  vertical-align: top;
+}
+
 footer .license {
   text-align: center;
 }
