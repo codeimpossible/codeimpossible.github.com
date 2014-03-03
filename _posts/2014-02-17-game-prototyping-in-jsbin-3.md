@@ -106,7 +106,7 @@ Now, our code for spawning the first three boxes changes slightly:
     game.objects.push( new YellowBox(100, 100, { depth: 101 }) );
     game.objects.push( new GreenBox(130, 130, { depth: 102 }) );
 
-{% endhighlight }
+{% endhighlight %}
 
 But we're back to having the RedBox in the background.
 
@@ -156,4 +156,6 @@ Now we can remove the sort from the game's `draw()`, update the code that create
 
 {% endhighlight %}
 
-This wraps up part three.
+This wraps up part three, like the other examples, I've posted the [source up on Jsbin](http://jsbin.com/iPOzAJa/7/edit?js,output).
+
+We started with nothing and now have a pretty decent - albeit extremely lite - game engine. Future work might include allowing a GameObject to have a texture or animation, or adding sound using the [HTML5 Audio API](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio).
