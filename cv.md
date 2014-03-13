@@ -39,7 +39,12 @@ Has this ever happened to you: you've been working on a customer's site, writing
 
 ## Black Duck Software (_2011-present_)
 
-#### Senior Ruby Developer (Ohloh.net)
+#### Senior UI Architect (current title)
+- Technical Lead for a team of 8 developers
+- Designed front-end architecture for a large-scale single page application built in Backbone/Marionette
+- Educated team-members on Backbone, Backbone.Marionette, and common development patterns
+
+#### Senior Ruby Developer ([Ohloh.net](http://www.ohloh.net))
 
 - Moved entire Ohloh.net UX to Twitter Bootstrap, lead the charge in refactoring javascript/SASS
 - Worked with team members on a huge Ruby codebase, implementing new features on a tight sprint schedule
