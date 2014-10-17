@@ -21,5 +21,8 @@
     var html = "<scr" + "ipt src='" + last_commit_url + "&callback=renderCommitSha'></scr" + "ipt>";
 
     $('body').append(html);
+
+    // adjusted bounce rate via http://drawingablank.me/blog/fix-your-bounce-rate.html
+    setTimeout(function() { _gaq.push(['_trackEvent', '15_seconds', 'read']); }, 15000);
   });
 })(jQuery, window);

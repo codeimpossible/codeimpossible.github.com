@@ -16,7 +16,12 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
     <link rel="shortcut icon" href="https://secure.gravatar.com/avatar/55997cec217233703cbf68b689578771?s=16&v=1">
@@ -26,46 +31,59 @@
   </head>
 
   <body>
-    <div class="body-content-header">
+    <section class="well ci-sidebar">
       <header>
-        <img src="https://en.gravatar.com/userimage/1755635/8b9f6352afae72e900f3c25ec868eb64.jpeg" />
-        <h1>Code: Impossible;</h1>
-        <p>by Jared Barboza: Husband, Frag Castle Games founder, Open Source junkie and game-maker. Opinions here are my own.</p>
+        <h1><a href='/' rel='author'>@codeimpossible</a></h1>
       </header>
-    </div>
-    <div class="body-nav">
-      <nav class="navbar container" role="navigation">
-        <ul class="nav navbar-nav">
-          <li><a href="/">Home</a></li>
-          <li><a href="/archive.html">Archives</a></li>
-          <li><a href="/cv.html">Resume</a></li>
-          <li><a href="/about.html">About</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="container">
-      <section>
+      <article>
+        <a href='/' rel='author'><img class="ci-me" src="https://avatars3.githubusercontent.com/u/176476?s=300" /></a>
+        <nav role="navigation">
+          <ul class="ci-social-links clearfix">
+            <li>
+              <a href="https://twitter.com/codeimpossible" target="_blank"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="https://github.com/codeimpossible" target="_blank"><i class="fa fa-github"></i></a>
+            </li>
+            <li>
+              <a href="https://plus.google.com/u/0/+JaredBarboza/posts" target="_blank"><i class="fa fa-google-plus"></i></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/jaredbarboza" target="_blank"><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a href="http://stackoverflow.com/users/1980/jared" target="_blank"><i class="fa fa-stack-overflow"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </artcle>
+      <footer>
+        <blockquote>&quot;Anything is possible if you have access to a compiler&quot;</blockquote>
+      </footer>
+    </section>
+
+    <section id="content" class="container-fluid">
+      <article class="ci-generated-content">
         {{ content }}
-      </section>
-    </div> <!-- /container -->
-    <div class="body-footer">
-      <div class="container" style="margin-bottom: 60px;">
-        <footer>
-          <p class="license">
-            <a rel="license" href="http://creativecommons.org/licenses/by-nd/3.0/deed.en_US">
-              <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/3.0/88x31.png" />
-            </a><br />
-            <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Code: Impossible</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://codeimpossible.com" property="cc:attributionName" rel="cc:attributionURL">Jared Barboza</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nd/3.0/deed.en_US">Creative Commons Attribution-NoDerivs 3.0 Unported License</a>.<br />
-            Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="{{ BASE_PATH }}{{ page.url }}" rel="dct:source">Code: Impossible</a>.
-          </p>
-        </footer>
-      </div>
-    </div>
+      </article>
+
+      <footer>
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <p class="license">
+              <a rel="license" href="http://creativecommons.org/licenses/by-nd/3.0/deed.en_US">
+                <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nd/3.0/88x31.png">
+              </a><br>
+              <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Code: Impossible</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://codeimpossible.com" property="cc:attributionName" rel="cc:attributionURL">Jared Barboza</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nd/3.0/deed.en_US">Creative Commons Attribution-NoDerivs 3.0 Unported License</a>.<br>
+                  Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="/index.html" rel="dct:source">Code: Impossible</a>.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </section>
 
     <script type="text/javascript">
-
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-9421738-1']);
+      var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-9421738-1']);
       _gaq.push(['_trackPageview']);
 
       (function() {
@@ -73,17 +91,9 @@
         ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-
     </script>
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script type="text/javascript" src="{{ ASSET_PATH }}/js/site.js"></script>
-
-    <!-- adjusted bounce rate via http://drawingablank.me/blog/fix-your-bounce-rate.html -->
-    <script type="text/javascript">
-      setTimeout( function() {
-          _gaq.push(['_trackEvent', '15_seconds', 'read']);
-        }, 15000);
-    </script>
   </body>
 </html>
