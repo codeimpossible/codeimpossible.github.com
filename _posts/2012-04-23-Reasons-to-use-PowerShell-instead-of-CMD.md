@@ -44,7 +44,7 @@ Awesome output commands
 clip is a command that copies whatever is "piped" to it to the clipboard. Yeah, no more right-clicking on the cmd window icon, selecting "select all" and pressing enter. Just pipe the output!
 
 
-    $ c:\&gt; ls | clip
+    $ c:\> ls | clip
 
 
 The directory listing for my c:\ root would be put into the clipboard, ready to be pasted into a blog post, email or message-board twitter flame.
