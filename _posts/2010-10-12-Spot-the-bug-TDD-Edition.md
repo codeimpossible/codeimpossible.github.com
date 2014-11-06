@@ -10,29 +10,32 @@ For the past two years I've been doing Asp.net MVC development off and on and pr
 
 Today I have one example of how TDD has saved my arse: I'm beginning work on adding a controller for Projects in our db and the Index action needs return a list of projects in the system. Following TDD I've got to write the test first before I get to write any system code.
 
-    [Test]
-    public void Index_HttpGet_ModelIsListOfProjects ()
-    {
-        var controller = new ProjectController();
+{% highlight csharp %}
+[Test]
+public void Index_HttpGet_ModelIsListOfProjects ()
+{
+    var controller = new ProjectController();
 
-        var result = controller.Index() as ViewResult;
+    var result = controller.Index() as ViewResult;
 
-        // uses WithViewData extension method from 
-        // MvcContrib TestHelpers
-        result.WithViewData&lt;List&lt;Project&gt;&gt;();
-    }
+    // uses WithViewData extension method from
+    // MvcContrib TestHelpers
+    result.WithViewData<List<Project>>();
+}
+
+{% endhighlight %}
 
 Okay, now, let's create that controller so I can run my test and see it fail.
 
-    
-    public class ProjectController : Controller
+{% highlight csharp %}
+public class ProjectController : Controller
+{
+    public ActionResult Index ()
     {
-        public ActionResult Index ()
-        {
-            return View();
-        }
+        return View();
     }
-    
+}
+{% endhighlight %}
 
 
 Great! Now to run my test aaaaaaaand. Whoa! What? The test is **passing**!?!? W.T.F?!?
@@ -41,33 +44,33 @@ Great! Now to run my test aaaaaaaand. Whoa! What? The test is **passing**!?!? W.
 
 *Note: I skipped a step here, WithViewData() calls AssertViewDataModelType() so I included that method here instead*
 
+{% highlight csharp %}
+private static TViewData AssertViewDataModelType<TViewData>(ViewResultBase actionResult)
+{
+    var actualViewData = actionResult.ViewData.Model;
+    var expectedType = typeof(TViewData);
 
-    private static TViewData AssertViewDataModelType&lt;TViewData&gt;(
-        ViewResultBase actionResult)
+    if ( actualViewData == null && expectedType.IsValueType)
     {
-        var actualViewData = actionResult.ViewData.Model;
-        var expectedType = typeof(TViewData);
+        throw new ActionResultAssertionException(
+            string.Format("Expected view data of type '{0}', actual was NULL",
+            expectedType.Name));
+    }
 
-        if ( actualViewData == null && expectedType.IsValueType)
-        {
-            throw new ActionResultAssertionException(
-                string.Format("Expected view data of type '{0}', actual was NULL",
-                expectedType.Name));
-        }
-        
-        if (actualViewData == null)
-        {
-            return (TViewData)actualViewData;
-        }
-
-        if (!typeof(TViewData).IsAssignableFrom(actualViewData.GetType()))
-        {
-            throw new ActionResultAssertionException(
-                string.Format("Expected view data of type '{0}', actual was '{1}'",
-                typeof(TViewData).Name, actualViewData.GetType().Name));
-        }
-
+    if (actualViewData == null)
+    {
         return (TViewData)actualViewData;
     }
+
+    if (!typeof(TViewData).IsAssignableFrom(actualViewData.GetType()))
+    {
+        throw new ActionResultAssertionException(
+            string.Format("Expected view data of type '{0}', actual was '{1}'",
+            typeof(TViewData).Name, actualViewData.GetType().Name));
+    }
+
+    return (TViewData)actualViewData;
+}
+{% endhighlight %}
 
 Can you tell why the test is passing?
