@@ -2,7 +2,7 @@
 layout: post
 title: 'Speaking Protips'
 date: 2014-11-23
-published: false
+published: true
 tags: "speaking, presentations, protips"
 ---
 
@@ -14,6 +14,9 @@ Talking in front of a crowd and sharing things I've learned are things that I re
 
 ### Don't just know your audience, Adapt to them
 Every presenter offers the same advice to newbies: "Know your audience". Knowing your audience is great advice and you should absolutely work on your presentation with a certain group of attendees in mind. However, you have to be able to adapt your speaking style and presentation on the fly. If your material isn't working - your jokes aren't landing right or you seem to be losing the audience - you have to adapt and change things up. Don't just plow ahead with your presentation. Know your audience, but also adapt to them too.
+
+### Be Excited.
+This might seem like a "yeah, duh" kind of point, but I see a lot of presenters who - for whatever reason - are just not that into their talk. IF you can't be excited about what you are talking about, why on earth are you speaking?
 
 ### Never. Ever. Read your damn slides word for word.
 Nothing will make you lose an audience faster than reading every word on your slides to your audience. How do you avoid this? I'm glad you asked.
