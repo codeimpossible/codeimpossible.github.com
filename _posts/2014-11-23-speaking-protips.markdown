@@ -3,7 +3,7 @@ layout: post
 title: 'Speaking Protips'
 date: 2014-11-23
 published: true
-tags: "speaking, presentations, protips"
+tags: "speaking presentations protips"
 ---
 
 When I was a kid I hated speaking in public. I would get so nervous that I would break out in a cold sweat, get super nauseous and completely freeze up, unable to speak a lot of the time I stood up in front of a classroom. So I started looking for more occasions to speak out, presentations during class and after school events for starters. I took public speaking and debate in college and started to build up my speaking abilities.

@@ -2,7 +2,7 @@
 layout: post
 title: 'Work-around for EINVAL, read when running Hubot locally'
 published: true
-tags: "opensource, hubot, troubleshooting"
+tags: "opensource hubot troubleshooting"
 ---
 
 **tl;dr - just delete the `.hubot-history` file in your local hubot install directory**

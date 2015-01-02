@@ -4,6 +4,7 @@
     <header>
       <h2>{{ page.title }}</h2>
       <small>{{ page.date | date_to_long_string }}</small>
+      <small>Tags: {% assign tags_list = page.tags %} {% include JB/tags_list %}</small>
     </header>
 
     <article>

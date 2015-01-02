@@ -2,7 +2,7 @@
 layout: post
 title: "Making a Simple Game Engine"
 date: 2014-11-23
-tags: "javascript, game development, programming, 2d games"
+tags: "javascript game development programming 2d games"
 published: false
 ---
 

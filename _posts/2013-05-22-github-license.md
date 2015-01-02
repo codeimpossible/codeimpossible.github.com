@@ -4,7 +4,7 @@ published: true
 title: 'Github should select a license for you'
 slug: "oss-license"
 date: '2013-05-22 23:30 -04:00'
-tags: "open-source, licensing, github"
+tags: "open-source licensing github"
 ---
 
 ## More and more people are posting code on Github without including a OSS License. It's the art museum way of sharing code. _You can come in and look at my code, but NO PICTURES_.

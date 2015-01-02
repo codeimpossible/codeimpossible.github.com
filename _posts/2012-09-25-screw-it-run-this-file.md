@@ -3,7 +3,7 @@ layout: post
 title: 'Screw it, run this file!'
 slug: "screw-it-run-this-file"
 date: '2012-09-28 00:00:00 -04:00'
-tags: "development, devx, developer-experience, practices"
+tags: "development devx developer-experience practices"
 ---
 ## Ever experienced a nightmarish environment setup and thought "If this project is this hard to setup, how hard is it going to be to work on?". Yeah, me too.
 

@@ -4,13 +4,13 @@ published: true
 title: 'PAX in review'
 slug: "post-pax"
 date: '2013-03-25 10:00 -04:00'
-tags: "fragcastle, gaming, pax, indie"
+tags: "fragcastle gaming pax indie"
 ---
 ## A recap on how this years PAX was, from my point of view
 
 <img src="https://lh3.googleusercontent.com/-e3R9xdXlBXE/UU-g3Kcm_MI/AAAAAAAADCs/FRg8NxaQl74/s1462/IMG_1123.JPG" width="780"/>
 
-A full day after PAX and I'm still reeling from it. There were so many great moments: hours of Cut-throat Caverns with friends, ahowing our game to hundreds of people, meeting lots of other indie devs. 
+A full day after PAX and I'm still reeling from it. There were so many great moments: hours of Cut-throat Caverns with friends, ahowing our game to hundreds of people, meeting lots of other indie devs.
 
 One of them that really stuck with me was when we had a group of college-aged guys standing around at the indie mini booth watching one of their friends play Rock Kickass; they started cheering and laughing when he dodged a shot or made a tricky jump.
 

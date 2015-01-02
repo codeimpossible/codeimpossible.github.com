@@ -2,7 +2,7 @@
 layout: post
 title: 'Download youtube videos via powershell'
 published: true
-tags: "powershell, youtube, ffmpeg"
+tags: "powershell youtube ffmpeg"
 ---
 
 Each week I record a podcast with [@JohnBubriski](https://twitter.com/johnbubriski) where we talk about the latest goings on with our vidya game startup: [Frag Castle Games](http://fragcastle.com). We record each episode via Google Hangouts so they get published to youtube. This takes away a lot of the headaches that recording a podcast via Skype can have, but it adds a smaller one: getting our audio as an MP3 so we can ship it off to everyone who listens via iTunes/RSS.

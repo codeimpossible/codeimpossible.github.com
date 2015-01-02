@@ -2,7 +2,7 @@
 layout: post
 published: true
 title: 'Albino, Pygments, Jekyll and "Bad File Descriptor" in Windows'
-tags: "programming, blogging, github-pages, jekyll"
+tags: "programming blogging github-pages jekyll"
 ---
 
 _**Note:** this is posted here so I don't forget how to do this later. I don't take any credit for this fix, nor do I make any gurauntees about its quality/stability._

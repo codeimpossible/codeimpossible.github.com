@@ -3,7 +3,7 @@ layout: post
 published: false
 title: 'FragEngine: Sprite Animations'
 slug: "fragengine-sprite-animations"
-tags: "programming, fragengine, fragcastle, game-development"
+tags: "programming fragengine fragcastle game-development"
 ---
 
 <img src="http://content.screencast.com/users/codeimpossible/folders/Jing/media/adb6de56-ae02-491b-8b1f-27c1ed6c4a61/2013-07-23_1807.png" />

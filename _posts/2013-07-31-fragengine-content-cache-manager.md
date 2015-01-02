@@ -3,7 +3,7 @@ layout: post
 published: false
 title: 'FragEngine: Content Caching'
 slug: "fragengine-content-cache-manager"
-tags: "programming, fragengine, fragcastle, game-development"
+tags: "programming fragengine fragcastle game-development"
 ---
 
 Loading textures XNA/MonoGame games can really be a pain in the ass. If you don't cache your assets you'll end up hitting the disk each time you load a texture, and allocating memory for each texture you instantiate.

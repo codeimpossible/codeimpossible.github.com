@@ -2,7 +2,7 @@
 layout: post
 published: true
 title: 'Using Jsbin to prototype game features: Part Three'
-tags: "programming, javascript, fragcastle, game-development"
+tags: "programming javascript fragcastle game-development"
 ---
 Time for part three of my "prototyping games in jsbin" series. If you're not familiar with the other two posts ([part 1](http://codeimpossible.com/2014/02/02/game-prototyping-in-jsbin/), [part 2](http://codeimpossible.com/2014/02/09/game-prototyping-in-jsbin-2/)), you should read them otherwise this post won't really make much sense.
 
