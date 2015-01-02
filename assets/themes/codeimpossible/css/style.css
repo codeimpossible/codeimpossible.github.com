@@ -127,6 +127,10 @@ pre {
 article > h2 { margin: 30px 0; }
 .ci-post-list article > h2 { margin: 10px 0; }
 
+footer {
+  margin-top: 40px;
+}
+
 pre { background: #ffffff; border: none; padding: 40px; }
 .c { color: #008000 } /* Comment */
 .err { border: 1px solid #FF0000 } /* Error */
