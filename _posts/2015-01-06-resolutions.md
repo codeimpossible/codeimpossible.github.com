@@ -3,13 +3,14 @@ layout: post
 title: 'Resolutions for 2015'
 published: true
 tags: "self-improvement 2015-goals"
+description: It's a new year, time to make improvements. Last year I didn't set any goals, so there was nothing to measure, but I ended the year unhappy with what it <i>felt</i> like I got done. Time to fix that.
 ---
 
-I don't think I'm going to write up a 2014 reflection post. I didn't set any goals, so there was nothing to measure, but I ended the year unhappy with what it _felt_ like I got done.
+It's a new year, time to make improvements. Last year I didn't set any goals, so there was nothing to measure, but I ended the year unhappy with what it _felt_ like I got done. Time to fix that.
 
-Because that's all I had. Feelings. I didn't have any data to look at to compare where I was with where _I wanted to be_.
+I didn't have any data to look at to compare where I was with where _I wanted to be_.
 
-Time to fix that. My wife and I sat down on New Years Eve and shared our resolutions and how we are going to measure success with each one. Sharing it with my wife should be enough to motivate me, but just in case I think it will be best if I write up my goals for 2015 here.
+So this year my wife and I sat down on New Years Eve and shared our resolutions and how we are going to measure success with each one. It's the first time we've done it and we're pretty pumped about being able to help each other achieve our goals. I'm posting up my goals here so that I can write about some of the goals as I work to meet them, pretty much using you all as peer pressure to push me to the finish line.
 
 ### Be healthier. Lose 50 lbs.
 I was *ok* with my weight through the spring and summer of 2014. I tore my shoulder and gave up on my workouts in the fall and completely fell to pieces in the winter. 50lbs in a year seems hard but I want to aim high and push myself here because this is where I need the most improvement. I don't take care of myself at all and it's starting to take its toll on me. I'll be adding regular workouts to my routine, changing how much I eat and _what_ I eat. I want to hit my goal but I also don't want to have a flash-in-the-pan approach to this either. This is something that needs to stick with me, so slow and steady is better than fast and out of control.
