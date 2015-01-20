@@ -2,7 +2,7 @@
 layout: post
 published: true
 title: 'Game Development'
-tags: "programming, javascript, fragcastle, game-development"
+tags: "programming javascript fragcastle game-development"
 ---
 
 ## What's it like to be a game programmer?

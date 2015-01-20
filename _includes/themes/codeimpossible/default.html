@@ -3,8 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }} | Code: Impossible a blog by Jared Barboza</title>
-    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+
+    <meta property="og:image" content="//secure.gravatar.com/avatar/55997cec217233703cbf68b689578771?s=114"/>
+    <meta property="og:site_name" content="Code: Impossible by Jared Barboza"/>
+    <meta property="og:latitude" content="42.3581"/>
+    <meta property="og:longitude" content="71.0636°"/>
+    <meta property="og:type" content="article"/>
+    {% if page.title %}<meta property="og:title" content="{{ page.title }}"/>{% endif %}
+    {% if page.url %}<meta property="og:url" content="{{ site.production_url }}{{ page.url }}"/>{% endif %}
+    {% if page.description %}<meta property="og:description" content="{{ page.description }}"/>{% endif %}
+
+    {% if page.title %}<meta itemprop="name" content="{{ page.title }}"/>{% endif %}
+    {% if page.url %}<meta itemprop="url" content="{{ site.production_url }}{{ page.url }}"/>{% endif %}
+    {% if page.description %}<meta itemprop="description" content="{{ page.description }}"/>{% endif %}
+
+    <meta itemprop="thumbnailUrl" content="//secure.gravatar.com/avatar/55997cec217233703cbf68b689578771?s=48"/>
+    <link rel="image_src" href="//secure.gravatar.com/avatar/55997cec217233703cbf68b689578771?s=114" />
+    <meta itemprop="image" content="//secure.gravatar.com/avatar/55997cec217233703cbf68b689578771?s=114"/>
     <meta name="author" content="{{ site.author.name }}">
+    {% if page.description %}<meta name="description" content="{{ page.description }}" />{% endif %}
 
     <meta HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8" />
 
@@ -16,18 +33,16 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <script src="//code.jquery.com/jquery.min.js"></script>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
-    <link rel="shortcut icon" href="https://secure.gravatar.com/avatar/55997cec217233703cbf68b689578771?s=16&v=1">
-    <link rel="apple-touch-icon" href="https://secure.gravatar.com/avatar/55997cec217233703cbf68b689578771?s=48">
-    <link rel="apple-touch-icon" sizes="72x72" href="https://secure.gravatar.com/avatar/55997cec217233703cbf68b689578771?s=72">
-    <link rel="apple-touch-icon" sizes="114x114" href="https://secure.gravatar.com/avatar/55997cec217233703cbf68b689578771?s=114">
+    <link rel="shortcut icon" href="//secure.gravatar.com/avatar/55997cec217233703cbf68b689578771?s=16&v=1">
+    <link rel="apple-touch-icon" href="//secure.gravatar.com/avatar/55997cec217233703cbf68b689578771?s=48">
+    <link rel="apple-touch-icon" sizes="72x72" href="//secure.gravatar.com/avatar/55997cec217233703cbf68b689578771?s=72">
+    <link rel="apple-touch-icon" sizes="114x114" href="//secure.gravatar.com/avatar/55997cec217233703cbf68b689578771?s=114">
   </head>
 
   <body>
@@ -36,7 +51,7 @@
         <h1><a href='/' rel='author'>@codeimpossible</a></h1>
       </header>
       <article>
-        <a href='/' rel='author'><img class="ci-me" src="https://avatars3.githubusercontent.com/u/176476?s=300" /></a>
+        <a href='/' rel='author'><img class="ci-me" src="//secure.gravatar.com/avatar/55997cec217233703cbf68b689578771?s=300" /></a>
         <nav role="navigation">
           <ul class="ci-social-links clearfix">
             <li>
@@ -97,7 +112,8 @@
       })();
     </script>
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script type="text/javascript" src="{{ ASSET_PATH }}/js/site.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" defer></script>
+    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" defer></script>
+    <script type="text/javascript" src="{{ ASSET_PATH }}/js/site.js" defer></script>
   </body>
 </html>

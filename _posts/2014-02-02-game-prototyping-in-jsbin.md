@@ -2,7 +2,7 @@
 layout: post
 published: true
 title: 'Using Jsbin to prototype game features'
-tags: "programming, javascript, fragcastle, game-development"
+tags: "programming javascript fragcastle game-development"
 ---
 
 If you're strapped for time prototyping a new game feature[;](http://www.youtube.com/watch?v=M94ii6MVilw) the last thing you want to do is waste time fighting your game engine/process/whatever. Here's how I built a simple game engine using HTML5 and JsBin to prototype game features quickly.

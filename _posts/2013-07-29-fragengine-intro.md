@@ -3,7 +3,7 @@ layout: post
 published: true
 title: 'FragEngine: A 2d Game Engine for MonoGame'
 slug: "fragengine-2d-monogame-engine"
-tags: "programming, fragengine, fragcastle, game-development, monogame"
+tags: "programming fragengine fragcastle game-development monogame"
 ---
 
 <div class="video-container">

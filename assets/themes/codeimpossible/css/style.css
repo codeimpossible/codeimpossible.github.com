@@ -131,6 +131,41 @@ pre {
 article > h2 { margin: 30px 0; }
 .ci-post-list article > h2 { margin: 10px 0; }
 
+footer {
+  margin-top: 40px;
+}
+
+.tag_box .tag {
+  float: left;
+  display: block;
+}
+
+.tag_box:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tag {
+  background: #ddd;
+  padding: 3px 3px 3px 8px;
+  border-radius: 14px!important;
+  margin-right: 8px;
+  margin-bottom: 5px;
+}
+
+.tag span {
+  background: #336699;
+  color: #fff;
+  padding: 5px 10px 6px 10px;
+  font-size: 10px;
+  border-radius: 50% !important;
+  margin: 0px -3px 0px 2px;
+  position: relative;
+  top: -2px;
+  border-left: 4px #fff solid;
+}
+
 pre { background: #ffffff; border: none; padding: 40px; }
 .c { color: #008000 } /* Comment */
 .err { border: 1px solid #FF0000 } /* Error */

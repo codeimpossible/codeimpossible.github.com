@@ -4,7 +4,7 @@ published: true
 title: 'Retrospective'
 slug: "retrospective"
 date: '2013-03-08 10:00 -04:00'
-tags: "retrospective, twenty-twelve"
+tags: "retrospective twenty-twelve"
 ---
 ## A look back on the crazy that was 2012
 

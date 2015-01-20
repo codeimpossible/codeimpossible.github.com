@@ -4,7 +4,7 @@ published: false
 title: 'Indie Game Development with JavaScript'
 slug: "indie-game-dev-javascript"
 date: '2013-04-01 10:00 -04:00'
-tags: "game-development, idie, gaming, javascript, impactjs, pax"
+tags: "game-development idie gaming javascript impactjs pax"
 ---
 ## Or how we showed our game without killing totally ourselves
 

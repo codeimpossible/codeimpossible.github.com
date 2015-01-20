@@ -3,7 +3,7 @@ layout: post
 title: 'Identity woes in SqlServer'
 date: 2014-12-22
 published: true
-tags: "sql, programming, troubleshooting, devops, sharepoint"
+tags: "sql programming troubleshooting devops sharepoint"
 ---
 
 My wife was having some trouble with a sharepoint farm at her work - one of the sites had gone into a wierd semi-read-only mode. Any time someone tried to create or edit content - or upload a file, the site would show an error page and when she checked the error message the error message was less than helpful.
