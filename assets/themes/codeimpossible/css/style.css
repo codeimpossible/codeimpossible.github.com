@@ -82,6 +82,10 @@ pre {
   border-bottom-right-radius: 50px!important;
 }
 
+.license {
+  font-size: 10px;
+}
+
 @media(max-width: 1199px) {
   /* medium and lower screens */
   .ci-sidebar {
