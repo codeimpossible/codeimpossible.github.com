@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Code makes anything possible]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://codeimpossible.com/"/>
-  <updated>2016-01-30T04:50:11.000Z</updated>
+  <updated>2016-01-30T07:26:40.425Z</updated>
   <id>http://codeimpossible.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://codeimpossible.com/2016/01/29/hello-world/"/>
     <id>http://codeimpossible.com/2016/01/29/hello-world/</id>
     <published>2016-01-30T03:14:46.000Z</published>
-    <updated>2016-01-30T04:50:11.000Z</updated>
+    <updated>2016-01-30T07:26:40.425Z</updated>
     <content type="html"><![CDATA[<p>I decided to start 2016 off a bit differently. Normally I’d write a recap post for 2015 listing all the things I didn’t do, and how I was going to <em>finally</em> do them <em>this</em> year. Because <em>this</em> year is totally different than all the others before it.</p>
 <p><blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">today is the day!. Im going to go out and be productive!<br><br>jump cut<br>I&#39;m asleep on the couch. tv is very loud<br><br>🎶ILL BE THERRREE FOR YOUUU🎶</p>&mdash; Shenanigans.js (@codeimpossible) <a href="https://twitter.com/codeimpossible/status/693216746136666112" target="_blank" rel="external">January 29, 2016</a></blockquote></p>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -44,7 +44,7 @@
     <link href="http://codeimpossible.com/2012/04/02/trailing-whitespace-is-evil-don-t-commit-evil-into-your-repo/"/>
     <id>http://codeimpossible.com/2012/04/02/trailing-whitespace-is-evil-don-t-commit-evil-into-your-repo/</id>
     <published>2012-04-02T05:00:00.000Z</published>
-    <updated>2016-01-30T02:11:03.000Z</updated>
+    <updated>2016-01-30T07:26:40.436Z</updated>
     <content type="html"><![CDATA[<h3 id="Lately_2C_I_u2019ve_beeen_working_on_a_lot_of_projects_with_different_people/languages/editors_2C_most_of_us_were_new_git_u2019ers_and_each_project_had_a_real_problem_with_trailing_whitespace"><a href="#Lately_2C_I_u2019ve_beeen_working_on_a_lot_of_projects_with_different_people/languages/editors_2C_most_of_us_were_new_git_u2019ers_and_each_project_had_a_real_problem_with_trailing_whitespace" class="headerlink" title="Lately, I’ve beeen working on a lot of projects with different people/languages/editors, most of us were new git’ers and each project had a real problem with trailing whitespace."></a>Lately, I’ve beeen working on a lot of projects with different people/languages/editors, most of us were new git’ers and each project had a real problem with trailing whitespace.</h3><p><strong>Fred and Tim</strong></p>
 <p>It all starts out innocently enough. Fred, a mid-level developer at InfoTech Systems opens up his IM client and fires off a chat to a co-worker: “Hey Tim, can you check out my pull request? I’m done with the ratings feature and think we should merge it in”.</p>
 <p>Tim, a Senior Software Developer, has been writing code since the mid 80’s. He originally started out contributing to the Gnome project and then bounced around the corporate world, Lotus, Microsoft, Oracle but now works with Fred at a small startup where they and five other developers are trying to build the next great cat-picture rating website - CatR.</p>
@@ -130,7 +130,7 @@ End Sub
     <link href="http://codeimpossible.com/2010/01/13/solving-document-ready-is-not-a-function-and-other-problems/"/>
     <id>http://codeimpossible.com/2010/01/13/solving-document-ready-is-not-a-function-and-other-problems/</id>
     <published>2010-01-13T06:00:00.000Z</published>
-    <updated>2016-01-30T02:10:32.000Z</updated>
+    <updated>2016-01-30T07:26:40.432Z</updated>
     <content type="html"><![CDATA[<h3 id="Ever_been_working_on_a_customer_u2019s_site_2C_writing_some_really_awesome_jQuery_2C_you_deploy_it_2C_and_everything_is_awesome-_And_then_you_get_an_email_one_day_u2026"><a href="#Ever_been_working_on_a_customer_u2019s_site_2C_writing_some_really_awesome_jQuery_2C_you_deploy_it_2C_and_everything_is_awesome-_And_then_you_get_an_email_one_day_u2026" class="headerlink" title="Ever been working on a customer’s site, writing some really awesome jQuery, you deploy it, and everything is awesome. And then you get an email one day…"></a>Ever been working on a customer’s site, writing some really awesome jQuery, you deploy it, and everything is awesome. And then you get an email one day…</h3><p>Has this ever happened to you: you’ve been working on a customer’s site, writing some really awesome jQuery flashy, fadey, scrolly, interactivey thing, you deploy it, and everything is awesome. The customer rejoices and the customer’s customers rejoice. Rejoicing is had by everyone. And then you get an email one day:</p>
 <blockquote>
 <p>“Everything is broken. We’ve kidnapped your dog. Fix our site or you’ll never see Spartacus again.”</p>
