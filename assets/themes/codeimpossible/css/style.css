@@ -61,7 +61,7 @@ pre {
 
 #content {
   margin-left: 400px;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 
 #content header {
@@ -84,6 +84,12 @@ pre {
 
 .license {
   font-size: 10px;
+}
+
+@media(min-width: 1200px) {
+  .ci-comments {
+    margin-top: 90px;
+  }
 }
 
 @media(max-width: 1199px) {

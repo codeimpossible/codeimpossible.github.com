@@ -1,22 +1,24 @@
 
 <div class="row">
   <section class="col-md-12">
-    <header>
-      <h2>{{ page.title }}</h2>
-      <small>{{ page.date | date_to_long_string }}</small>
-      <small>Tags: {% assign tags_list = page.tags %} {% include JB/tags_list %}</small>
-    </header>
+    <section class="ci-post-content col-md-12 col-lg-8">
+      <header>
+        <h2>{{ page.title }}</h2>
+        <small>{{ page.date | date_to_long_string }}</small>
+        <small>Tags: {% assign tags_list = page.tags %} {% include JB/tags_list %}</small>
+      </header>
 
-    <article>
-      {{ content }}
-    </article>
+      <article>
+        {{ content }}
+      </article>
 
-    <footer class="ci-social">
-      <a href="https://twitter.com/codeimpossible" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @codeimpossible</a>
-      <a href="https://twitter.com/share" class="twitter-share-button" data-via="codeimpossible" data-size="large">Tweet</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-    </footer>
-    <footer class="ci-comments">
+      <footer class="ci-social">
+        <a href="https://twitter.com/codeimpossible" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @codeimpossible</a>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="codeimpossible" data-size="large">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </footer>
+    </section>
+    <footer class="ci-comments col-md-12 col-lg-4">
       {% include JB/comments %}
     </footer>
   </section>
