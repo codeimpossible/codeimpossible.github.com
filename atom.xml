@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Code makes anything possible]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://codeimpossible.com/"/>
-  <updated>2016-01-30T07:26:40.425Z</updated>
+  <updated>2016-02-06T03:03:26.000Z</updated>
   <id>http://codeimpossible.com/</id>
   
   <author>
@@ -15,11 +15,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Hacks are good! Do moar!]]></title>
+    <link href="http://codeimpossible.com/2016/01/30/hacks-are-good-do-more/"/>
+    <id>http://codeimpossible.com/2016/01/30/hacks-are-good-do-more/</id>
+    <published>2016-01-30T07:31:55.000Z</published>
+    <updated>2016-02-06T03:03:26.000Z</updated>
+    <content type="html"><![CDATA[<p>In January I was lucky enough to participate in a project review session for <a href="https://generalassemb.ly/" target="_blank" rel="external">General Assembly</a> a programmer bootcamp here in Austin, TX. I was one of three professional software devs brought in to provide feedback on the students’ projects. The feedback can be on anything, from how they approached the UX, their data models, how they used git… anything.</p>
+<p>During each presentation each team had a set of topics that they had to talk about, one of them being “rose, bud, thorn” or “what was great about this project/experience”, “what will you take on to your next project(s)”, and “what sucked”.</p>
+<p>One team of students began a demo of their search filters for a recipe site they had built. It had a great amazon-esque checkbox filter system where you could pick recipe ingredients to filter the list of recipes on the site. It worked really well.</p>
+<p>For their “what sucked” part, one of the team members brought up the code for the checkbox filtering and showed how it worked. There was a collection of around twenty <code>if</code> statements that controlled what happened when one of the recipe filters was chosen.</p>
+<p>Basically it looked something like this, just 20x as much:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'checkbox1'</span>).on(<span class="string">'change'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> ($(<span class="keyword">this</span>).is(<span class="string">':checked'</span>)) &#123;</span><br><span class="line">    $(<span class="string">'form #hidden1'</span>).val($(<span class="keyword">this</span>).val());</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    $(<span class="string">'form #hidden1'</span>).val(<span class="string">''</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>So for each checkbox there was a matching hidden field in a form so the selected search filters could be sent to the server and the search could be carried out. A truly righteous hack, if I may say so.</p>
+<p>When the rest of the reviewers and I saw this we kinda chuckled a bit - which to be honest, probably wasn’t the best response - but I explained that we were all chuckling because hacks are a common thing in software development and we’d all done hacks like that (or in worse) to make something work to meet a deadline. It’s a fact of life. And it’s a friggin’ important one too.</p>
+<p>We should create hacks more often. Don’t kill yourself for 2-3 hours to try to find the best/most correct way to do something immediately. If you meet resistance, do the simplest thing that could possibly work - make a hack - and move on. Come back to it - or even better get someone to pair or code review what you’ve done - and refactor it when you know the better way to do it. Bad code is… well, yeah, bad… but it’s also super important since it helps us grow and become better.</p>
+<p>You won’t forget your hacks easily. They’ll stay with you for a while; they will keep you up at night. In fact, one night, you’ll probably refactor them into as few lines of code as possible.</p>
+<p>And one day you’ll come back to those hacks, years from now and chuckle too.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>In January I was lucky enough to participate in a project review session for <a href="https://generalassemb.ly/" target="_blank" rel="ext]]>
+    </summary>
+    
+      <category term="best-practices" scheme="http://codeimpossible.com/tags/best-practices/"/>
+    
+      <category term="development" scheme="http://codeimpossible.com/categories/development/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[hello world (again)]]></title>
     <link href="http://codeimpossible.com/2016/01/29/hello-world/"/>
     <id>http://codeimpossible.com/2016/01/29/hello-world/</id>
     <published>2016-01-30T03:14:46.000Z</published>
-    <updated>2016-01-30T07:26:40.425Z</updated>
+    <updated>2016-01-30T04:50:11.000Z</updated>
     <content type="html"><![CDATA[<p>I decided to start 2016 off a bit differently. Normally I’d write a recap post for 2015 listing all the things I didn’t do, and how I was going to <em>finally</em> do them <em>this</em> year. Because <em>this</em> year is totally different than all the others before it.</p>
 <p><blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">today is the day!. Im going to go out and be productive!<br><br>jump cut<br>I&#39;m asleep on the couch. tv is very loud<br><br>🎶ILL BE THERRREE FOR YOUUU🎶</p>&mdash; Shenanigans.js (@codeimpossible) <a href="https://twitter.com/codeimpossible/status/693216746136666112" target="_blank" rel="external">January 29, 2016</a></blockquote></p>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -44,7 +72,7 @@
     <link href="http://codeimpossible.com/2012/04/02/trailing-whitespace-is-evil-don-t-commit-evil-into-your-repo/"/>
     <id>http://codeimpossible.com/2012/04/02/trailing-whitespace-is-evil-don-t-commit-evil-into-your-repo/</id>
     <published>2012-04-02T05:00:00.000Z</published>
-    <updated>2016-01-30T07:26:40.436Z</updated>
+    <updated>2016-01-30T02:11:03.000Z</updated>
     <content type="html"><![CDATA[<h3 id="Lately_2C_I_u2019ve_beeen_working_on_a_lot_of_projects_with_different_people/languages/editors_2C_most_of_us_were_new_git_u2019ers_and_each_project_had_a_real_problem_with_trailing_whitespace"><a href="#Lately_2C_I_u2019ve_beeen_working_on_a_lot_of_projects_with_different_people/languages/editors_2C_most_of_us_were_new_git_u2019ers_and_each_project_had_a_real_problem_with_trailing_whitespace" class="headerlink" title="Lately, I’ve beeen working on a lot of projects with different people/languages/editors, most of us were new git’ers and each project had a real problem with trailing whitespace."></a>Lately, I’ve beeen working on a lot of projects with different people/languages/editors, most of us were new git’ers and each project had a real problem with trailing whitespace.</h3><p><strong>Fred and Tim</strong></p>
 <p>It all starts out innocently enough. Fred, a mid-level developer at InfoTech Systems opens up his IM client and fires off a chat to a co-worker: “Hey Tim, can you check out my pull request? I’m done with the ratings feature and think we should merge it in”.</p>
 <p>Tim, a Senior Software Developer, has been writing code since the mid 80’s. He originally started out contributing to the Gnome project and then bounced around the corporate world, Lotus, Microsoft, Oracle but now works with Fred at a small startup where they and five other developers are trying to build the next great cat-picture rating website - CatR.</p>
@@ -130,7 +158,7 @@ End Sub
     <link href="http://codeimpossible.com/2010/01/13/solving-document-ready-is-not-a-function-and-other-problems/"/>
     <id>http://codeimpossible.com/2010/01/13/solving-document-ready-is-not-a-function-and-other-problems/</id>
     <published>2010-01-13T06:00:00.000Z</published>
-    <updated>2016-01-30T07:26:40.432Z</updated>
+    <updated>2016-01-30T02:10:32.000Z</updated>
     <content type="html"><![CDATA[<h3 id="Ever_been_working_on_a_customer_u2019s_site_2C_writing_some_really_awesome_jQuery_2C_you_deploy_it_2C_and_everything_is_awesome-_And_then_you_get_an_email_one_day_u2026"><a href="#Ever_been_working_on_a_customer_u2019s_site_2C_writing_some_really_awesome_jQuery_2C_you_deploy_it_2C_and_everything_is_awesome-_And_then_you_get_an_email_one_day_u2026" class="headerlink" title="Ever been working on a customer’s site, writing some really awesome jQuery, you deploy it, and everything is awesome. And then you get an email one day…"></a>Ever been working on a customer’s site, writing some really awesome jQuery, you deploy it, and everything is awesome. And then you get an email one day…</h3><p>Has this ever happened to you: you’ve been working on a customer’s site, writing some really awesome jQuery flashy, fadey, scrolly, interactivey thing, you deploy it, and everything is awesome. The customer rejoices and the customer’s customers rejoice. Rejoicing is had by everyone. And then you get an email one day:</p>
 <blockquote>
 <p>“Everything is broken. We’ve kidnapped your dog. Fix our site or you’ll never see Spartacus again.”</p>

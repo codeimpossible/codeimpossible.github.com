@@ -6,27 +6,23 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Code: Impossible">
-    <title>Trailing whitespace is evil. Don&#39;t commit evil into your repo. - Code: Impossible</title>
+    <title>Hacks are good! Do moar! - Code: Impossible</title>
     <meta name="author" content="Jared Barboza">
     
     
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <meta name="description" content="Lately, I’ve beeen working on a lot of projects with different people/languages/editors, most of us were new git’ers and each project had a real problem with trailing whitespace.Fred and Tim
-It all st">
+    <meta name="description" content="In January I was lucky enough to participate in a project review session for General Assembly a programmer bootcamp here in Austin, TX. I was one of three professional software devs brought in to prov">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="Trailing whitespace is evil. Don't commit evil into your repo.">
-<meta property="og:url" content="http://codeimpossible.com/2012/04/02/trailing-whitespace-is-evil-don-t-commit-evil-into-your-repo/index.html">
+<meta property="og:title" content="Hacks are good! Do moar!">
+<meta property="og:url" content="http://codeimpossible.com/2016/01/30/hacks-are-good-do-more/index.html">
 <meta property="og:site_name" content="Code: Impossible">
-<meta property="og:description" content="Lately, I’ve beeen working on a lot of projects with different people/languages/editors, most of us were new git’ers and each project had a real problem with trailing whitespace.Fred and Tim
-It all st">
-<meta property="og:image" content="http://dl.dropbox.com/u/6291954/MnEIl.gif">
-<meta property="og:updated_time" content="2016-01-30T02:11:03.000Z">
+<meta property="og:description" content="In January I was lucky enough to participate in a project review session for General Assembly a programmer bootcamp here in Austin, TX. I was one of three professional software devs brought in to prov">
+<meta property="og:updated_time" content="2016-02-06T03:03:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Trailing whitespace is evil. Don't commit evil into your repo.">
-<meta name="twitter:description" content="Lately, I’ve beeen working on a lot of projects with different people/languages/editors, most of us were new git’ers and each project had a real problem with trailing whitespace.Fred and Tim
-It all st">
+<meta name="twitter:title" content="Hacks are good! Do moar!">
+<meta name="twitter:description" content="In January I was lucky enough to participate in a project review session for General Assembly a programmer bootcamp here in Austin, TX. I was one of three professional software devs brought in to prov">
 <meta name="twitter:creator" content="@codeimpossible">
     
         <meta rel="publisher" content="https://plus.google.com/+JaredBarboza"/>
@@ -237,13 +233,13 @@ It all st">
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            Trailing whitespace is evil. Don&#39;t commit evil into your repo.
+            Hacks are good! Do moar!
         </h1>
     
     <div class="post-meta">
-    <time itemprop="datePublished" content="Mon Apr 02 2012 00:00:00 GMT-0500">
+    <time itemprop="datePublished" content="Sat Jan 30 2016 01:31:55 GMT-0600">
 	
-		    Apr 02, 2012
+		    Jan 30, 2016
     	
     </time>
     
@@ -258,73 +254,17 @@ It all st">
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <h3 id="Lately_2C_I_u2019ve_beeen_working_on_a_lot_of_projects_with_different_people/languages/editors_2C_most_of_us_were_new_git_u2019ers_and_each_project_had_a_real_problem_with_trailing_whitespace"><a href="#Lately_2C_I_u2019ve_beeen_working_on_a_lot_of_projects_with_different_people/languages/editors_2C_most_of_us_were_new_git_u2019ers_and_each_project_had_a_real_problem_with_trailing_whitespace" class="headerlink" title="Lately, I’ve beeen working on a lot of projects with different people/languages/editors, most of us were new git’ers and each project had a real problem with trailing whitespace."></a>Lately, I’ve beeen working on a lot of projects with different people/languages/editors, most of us were new git’ers and each project had a real problem with trailing whitespace.</h3><p><strong>Fred and Tim</strong></p>
-<p>It all starts out innocently enough. Fred, a mid-level developer at InfoTech Systems opens up his IM client and fires off a chat to a co-worker: “Hey Tim, can you check out my pull request? I’m done with the ratings feature and think we should merge it in”.</p>
-<p>Tim, a Senior Software Developer, has been writing code since the mid 80’s. He originally started out contributing to the Gnome project and then bounced around the corporate world, Lotus, Microsoft, Oracle but now works with Fred at a small startup where they and five other developers are trying to build the next great cat-picture rating website - CatR.</p>
-<p>“Ok, let me CR it”, CR is the teams short-hand for Code Review. Even though most of the team are experienced programmers every feature and bug fix commit must be reviewed by another developer.</p>
-<p>Fred is the “new guy” on the team, this is his third day at InfoTech and he’s submitting his first feature enhancement. Even though Fred has 8 years of coding under his belt, he still gets a little nervous when someone reviews his code.</p>
-<p>“Hmmmmm” Tim types back. <em>Ugh, This can’t be good</em> Fred thinks.</p>
-<p>“This git diff looks weird. How many lines did you change in the main stylesheet?”</p>
-<p>“Only 2 why?” Fred types back, starting to get a bit defensive. He takes a few quick, deep breaths and calms down.</p>
-<p>“The diff is lighting up like a christmas tree. Check your diff locally.”</p>
-<p>Fred opens up a terminal and does a quick check to see what Tim is talking about:</p>
-<pre><code>git diff master product-ratings-feature
-</code></pre><p><em>“Crap!”</em> the word jumps instantly into Freds mind. He can see immediately what Tims talking about. There a bunch of lines where the only thing different is the whitespace at the beginning or end of the line.</p>
-<p>“Ugh, yeah I see it” Fred types back.</p>
-<p>“Well, we can’t pull this in yet dude, we only want to have diffs show what we actually changed so if something goes south in the future we’re not scratching our heads looking at a all whitespace commit. Go back and check your whitespace settings, re-save and let me know when I can review it again.”</p>
-<p>“Great, guess I’ve got some more work to do” Fred says to himself. He lets out a fairly audible sigh, opens up Visual Studio and starts typing away at the keyboard.</p>
-<p><strong>The moral of the story</strong></p>
-<p>Trailing whitespace issues can cause a lot of problems when they get into your repository. It leads to falsey diffs which claim lines have been changed when in fact the only thing that changed was spacing.</p>
-<p>This can make finding what actually changed in a file later on in the development cycle next to impossible. Most open source project leads know this and a lot of them will reject pull requests that fail to trim whitespace (or have other</p>
-<p>A lot of IDEs and text editors have options to configure trailing whitespace (SublimeText make this insanely easy) but Visual Studio, amazingly, has no option for this.</p>
-<h2 id="How_to_Remove_Trailing_Whitespace_on_save_in_Visual_Studio"><a href="#How_to_Remove_Trailing_Whitespace_on_save_in_Visual_Studio" class="headerlink" title="How to Remove Trailing Whitespace on save in Visual Studio"></a>How to Remove Trailing Whitespace on save in Visual Studio</h2><ol>
-<li>Open visual studio (yep)</li>
-<li>In the menu select Tools -&gt; Macros -&gt; Macros IDE (yeah, we’re opening <strong>another</strong> IDE)</li>
-<li>Expand “My Macros” in the Project Explorer (usually in the right-hand side of the window)</li>
-<li>Double-Click the EnvironmentEvents module (yep, it’s VBA in all it’s glory)</li>
-<li><p>Paste the code below just after the “Automatically generated code” region</p>
-<pre><code>Private Sub DocumentEvents_DocumentSaved(ByVal document As EnvDTE.Document) _
-    Handles DocumentEvents.DocumentSaved
-    Dim fileName As String
-    Dim result As vsFindResult
-
-    Try
-        &apos; Remove trailing whitespace
-        result = DTE.Find.FindReplace( _
-            vsFindAction.vsFindActionReplaceAll, _
-            &quot;{:b}+$&quot;, _
-            vsFindOptions.vsFindOptionsRegularExpression, _
-            String.Empty, _
-            vsFindTarget.vsFindTargetFiles, _
-            document.FullName, _
-            &quot;&quot;, _
-            vsFindResultsLocation.vsFindResultsNone)
-
-        If result = vsFindResult.vsFindResultReplaced Then
-            &apos; Triggers DocumentEvents_DocumentSaved event again
-            document.Save()
-        End If
-    Catch ex As Exception
-        MsgBox(ex.Message, MsgBoxStyle.OkOnly, &quot;Trim White Space exception&quot;)
-    End Try
-End Sub
-</code></pre></li>
-</ol>
-<p>Now save your new macro and whenever you save a file in Visual Studio this will run and trim all the trailing whitespace.</p>
-<h2 id="How_to_Remove_trailing_whitespace_on_save_in_Sublime_Text_2"><a href="#How_to_Remove_trailing_whitespace_on_save_in_Sublime_Text_2" class="headerlink" title="How to Remove trailing whitespace on save in Sublime Text 2"></a>How to Remove trailing whitespace on save in Sublime Text 2</h2><ol>
-<li>In Sublime Text, open up the preferences menu and select “File Settings - User”<ul>
-<li>this is important because if you use the “Default” settings, they may be overwritten when you update Sublime Text to a new version.</li>
-</ul>
-</li>
-<li>Scroll down until you see <code>&quot;trim_trailing_white_space_on_save&quot;</code>, set this option to <code>true</code></li>
-<li>Save</li>
-<li>Profit</li>
-</ol>
-<h2 id="Get_Git_to_help_you_out"><a href="#Get_Git_to_help_you_out" class="headerlink" title="Get Git to help you out"></a>Get Git to help you out</h2><p>In the example above Fred could have saved himself a lot of time if he ran one command:</p>
-<pre><code>mv .git/hooks/pre-commit.sample .git/hooks/pre-commit
-</code></pre><p>This file has a check (on the last line) that will fail any commit when there are whitespace errors. It’s not enabled by default so you have to remove the <code>.sample</code> from the file name to get git to run it.</p>
-<h2 id="After_all_this_2C_what_should_I_do_next_3F"><a href="#After_all_this_2C_what_should_I_do_next_3F" class="headerlink" title="After all this, what should I do next?"></a>After all this, what should I do next?</h2><p>High-five Yourself!!!</p>
-<p><img src="http://dl.dropbox.com/u/6291954/MnEIl.gif" alt=""></p>
+            <p>In January I was lucky enough to participate in a project review session for <a href="https://generalassemb.ly/" target="_blank" rel="external">General Assembly</a> a programmer bootcamp here in Austin, TX. I was one of three professional software devs brought in to provide feedback on the students’ projects. The feedback can be on anything, from how they approached the UX, their data models, how they used git… anything.</p>
+<p>During each presentation each team had a set of topics that they had to talk about, one of them being “rose, bud, thorn” or “what was great about this project/experience”, “what will you take on to your next project(s)”, and “what sucked”.</p>
+<p>One team of students began a demo of their search filters for a recipe site they had built. It had a great amazon-esque checkbox filter system where you could pick recipe ingredients to filter the list of recipes on the site. It worked really well.</p>
+<p>For their “what sucked” part, one of the team members brought up the code for the checkbox filtering and showed how it worked. There was a collection of around twenty <code>if</code> statements that controlled what happened when one of the recipe filters was chosen.</p>
+<p>Basically it looked something like this, just 20x as much:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'checkbox1'</span>).on(<span class="string">'change'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> ($(<span class="keyword">this</span>).is(<span class="string">':checked'</span>)) &#123;</span><br><span class="line">    $(<span class="string">'form #hidden1'</span>).val($(<span class="keyword">this</span>).val());</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    $(<span class="string">'form #hidden1'</span>).val(<span class="string">''</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>So for each checkbox there was a matching hidden field in a form so the selected search filters could be sent to the server and the search could be carried out. A truly righteous hack, if I may say so.</p>
+<p>When the rest of the reviewers and I saw this we kinda chuckled a bit - which to be honest, probably wasn’t the best response - but I explained that we were all chuckling because hacks are a common thing in software development and we’d all done hacks like that (or in worse) to make something work to meet a deadline. It’s a fact of life. And it’s a friggin’ important one too.</p>
+<p>We should create hacks more often. Don’t kill yourself for 2-3 hours to try to find the best/most correct way to do something immediately. If you meet resistance, do the simplest thing that could possibly work - make a hack - and move on. Come back to it - or even better get someone to pair or code review what you’ve done - and refactor it when you know the better way to do it. Bad code is… well, yeah, bad… but it’s also super important since it helps us grow and become better.</p>
+<p>You won’t forget your hacks easily. They’ll stay with you for a while; they will keep you up at night. In fact, one night, you’ll probably refactor them into as few lines of code as possible.</p>
+<p>And one day you’ll come back to those hacks, years from now and chuckle too.</p>
 
             
                 
@@ -337,7 +277,7 @@ End Sub
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">TAGGED IN</span><br/>
                 
-    <a class="tag tag--primary tag--small t-link" href="/tags/best-practices/">best-practices</a> <a class="tag tag--primary tag--small t-link" href="/tags/source-control/">source-control</a>
+    <a class="tag tag--primary tag--small t-link" href="/tags/best-practices/">best-practices</a>
 
             </div>
         
@@ -346,7 +286,7 @@ End Sub
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/01/29/hello-world/"  data-tooltip="hello world (again)">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -354,7 +294,7 @@ End Sub
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2010/01/13/solving-document-ready-is-not-a-function-and-other-problems/" data-tooltip="Solving &quot;$(document).ready is not a function&quot; and other problems">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/01/29/hello-world/" data-tooltip="hello world (again)">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -369,17 +309,17 @@ End Sub
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://codeimpossible.com/2012/04/02/trailing-whitespace-is-evil-don-t-commit-evil-into-your-repo/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://codeimpossible.com/2016/01/30/hacks-are-good-do-more/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://codeimpossible.com/2012/04/02/trailing-whitespace-is-evil-don-t-commit-evil-into-your-repo/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://codeimpossible.com/2016/01/30/hacks-are-good-do-more/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://codeimpossible.com/2012/04/02/trailing-whitespace-is-evil-don-t-commit-evil-into-your-repo/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://codeimpossible.com/2016/01/30/hacks-are-good-do-more/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -427,7 +367,7 @@ End Sub
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/01/29/hello-world/"  data-tooltip="hello world (again)">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -435,7 +375,7 @@ End Sub
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2010/01/13/solving-document-ready-is-not-a-function-and-other-problems/" data-tooltip="Solving &quot;$(document).ready is not a function&quot; and other problems">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/01/29/hello-world/" data-tooltip="hello world (again)">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -450,17 +390,17 @@ End Sub
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://codeimpossible.com/2012/04/02/trailing-whitespace-is-evil-don-t-commit-evil-into-your-repo/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://codeimpossible.com/2016/01/30/hacks-are-good-do-more/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://codeimpossible.com/2012/04/02/trailing-whitespace-is-evil-don-t-commit-evil-into-your-repo/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://codeimpossible.com/2016/01/30/hacks-are-good-do-more/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://codeimpossible.com/2012/04/02/trailing-whitespace-is-evil-don-t-commit-evil-into-your-repo/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://codeimpossible.com/2016/01/30/hacks-are-good-do-more/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -486,17 +426,17 @@ End Sub
                 <div id="share-options-bar" class="share-options-bar" data-behavior="3">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://codeimpossible.com/2012/04/02/trailing-whitespace-is-evil-don-t-commit-evil-into-your-repo/">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://codeimpossible.com/2016/01/30/hacks-are-good-do-more/">
                 <i class="fa fa-google-plus"></i><span class="">Share on Google Plus</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://codeimpossible.com/2012/04/02/trailing-whitespace-is-evil-don-t-commit-evil-into-your-repo/">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://codeimpossible.com/2016/01/30/hacks-are-good-do-more/">
                 <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://codeimpossible.com/2012/04/02/trailing-whitespace-is-evil-don-t-commit-evil-into-your-repo/">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://codeimpossible.com/2016/01/30/hacks-are-good-do-more/">
                 <i class="fa fa-twitter"></i><span>Share on Twitter</span>
             </a>
         </li>
@@ -551,9 +491,9 @@ End Sub
     
         <script>
              var disqus_config = function () {
-                 this.page.url = 'http://codeimpossible.com/2012/04/02/trailing-whitespace-is-evil-don-t-commit-evil-into-your-repo/';
+                 this.page.url = 'http://codeimpossible.com/2016/01/30/hacks-are-good-do-more/';
                  
-                    this.page.identifier = '2012/04/02/trailing-whitespace-is-evil-don-t-commit-evil-into-your-repo/';
+                    this.page.identifier = '2016/01/30/hacks-are-good-do-more/';
                                   
              };
             (function() {
