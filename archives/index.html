@@ -37,7 +37,7 @@
     
 
     <!--STYLES-->
-    <link rel="stylesheet" href="/assets/css/style-tnvjsumpnpqlgcph74zfvwgabegugloivmjmlcowxfzxxszp8qw9urfrmao5.min.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/style-qavqlviclalzflecbevqykotkyl13zro18tgvklxwi6qx2lnz1hzid4nyc05.min.css" type="text/css">
     <!--STYLES END-->
 
     <link rel="stylesheet" href="/assets/css/codeimpossible.css" type="text/css">
@@ -229,6 +229,67 @@
     
 
 <section class="postShorten-group main-content-wrap">
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2016/02/02/not-a-fan-of-es6-arrow-function/">
+                            Why I dislike the es6 arrow
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" content="Tue Feb 02 2016 23:13:01 GMT-0600">
+	
+		    Feb 02, 2016
+    	
+    </time>
+    
+</div>
+            </div>
+            
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>When I first read that javascript was getting a arrow function shortcut, I was happy. Like this kind of happy:</p>
+<p><img src="http://www.reactiongifs.com/r/yay2.gif"></p>
+<p>Seriously. So happy. Check out the code below and tell me it doesn’t feel great.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> times_2 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>].map((num) =&gt; num * <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">times_2.forEach((num) =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(num);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>Pretty, great, right? The arrow function shortcut seemed like a perfect port of the lambda syntax from C#. Buuuut it’s not. Like, not at all.</p>
+<p>When you use the ES6 arrow function, it creates a lexical scope. Lexical (also called static) scoped functions are functions where the <code>this</code> context is set to it’s parent, and cannot be altered. This means that the examples above would translate (roughly) to this JavaScript:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> times_2 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>].map(<span class="function"><span class="keyword">function</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> num * <span class="number">2</span></span><br><span class="line">&#125;.bind(<span class="keyword">this</span>));</span><br><span class="line"></span><br><span class="line">times_2.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(num);</span><br><span class="line">&#125;.bind(<span class="keyword">this</span>));</span><br></pre></td></tr></table></figure>
+<p>Now in these two examples the scoping isn’t an issue. In fact in a lot of cases you won’t care about the <code>=&gt;</code> operator creating a static scope. But it’s really easy to forget, especially when everyone on the internet just refers to this thing as the “ES6 arrow function”.</p>
+<p>For real? “Arrow function” makes it sound like this isn’t doing anything other than dropping a function into my code. It’s a bad name and it should feel bad.</p>
+<p><img src="http://i.imgur.com/fLlgFSC.gif"></p>
+<p>To me, the better name for this is the “static scope operator”. Yeah it’s longer, fite me. <em>Authors Note: don’t really fight me, I’m overly squishy and bruise easily. Let’s grab a drink of your preference and talk about movies or comics instead</em>.</p>
+<p>Using a name that doesn’t call out that this operator creates a static scope seems like a bad idea to me. Scope is an incredibly tricky thing to understand in JavaScript, so to me it should be very obvious when we are about to muck around with it.</p>
+<p>This obfuscation of the static scope operators intent often leads to code that is harder to understand. For example, what if we wanted to create an action handler for a React component?</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  onLinkClick = () =&gt; &#123;</span><br><span class="line">    <span class="comment">// do stuff</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">onClick</span>=<span class="value">&#123;this.onLinkClick&#125;</span>&gt;</span>Clicky<span class="tag">&lt;/<span class="title">a</span>&gt;</span>;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The low number of lines of code here is a plus, but that <code>onLinkClick</code> property is hard to grok at first glance. When we write code, we’re writing code for the people that we work with now and in the future who will maintain our code. Code is for coworkers.</p>
+<p>Let’s try cleaning this up.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> _ <span class="keyword">from</span> <span class="string">'lodash'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    _.bindAll(<span class="keyword">this</span>, <span class="string">'onLinkClick'</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  onLinkClick() &#123;</span><br><span class="line">    <span class="comment">// do stuff</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">onClick</span>=<span class="value">&#123;this.onLinkClick&#125;</span>&gt;</span>Clicky<span class="tag">&lt;/<span class="title">a</span>&gt;</span>;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>To me this second example is much easier to read and is clearer about how the code functions. The scope binding is clear, and explicit.</p>
+<p>So when do I use a static scope operator? Usually in simple callbacks, like map/reduce or a one line promise handler. I don’t see the value of using <code>=&gt;</code> for every function by default, especially not in the class definition like above. But if you disagree, cool. I’d love to hear your points so post a comment, twit me on twitter (@codeimpossible), or chat with me at a conference.</p>
+<p>My intention here wasn’t to make you feel bad for using static scope operators (yep, I’m going to keep calling it that). I do hope that this post made you think more about the abstractions you use and make you ask yourself if they making your code easier to read, maintain, and test, or if they are just saving you a few keystrokes.</p>
+
+                    
+                        
+
+                    
+                    
+                        <p>
+                            <a href="/2016/02/02/not-a-fan-of-es6-arrow-function/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
     
     
     <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
@@ -583,7 +644,7 @@ End Sub
 <div id="cover" style="background-image:url('https://lh3.googleusercontent.com/-Z-Xt3Acjp5g/TQP6bUqu1mI/AAAAAAAABeY/uQ5kVcUXIaA/s2048-Ic42/IMG_4514.JPG');"></div>
     </body>
     <!--SCRIPTS-->
-<script src="/assets/js/scrip-mworfzj4jjsyiu69xtqmlxear1if50cq61i9tyvb8llfxmugugalpsmfc7nv.min.js" type="text/javascript"></script>
+<script src="/assets/js/scrip-gautbovyvkurjejpa8m2e2snbcjwtpq44cp70fki1nmpqushonu5pkat1bdt.min.js" type="text/javascript"></script>
 <!--SCRIPTS END-->
 
 

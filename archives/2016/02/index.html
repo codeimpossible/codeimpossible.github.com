@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Code: Impossible">
-    <title>Tag: javascript - Code: Impossible</title>
+    <title>Archives: 2016/2 - Code: Impossible</title>
     <meta name="author" content="Jared Barboza">
     
     
@@ -16,7 +16,7 @@
     <meta name="description">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Code: Impossible">
-<meta property="og:url" content="http://codeimpossible.com/tags/javascript/index.html">
+<meta property="og:url" content="http://codeimpossible.com/archives/2016/02/index.html">
 <meta property="og:site_name" content="Code: Impossible">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
@@ -291,73 +291,6 @@
         
     </article>
     
-    
-    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2010/01/13/solving-document-ready-is-not-a-function-and-other-problems/">
-                            Solving &quot;$(document).ready is not a function&quot; and other problems
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" content="Wed Jan 13 2010 00:00:00 GMT-0600">
-	
-		    Jan 13, 2010
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/development/">development</a>
-
-
-    
-</div>
-            </div>
-            
-            
-                <div class="postShorten-content" itemprop="articleBody">
-                    <h3 id="Ever_been_working_on_a_customer_u2019s_site_2C_writing_some_really_awesome_jQuery_2C_you_deploy_it_2C_and_everything_is_awesome-_And_then_you_get_an_email_one_day_u2026"><a href="#Ever_been_working_on_a_customer_u2019s_site_2C_writing_some_really_awesome_jQuery_2C_you_deploy_it_2C_and_everything_is_awesome-_And_then_you_get_an_email_one_day_u2026" class="headerlink" title="Ever been working on a customer’s site, writing some really awesome jQuery, you deploy it, and everything is awesome. And then you get an email one day…"></a>Ever been working on a customer’s site, writing some really awesome jQuery, you deploy it, and everything is awesome. And then you get an email one day…</h3><p>Has this ever happened to you: you’ve been working on a customer’s site, writing some really awesome jQuery flashy, fadey, scrolly, interactivey thing, you deploy it, and everything is awesome. The customer rejoices and the customer’s customers rejoice. Rejoicing is had by everyone. And then you get an email one day:</p>
-<blockquote>
-<p>“Everything is broken. We’ve kidnapped your dog. Fix our site or you’ll never see Spartacus again.”</p>
-</blockquote>
-<p>And before you have time to wonder why you ever named your dog “Spartacus” to begin with (i mean <strong>come. on.</strong>), you’re off in debug hell.</p>
-<p>You load the site and see all sorts of weird errors: <code>&quot;$().ready is not a function&quot;</code> <code>&quot;$(document) doesn&#39;t support this property or method&quot;</code> Or my personal favorite: <code>&quot;null is null or not an object&quot;</code></p>
-<p>You open up FireFox, activate FireBug, load the console, and type <code>alert($)</code>, press run, and instead of seeing the expected jQuery function:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> (<span class="params">E, F</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> (o.fn.init)(E, F);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>You instead get:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">$</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">arguments</span>.length &gt; <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, elements = [], length = <span class="built_in">arguments</span>.length; i &lt; length; i++) &#123;</span><br><span class="line">            elements.push($(<span class="built_in">arguments</span>[i]));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> elements;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">Object</span>.isString(element)) &#123;</span><br><span class="line">        element = <span class="built_in">document</span>.getElementById(element);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> Element.extend(element);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Or even:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">$</span>(<span class="params">id</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">document</span>.getElementById(id);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>DOH!</strong> Looks like another javascript library has been loaded and has overwritten the <code>$()</code> shortcut for jQuery. Woe is I. Why can’t we all just get along?!? Well, we can’t stop people from including their favorite javascript libraries, but what we can do is prevent our code from suffering as a result. We’ll need a nice, big beefy, bodyguard to make sure our code isn’t messed with while it’s out clubbing with Prototype, Scriptaculous or even MooTools (who invited <em>him</em>??!?). Here’s what our bodyguard function will look like</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">( <span class="function"><span class="keyword">function</span>(<span class="params">$</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125; ) ( jQuery );</span><br></pre></td></tr></table></figure>
-<p>So what this does is call our anonymous function and pass the <code>jQuery</code> object. This will scope <code>$</code> our little function so we won’t step on anyone else’s toes (and they won’t bump into us while we’re on the dance floor and spill our drink everywhere). Okay, I think I&#39;ve taken the clubbing metaphor far enough.</p>
-<p>Basically this will allow our code to run and use the <code>$</code> shortcut for JQuery as if it were loaded without any of these other libraries on the page. Here is what the completed code would look like:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="undefined"></span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://ajax.googleapis.com/ajax/libs/prototype/1.6.1.0/prototype.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="undefined"></span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="undefined"></span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">( <span class="function"><span class="keyword">function</span>(<span class="params">$</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// we can now rely on $ within the safety of our "bodyguard" function</span></span><br><span class="line">    $(<span class="built_in">document</span>).ready( <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; alert(<span class="string">"nyah nyah! I'm able to use '$'!!!!"</span>);  &#125; );</span><br><span class="line">&#125; ) ( jQuery );</span><br><span class="line"></span><br><span class="line"><span class="comment">//this will fail</span></span><br><span class="line">$(<span class="built_in">document</span>).ready( <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; alert(<span class="string">'fail?'</span>); &#125; );</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>I love using this simple self-calling anonymous function style when working with jQuery because it saves me from typing <code>jQuery()</code>, which really does look a lot more ugly than using the <code>$()</code> shortcut. It also protects my code from any scoping issues and lets the code function normally when <a href="http://docs.jquery.com/Core/jQuery.noConflict" target="_blank" rel="external">jQuery is put into no conflict mode</a>.</p>
-<p>My opinion, if you’re doing work in jQuery on sites that you don’t control 100%, you should be using this method to protect your code and your clients.</p>
-<p><strong>Updated: changed link for jquery to use 1.4.1 at the google CDN (tsk, tsk, tsk I was using the googlecode.com link)</strong></p>
-
-                    
-                        
-
-                    
-                    
-                        <p>
-                            <a href="/2010/01/13/solving-document-ready-is-not-a-function-and-other-problems/#post-footer" class="postShorten-excerpt_link link">
-                                Comment and share
-                            </a>
-                        </p>
-                    
-                </div>
-            
-        </div>
-        
-    </article>
-    
     <div class="pagination-bar">
     <ul class="pagination">
         
@@ -367,6 +300,7 @@
 </div>
 
 </section>
+
 
 
                 <footer id="footer" class="main-content-wrap">
